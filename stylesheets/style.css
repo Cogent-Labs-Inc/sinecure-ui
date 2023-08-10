@@ -13,34 +13,38 @@ body {
   display: flex;
   gap: 16px;
 }
-.main aside {
+.main .active {
+  left: 64px !important;
+}
+.main .side-bar {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #FFFFFF;
   flex: 0 0 64px;
+  height: 100vh;
 }
-.main aside img {
+.main .side-bar img {
   width: 100%;
   height: 100%;
 }
-.main aside .logo {
+.main .side-bar .logo {
   width: 56px;
   height: 56px;
   margin: 4px 0 93px;
 }
-.main aside .avatar {
+.main .side-bar .avatar {
   width: 32px;
   height: 32px;
   margin-bottom: 93px;
 }
-.main aside .message {
+.main .side-bar .message {
   position: relative;
   width: 64px;
   height: 40px;
   margin-bottom: 50px;
 }
-.main aside .message .message-number {
+.main .side-bar .message .message-number {
   display: flex;
   position: absolute;
   top: 7px;
@@ -48,54 +52,62 @@ body {
   width: 16px;
   height: 16px;
 }
-.main aside .tabs .tab-button-outer #tab-button {
+.main .side-bar nav ul {
   margin-bottom: 59px;
 }
-.main aside .tabs .tab-button-outer #tab-button li {
+.main .side-bar nav ul li {
   list-style: none;
 }
-.main aside .tabs .tab-button-outer #tab-button li a {
+.main .side-bar nav ul li a {
   width: 64px;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.main aside .tabs .tab-button-outer #tab-button li a svg {
+.main .side-bar nav ul li a svg {
   color: #002766;
   display: flex;
   width: 16px;
   height: 16px;
 }
-.main aside .tabs .tab-button-outer #tab-button li a:hover,
-.main aside .tabs .tab-button-outer #tab-button .is-active a {
-  background-color: #e6f7ff;
-  border-right: 2px solid #1890ff;
+.main .side-bar nav ul li:first-child {
+  background-color: #E6F7FF;
+  border-right: 2px solid #1890FF;
 }
-.main aside .tabs .tab-button-outer #tab-button .is-active a svg {
-  color: #1890ff;
+.main .side-bar nav ul li:first-child a svg {
+  color: #1890FF;
 }
-.main aside .tabs .tab-contents {
+.main .side-bar .setting {
+  width: 64px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .collapsible-bar {
   width: 256px;
   position: fixed;
   top: 16px;
-  left: 64px;
+  left: -256px;
   background-color: #FFFFFF;
   border-radius: 8px;
   height: 100vh;
+  z-index: -1;
+  transition: 0.7s;
 }
-.main aside .tabs .tab-contents .selection-bar {
+.main .collapsible-bar .selection-bar {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 35px;
   white-space: nowrap;
   padding: 10px 0;
-  background-color: #e6f7ff;
+  background-color: #E6F7FF;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
-.main aside .tabs .tab-contents .selection-bar .selection {
+.main .collapsible-bar .selection-bar .selection {
   font-size: 14px;
   font-weight: 600;
   line-height: 22px;
@@ -104,33 +116,33 @@ body {
   align-items: center;
   gap: 0.625rem;
 }
-.main aside .tabs .tab-contents .selection-bar .selection img {
+.main .collapsible-bar .selection-bar .selection img {
   width: 16px;
   height: 16px;
 }
-.main aside .tabs .tab-contents .selection-bar .clear {
+.main .collapsible-bar .selection-bar .clear {
   display: flex;
   align-items: center;
   gap: 2px;
   font-size: 12px;
   font-weight: 400;
   line-height: 20px;
-  color: #1890ff;
+  color: #1890FF;
 }
-.main aside .tabs .tab-contents .selection-bar .clear img {
+.main .collapsible-bar .selection-bar .clear img {
   width: 12px;
   height: 12px;
 }
-.main aside .tabs .tab-contents .advance-seach {
+.main .collapsible-bar .advance-seach {
   margin: 14px 0 18px 24px;
 }
-.main aside .tabs .tab-contents .advance-seach span {
+.main .collapsible-bar .advance-seach span {
   font-size: 12px;
   font-weight: 400;
   line-height: 20px;
   color: #262626;
 }
-.main aside .tabs .tab-contents .advance-seach .search {
+.main .collapsible-bar .advance-seach .search {
   width: 192px;
   height: 36px;
   border-radius: 4px;
@@ -143,14 +155,14 @@ body {
   line-height: 22px;
   color: #FFFFFF;
   border: none;
-  background-color: #1890ff;
+  background-color: #1890FF;
   margin-top: 4px;
 }
-.main aside .tabs .tab-contents .advance-seach .search img {
+.main .collapsible-bar .advance-seach .search img {
   width: 16px;
   height: 16px;
 }
-.main aside .tabs .tab-contents .detail-listing li {
+.main .collapsible-bar .detail-listing li {
   font-size: 12px;
   font-weight: 400;
   line-height: 20x;
@@ -162,31 +174,30 @@ body {
   list-style: none;
   border-top: 2px solid #F5F5F5;
 }
-.main aside .tabs .tab-contents .detail-listing li:last-child {
+.main .collapsible-bar .detail-listing li:last-child {
   border-bottom: 2px solid #F5F5F5;
 }
-.main aside .tabs .tab-contents .detail-listing img {
+.main .collapsible-bar .detail-listing img {
   width: 24px;
   height: 24px;
 }
-.main aside .setting {
-  width: 64px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .main .main-content {
   flex: 1;
+  height: 100vh;
+  overflow-y: scroll;
   padding: 16px 16px 16px 0;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
+.main .main-content::-webkit-scrollbar {
+  display: none;
+}
 .main .main-content .skill-type {
   padding: 24px;
   border-radius: 16px;
   background-color: #FFFFFF;
+  z-index: -2;
 }
 .main .main-content .skill-type .result {
   display: flex;
@@ -292,6 +303,7 @@ body {
   display: flex;
   gap: 33px;
   align-items: center;
+  z-index: -2;
 }
 .main .main-content .achievement-listing .achievement {
   width: -webkit-fill-available;
@@ -327,6 +339,7 @@ body {
   background-color: #FFFFFF;
   padding: 24px;
   border-radius: 16px;
+  z-index: -2;
 }
 .main .main-content .detail-search .btn-wrapper {
   display: flex;
@@ -478,6 +491,7 @@ body {
 .main .main-content .candidate-listing {
   background-color: #FFFFFF;
   border-radius: 16px;
+  z-index: -2;
 }
 .main .main-content .candidate-listing .candidate {
   display: flex;
