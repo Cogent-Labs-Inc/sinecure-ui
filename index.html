@@ -7,6 +7,9 @@
     <title>sinecure-ui</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
@@ -14,13 +17,6 @@
     <link rel="stylesheet" href="./stylesheets/style.css" />
   </head>
   <body>
-    <link
-      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-      rel="stylesheet"
-      id="bootstrap-css"
-    />
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <main class="main">
       <aside class="side-bar">
         <div class="logo">
@@ -290,14 +286,14 @@
               Use advanced search
             </button>
           </div>
-          <div class="tabs-detail-search">
+          <div class="tabs">
             <div class="tab-button-outer">
-              <ul id="tab-button-detail-search">
+              <ul id="tab-button">
                 <li><a href="#tab06">Search Results</a></li>
                 <li><a href="#tab07">Compare Candidates</a></li>
               </ul>
             </div>
-            <div id="tab06" class="tab-contents-detail-search">
+            <div id="tab06" class="tab-contents">
               <div class="filter-detail-search">
                 <div class="filter-data">
                   <div class="filter">
@@ -433,7 +429,7 @@
                 <img src="./assets/svg-images/layout.svg" alt="layout" />
               </div>
             </div>
-            <div id="tab07" class="tab-contents-detail-search">
+            <div id="tab07" class="tab-contents">
               compare candidate data
             </div>
           </div>
@@ -1070,12 +1066,9 @@
   <script>
     const sidebarCollapseButton = document.querySelector(".setting");
     const collapsibleBar = document.querySelector(".collapsible-bar");
-    sidebarCollapseButton.onclick = function () {
-      collapsibleBar.classList.toggle("active");
-    };
-    $(function () {
-      var $tabButtonItem = $("#tab-button-detail-search li"),
-        $tabContents = $(".tab-contents-detail-search"),
+     $(function () {
+      var $tabButtonItem = $("#tab-button li"),
+        $tabContents = $(".tab-contents"),
         activeClass = "is-active";
 
       $tabButtonItem.first().addClass(activeClass);
@@ -1091,5 +1084,12 @@
         e.preventDefault();
       });
     });
+
+
+    sidebarCollapseButton.onclick = function () {
+      collapsibleBar.classList.toggle("active");
+    };
+    
+   
   </script>
 </html>

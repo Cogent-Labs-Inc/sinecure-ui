@@ -61,7 +61,7 @@ body {
             justify-content: center;
             align-items: center;
             svg {
-              color: $OOSecondary;
+              color: $textSecondary;
               display: flex;
               width: 16px;
               height: 16px;
@@ -111,7 +111,7 @@ body {
         font-size: 14px;
         font-weight: 600;
         line-height: 22px;
-        color: $OOSecondary;
+        color: $textSecondary;
         display: flex;
         align-items: center;
         gap: 0.625rem;
@@ -368,10 +368,10 @@ body {
           }
         }
       }
-      .tabs-detail-search {
+      .tabs {
         margin: 24px 0;
         .tab-button-outer {
-          #tab-button-detail-search {
+          #tab-button {
             display: flex;
             gap: 32px;
             margin-bottom: 40px;
@@ -387,13 +387,13 @@ body {
               }
             }
           }
-          #tab-button-detail-search li a:hover,
-          #tab-button-detail-search .is-active a {
+          #tab-button li a:hover,
+          #tab-button .is-active a {
             color: $colorPrimary;
             border-bottom: 2px solid $colorPrimary;
           }
         }
-        .tab-contents-detail-search {
+        .tab-contents {
           min-height: 88px;
           .filter-detail-search {
             display: flex;
@@ -482,7 +482,7 @@ body {
                   background-color: $universalWhite;
                 }
                 &:first-child {
-                  color: $OOPrimary;
+                  color: $textPrimary;
                 }
               }
             }
@@ -561,7 +561,7 @@ body {
             font-size: 16px;
             font-weight: 600;
             line-height: 24px;
-            color: $OOPrimary;
+            color: $textPrimary;
             text-align: center;
           }
           p {
@@ -680,7 +680,7 @@ body {
               font-size: 14px;
               font-weight: 600;
               line-height: 22px;
-              color: $OOSecondary;
+              color: $textSecondary;
               margin-bottom: 5px;
             }
             .experience-span {
@@ -723,7 +723,7 @@ body {
                 font-size: 12px;
                 font-weight: 400;
                 line-height: 20px;
-                color: $OOTertiary;
+                color: $textTertiary;
                 margin: 0;
               }
               img {
