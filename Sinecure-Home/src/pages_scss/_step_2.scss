@@ -1,0 +1,339 @@
+.body-wrapper {
+	padding: 16px;
+	background-color: #f5f5f5;
+	height: 100vh;
+	overflow-y: scroll;
+	.step-two-hero {
+		background-color: #fff;
+		background-image: url('assets/images/background.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		height: calc(100vh - -170px);
+	}
+	.required-skills-description {
+		gap: 31px;
+		.skills-heading {
+			margin-top: 3.75rem;
+			h1 {
+				max-width: 678px;
+				color: $textColorPrimary;
+			}
+		}
+		.skills-detail {
+			h3 {
+				max-width: 680px;
+				color: $textColorPrimary;
+				z-index: 99999;
+				span {
+					font-weight: 600;
+					position: relative;
+					z-index: 99999;
+				}
+			}
+		}
+	}
+	.experience-section {
+		margin-top: 41px;
+		font-family: Roboto;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 22px;
+		color: $textColorPrimary;
+	}
+	.skils-detail-section {
+		position: relative;
+		margin: 90px 96px 0;
+		.search-fields-wrapper {
+			justify-content: space-between;
+			span {
+				color: $textColorPrimary;
+				font-size: 14px;
+				font-weight: 600;
+				line-height: 22px;
+			}
+			.input-wrapper {
+				width: 458px;
+				margin-top: 1rem;
+				border: 1px solid #eeeeee;
+				box-shadow: 9px 9px 40px 0px rgba(54, 122, 184, 0.2);
+			}
+			.options-list {
+				z-index: 999999999;
+				top: 108px;
+				width: 380px;
+				left: 45px;
+			}
+			.your-choice {
+				width: 458px;
+				display: flex;
+				align-items: center;
+				margin-top: 1.5rem;
+				gap: 13px;
+
+				span {
+					font-size: 16px;
+					font-weight: 400;
+					line-height: 24px;
+					margin-right: 13px;
+				}
+				.recent-search-list {
+					flex-wrap: wrap;
+					height: 182px;
+					overflow-y: scroll;
+					gap: 13px;
+					&::-webkit-scrollbar {
+						width: 4px;
+					}
+					&::-webkit-scrollbar-thumb {
+						background-color: #69c0ff;
+					}
+					&::-webkit-scrollbar-track {
+						background-color: #e6f7ff;
+						border-radius: 9px;
+					}
+					li {
+						font-family: Roboto;
+						font-size: 14px;
+						font-weight: 400;
+						line-height: 19px;
+						gap: 0.8rem;
+						border-radius: 55px;
+						border: 1px solid #91d5ff;
+						padding: 4px 5px 4px 15px;
+						color: #fff;
+						background-color: #40a9ff;
+					}
+				}
+			}
+		}
+	}
+	.buttons-section {
+		position: absolute;
+		bottom: -100px;
+		gap: 15px;
+		left: 50%;
+		right: 50%;
+		.previous-button {
+			display: flex;
+			align-items: center;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 24px;
+			color: #40a9ff;
+			border: 1px solid #40a9ff;
+			background-color: transparent;
+			width: 121px;
+			border-radius: 4px;
+			padding: 8px 16px;
+			gap: 8px;
+			white-space: nowrap;
+		}
+		.next-button {
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 24px;
+			color: #ffffff;
+			min-width: 125px;
+			padding: 8px 16px;
+			border-radius: 4px;
+			background-color: #096dd9;
+			border: transparent;
+			white-space: nowrap;
+		}
+	}
+}
+:root {
+	--ColorPrimaryDk: #193957;
+	--ColorPrimaryLt: #31689b;
+}
+
+.range-slider {
+	--range-slider-common-height: 16px;
+	--range-slider-handle-width: 24px;
+	--range-slider-handle-height: 24px;
+	margin: 5.8125rem auto 0;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 38%;
+	height: 100%;
+}
+
+.range-slider > div {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	left: 13px;
+	right: 15px;
+	height: 4px;
+}
+
+.range-slider > div > .range-slider-val-left,
+.range-slider > div > .range-slider-val-right,
+.range-slider > div > .range-slider-val-range {
+	height: 4px;
+}
+
+.range-slider > div > .range-slider-val-left {
+	position: absolute;
+	left: -8px;
+
+	border-radius: 10px;
+	background-color: #ccc;
+}
+
+.range-slider > div > .range-slider-val-right {
+	position: absolute;
+	right: 0;
+	margin: 0 7px;
+	border-radius: 10px;
+	background-color: #ccc;
+}
+
+.range-slider > div > .range-slider-val-range {
+	position: absolute;
+	left: 0;
+	top: -1px;
+	height: 4px;
+	border-radius: 4px;
+	background-color: var(--ColorPrimaryLt);
+}
+
+.range-slider > div > .range-slider-handle {
+	z-index: 1;
+	position: absolute;
+	top: -5px;
+	margin-left: -11px;
+	width: 14px;
+	height: 14px;
+	border-radius: 100%;
+	background-color: #fff;
+	text-align: left;
+	border: 1px solid #003a8c;
+
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+	outline: none;
+	cursor: pointer;
+}
+
+div.range-slider > input[type='range']::-ms-thumb {
+	width: var(--range-slider-handle-width);
+	height: var(--range-slider-handle-height);
+	border: 0 none;
+	border-radius: 0px;
+	background: red;
+
+	pointer-events: all;
+}
+
+div.range-slider > input[type='range']::-moz-range-thumb {
+	width: var(--range-slider-handle-width);
+	height: var(--range-slider-handle-height);
+	border: 0 none;
+	border-radius: 0px;
+	background: red;
+
+	pointer-events: all;
+}
+
+div.range-slider > input[type='range']::-webkit-slider-thumb {
+	width: var(--range-slider-handle-width);
+	height: var(--range-slider-handle-height);
+	border: 0 none;
+	border-radius: 0px;
+	background: red;
+
+	pointer-events: all;
+	-webkit-appearance: none;
+}
+
+div.range-slider > input[type='range']::-ms-fill-lower {
+	background: transparent;
+	border: 0 none;
+}
+
+div.range-slider > input[type='range']::-ms-fill-upper {
+	background: transparent;
+	border: 0 none;
+}
+
+.range-slider > input[type='range'] {
+	z-index: 1;
+	position: absolute;
+	width: 100%;
+	height: 4px;
+
+	opacity: 0;
+	filter: alpha(opacity=0);
+	cursor: pointer;
+	pointer-events: none;
+	--webkit-appearance: none;
+}
+
+div.range-slider > input[type='range']::-ms-track {
+	background: transparent;
+	color: transparent;
+
+	--webkit-appearance: none;
+}
+
+div.range-slider > input[type='range']::-moz-range-track {
+	background: transparent;
+	color: transparent;
+
+	-moz-appearance: none;
+}
+
+div.range-slider > input[type='range']:focus::-webkit-slider-runnable-track {
+	background: transparent;
+	border: transparent;
+}
+
+div.range-slider > input[type='range']:focus {
+	outline: none;
+}
+
+div.range-slider > input[type='range']::-ms-tooltip {
+	display: none;
+}
+
+.range-slider > div > .range-slider-tooltip {
+	z-index: 2;
+	position: absolute;
+	top: -42px;
+	margin-left: -12px;
+	width: 28px;
+	height: 28px;
+	border-radius: 28px;
+	background-color: var(--ColorPrimaryLt);
+	color: #fff;
+	text-align: center;
+
+	opacity: 0;
+}
+
+.range-slider > div > .range-slider-tooltip:after {
+	content: '';
+
+	position: absolute;
+	left: 0;
+	top: 19px;
+	border-left: 14px solid transparent;
+	border-right: 14px solid transparent;
+	border-top-width: 16px;
+	border-top-style: solid;
+	border-top-color: var(--ColorPrimaryLt);
+	border-radius: 16px;
+}
+
+.range-slider > div > .range-slider-tooltip > span {
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 28px;
+}
+
+.range-slider:hover > div > .range-slider-tooltip {
+	opacity: 1;
+}
