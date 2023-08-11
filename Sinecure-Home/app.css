@@ -277,7 +277,7 @@ select {
 
 .active {
   background-color: rgb(230, 247, 255);
-  border-right: 2px solid #1890FF;
+  border-right: 2px solid #1890ff;
 }
 
 .hero-wrapper {
