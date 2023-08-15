@@ -1143,10 +1143,36 @@ body {
                 position: absolute;
                 content: "";
                 width: 24.625rem;
-                height: 0.125remx;
-                border: 1px dashed rgb(145, 213, 255);
+                height: 0.125rem;
+                border: 1px dashed $borderPrimaryColor;
                 bottom: 0.6875rem;
                 left: 0;
+              }
+              &:nth-child(2) {
+                @media  screen and (min-width: 160rem) {
+                  &:before {
+                    position: absolute;
+                    content: "";
+                    width: 24.625rem;
+                    height: 0.125rem;
+                    border: 1px dashed $borderPrimaryColor;
+                    bottom: 4.6875rem;
+                    left: 0;
+                  }
+                }
+              }
+              &:last-child {
+                @media  screen and (min-width: 160rem) {
+                  &::before {
+                    position: absolute;
+                    content: "";
+                    width: 24.625rem;
+                    height: 0.125rem;
+                    border: 1px dashed $borderPrimaryColor;
+                    bottom: 3.4375rem;
+                    left: 0;
+                  }
+                }
               }
             }
           }
