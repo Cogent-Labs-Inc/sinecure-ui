@@ -1484,6 +1484,9 @@ select {
   background-size: var(--bs-accordion-btn-icon-width);
   rotate: -90deg;
 }
+.step-four-hero .skils-detail-section .right-section .accordion .accordion-item .accordion-header button:focus {
+  box-shadow: none;
+}
 .step-four-hero .skils-detail-section .right-section .accordion .accordion-item .accordion-collapse {
   background-color: #f5fcff;
 }

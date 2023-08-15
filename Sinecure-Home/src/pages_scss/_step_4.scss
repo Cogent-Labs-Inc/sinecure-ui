@@ -129,6 +129,9 @@
 								background-size: var(--bs-accordion-btn-icon-width);
 								rotate: -90deg;
 							}
+							&:focus {
+								box-shadow: none;
+							}
 						}
 					}
 					.accordion-collapse {
