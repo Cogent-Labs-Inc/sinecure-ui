@@ -101,7 +101,7 @@ body {
     top: 1rem;
     left: -16rem;
     background-color: $universalWhite;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     height: calc(100vh - 1rem);
     z-index: 1;
     transition: 0.7s;
@@ -117,8 +117,8 @@ body {
       white-space: nowrap;
       padding: 0.625rem 0;
       background-color: $bgPrimaryColor;
-      border-top-left-radius: 8px;
-      border-top-right-radius: 8px;
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
       .selection {
         font-size: 0.875rem;
         font-weight: 600;
@@ -126,7 +126,7 @@ body {
         color: $textSecondary;
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 0.625rem;
         img {
           width: 1rem;
           height: 1rem;
@@ -157,7 +157,7 @@ body {
       .search {
         width: 12rem;
         height: 2.25rem;
-        border-radius: 4px;
+        border-radius: 0.25rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -179,7 +179,7 @@ body {
       li {
         font-size: 0.75rem;
         font-weight: 400;
-        line-height: 20x;
+        line-height: 1.25rem;
         color: $colorSecondary;
         display: flex;
         justify-content: space-between;
@@ -210,7 +210,7 @@ body {
     }
     .skill-type {
       padding: 1.5rem;
-      border-radius: 16px;
+      border-radius: 1rem;
       background-color: $universalWhite;
       .result {
         display: flex;
@@ -291,7 +291,7 @@ body {
             line-height: 1.375rem;
             color: $colorSecondary;
             background-color: transparent;
-            border-radius: 4px;
+            border-radius: 0.25rem;
             border: 1px solid $colorTertiary;
             outline: none;
             cursor: pointer;
@@ -314,7 +314,7 @@ body {
     .achievement-listing {
       padding: 1.5rem;
       background-color: white;
-      border-radius: 16px;
+      border-radius: 0.5rem;
       display: flex;
       gap: 2.0625rem;
       align-items: center;
@@ -325,7 +325,7 @@ body {
         width: -webkit-fill-available;
         height: 5.25rem;
         padding: 1rem 0 1rem 1.5rem;
-        border-radius: 8px;
+        border-radius: 0.5rem;
         display: flex;
         align-items: center;
         gap: 1rem;
@@ -377,7 +377,7 @@ body {
     .detail-search {
       background-color: $universalWhite;
       padding: 1.5rem;
-      border-radius: 16px;
+      border-radius: 1rem;
       .btn-wrapper {
         display: flex;
         gap: 0.5625rem;
@@ -393,7 +393,7 @@ body {
           font-weight: 400;
           line-height: 1.375rem;
           padding: 0.5rem 1rem;
-          border-radius: 4px;
+          border-radius: 0.25rem;
           border: none;
           outline: none;
           cursor: pointer;
@@ -478,7 +478,7 @@ body {
                 font-weight: 400;
                 line-height: 1.375rem;
                 color: $colorSecondary;
-                border-radius: 4px;
+                border-radius: 0.25rem;
                 border: 1px solid $colorTertiary;
                 height: 2rem;
                 img {
@@ -521,7 +521,7 @@ body {
               }
               input {
                 padding: 0.3125rem 1.875rem 0.3125rem 0.75rem;
-                border-radius: 4px;
+                border-radius: 0.25rem;
                 border: 1px solid $colorTertiary;
                 width: 13.125rem;
                 height: 2rem;
@@ -541,7 +541,7 @@ body {
             align-items: center;
             padding: 0.5rem 0.625rem;
             background-color: $bgPrimaryColor;
-            border-radius: 4px;
+            border-radius: 0.25rem;
             ul {
               display: flex;
               gap: 1.3125rem;
@@ -557,13 +557,15 @@ body {
                 &:last-child {
                   color: $highlightColor;
                 }
-                .checkbox {
+                input[type="checkbox"] {
                   width: 1rem;
                   height: 1rem;
                   background-color: $universalWhite;
+                  border: 1px solid #D9D9D9;
                 }
-                &:first-child {
+                label {
                   color: $textPrimary;
+                  margin: 0;
                 }
                 &:nth-child(2),
                 &:last-child {
@@ -589,7 +591,7 @@ body {
     }
     .candidate-listing {
       background-color: $universalWhite;
-      border-radius: 16px;
+      border-radius: 1rem;
       position: relative;
       @media screen and (min-width: 160rem) {
         order: 2;
@@ -695,7 +697,7 @@ body {
                 .progress-bar {
                   width: 7.125rem;
                   height: 0.3125rem;
-                  border-radius: 5px;
+                  border-radius: 0.3125rem;
                   background-color: $colorTertiary;
                   margin: 0.625rem;
                   @media screen and (min-width: 160rem) {
@@ -753,7 +755,7 @@ body {
               width: 8.4375rem;
               height: 2.25rem;
               border: 1px solid $colorCommonTertiary;
-              border-radius: 4px;
+              border-radius: 0.25rem;
               font-size: 0.75rem;
               font-weight: 400;
               color: $colorPrimary;
@@ -895,7 +897,7 @@ body {
                 font-size: 0.75rem;
                 font-weight: 400;
                 color: $colorPrimary;
-                border-radius: 2px;
+                border-radius: 0.125rem;
                 border: 1px solid $borderPrimaryColor;
                 display: none;
                 &:first-child,
@@ -949,6 +951,8 @@ body {
                     display: none;
                     @media screen and (min-width: 2560px) {
                       display: inline;
+                      font-size: 12px;
+                      color: $colorPrimary;
                     }
                   }
                   svg {
@@ -996,7 +1000,7 @@ body {
                   width: 7rem;
                   height: 1.25rem;
                   border: 1px solid $renewedBorderColor;
-                  border-radius: 4px;
+                  border-radius: 0.25rem;
                   font-size: 0.625rem;
                   color: $renewedTextColor;
                   position: absolute;
@@ -1119,16 +1123,7 @@ body {
                 font-weight: 500;
                 color: $colorPrimary;
                 position: relative;
-                &:after {
-                  position: absolute;
-                  content: "";
-                  width: 24.625rem;
-                  border: 1px dashed $borderPrimaryColor;
-                  top: 50%;
-                  transform: translateY(-50%);
-                  left: -1.5rem;
-                  z-index: -1;
-                }
+                z-index: 2;
                 img {
                   width: 0.875rem;
                   height: 0.875rem;
@@ -1142,6 +1137,15 @@ body {
                 border-radius: 50%;
                 background-color: $colorPrimary;
                 top: 0.4375rem;
+                left: 0;
+              }
+              &:before {
+                position: absolute;
+                content: "";
+                width: 24.625rem;
+                height: 0.125remx;
+                border: 1px dashed rgb(145, 213, 255);
+                bottom: 0.6875rem;
                 left: 0;
               }
             }
