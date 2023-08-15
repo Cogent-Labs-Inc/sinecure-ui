@@ -8,7 +8,6 @@
 		background-image: url('assets/images/background.png');
 		background-size: contain;
 		background-repeat: no-repeat;
-		height: calc(100vh - -170px);
 	}
 	.required-skills-description {
 		gap: 31px;
@@ -109,11 +108,10 @@
 		}
 	}
 	.buttons-section {
-		position: absolute;
-		bottom: -100px;
-		gap: 15px;
 		left: 50%;
 		right: 50%;
+		padding: 71px 0 32px;
+		gap: 15px;
 		.previous-button {
 			display: flex;
 			align-items: center;
@@ -133,7 +131,7 @@
 			font-size: 16px;
 			font-weight: 400;
 			line-height: 24px;
-			color: $universalWhitefff;
+			color: $universalWhite;
 			min-width: 125px;
 			padding: 8px 16px;
 			border-radius: 4px;

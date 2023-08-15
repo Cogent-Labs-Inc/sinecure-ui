@@ -469,11 +469,10 @@ select {
   overflow-y: scroll;
 }
 .body-wrapper .step-two-hero {
-  background-color: #fff;
+  background-color: #ffffff;
   background-image: url("assets/images/background.png");
   background-size: contain;
   background-repeat: no-repeat;
-  height: calc(100vh + 170px);
 }
 .body-wrapper .required-skills-description {
   gap: 31px;
@@ -520,7 +519,7 @@ select {
 .body-wrapper .skils-detail-section .search-fields-wrapper .input-wrapper {
   width: 458px;
   margin-top: 1rem;
-  border: 1px solid #eeeeee;
+  border: 1px solid #eee;
   box-shadow: 9px 9px 40px 0px rgba(54, 122, 184, 0.2);
 }
 .body-wrapper .skils-detail-section .search-fields-wrapper .options-list {
@@ -567,15 +566,14 @@ select {
   border-radius: 55px;
   border: 1px solid #91d5ff;
   padding: 4px 5px 4px 15px;
-  color: #fff;
+  color: #ffffff;
   background-color: #40a9ff;
 }
 .body-wrapper .buttons-section {
-  position: absolute;
-  bottom: -100px;
-  gap: 15px;
   left: 50%;
   right: 50%;
+  padding: 71px 0 32px;
+  gap: 15px;
 }
 .body-wrapper .buttons-section .previous-button {
   display: flex;
@@ -670,7 +668,7 @@ select {
   width: 14px;
   height: 14px;
   border-radius: 100%;
-  background-color: #fff;
+  background-color: #ffffff;
   text-align: left;
   border: 1px solid #003a8c;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
@@ -762,7 +760,7 @@ div.range-slider > input[type=range]::-ms-tooltip {
   height: 28px;
   border-radius: 28px;
   background-color: var(--ColorPrimaryLt);
-  color: #fff;
+  color: #ffffff;
   text-align: center;
   opacity: 0;
 }
@@ -788,4 +786,581 @@ div.range-slider > input[type=range]::-ms-tooltip {
 
 .range-slider:hover > div > .range-slider-tooltip {
   opacity: 1;
+}
+
+.body-wrapper .step-three-hero {
+  background-color: #ffffff;
+  position: relative;
+}
+.body-wrapper .graph-section-wrapper {
+  margin-top: 3.3125rem;
+  padding: 0 3.5625rem 0 5.25rem;
+}
+.body-wrapper .graph-section-wrapper .graph-section {
+  gap: 105px;
+}
+.body-wrapper .graph-section-wrapper .graph-section .sorting-buttons {
+  gap: 10px;
+}
+.body-wrapper .graph-section-wrapper .graph-section .sorting-buttons .title-sort .title-sort-button {
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  gap: 3px;
+  color: #262626;
+  background-color: transparent;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 5px 16px;
+  align-items: center;
+  height: 34px;
+}
+.body-wrapper .graph-section-wrapper .graph-section .sorting-buttons .match-sort .match-sort-button {
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  gap: 3px;
+  color: #262626;
+  background-color: transparent;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 5px 16px;
+  align-items: center;
+}
+.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper {
+  margin-top: 2.0625rem;
+}
+.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .listing-wrapper {
+  padding: 15px 16px 15px 0;
+  justify-content: flex-end;
+  max-width: 210px;
+  gap: 18px;
+  border-right: 3px solid rgb(176, 190, 197);
+  opacity: 0.6068;
+}
+.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .listing-wrapper .graph-listing {
+  height: 280px;
+  overflow-y: scroll;
+  gap: 18px;
+}
+.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .listing-wrapper .graph-listing li {
+  display: flex;
+  gap: 5px;
+  justify-content: flex-end;
+}
+.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .listing-wrapper .graph-listing li span {
+  color: #002766;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  width: 146px;
+}
+.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .listing-wrapper .show-more-button {
+  justify-content: flex-end;
+}
+.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .listing-wrapper .show-more-button .more-title-button {
+  display: flex;
+  width: 154px;
+  padding: 5px 16px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  border: 1px solid #40a9ff;
+  background: transparent;
+  color: #40a9ff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .graph {
+  margin-left: 40px;
+  padding: 15px 0;
+  gap: 18px;
+}
+.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .graph .graph-line {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #cde9f6;
+  height: 24px;
+  border-radius: 50px;
+  gap: 4px;
+}
+.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .graph .graph-line span {
+  width: 50.386px;
+  color: #003a8c;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .graph .graph-line.gl-1 {
+  width: 520px;
+}
+.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .graph .graph-line.gl-2 {
+  width: 402px;
+}
+.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .graph .graph-line.gl-3 {
+  width: 460px;
+}
+.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .graph .graph-line.gl-4 {
+  width: 360px;
+}
+.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .graph .graph-line.gl-5 {
+  width: 460px;
+}
+.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .graph .graph-line.gl-6 {
+  width: 309px;
+}
+.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .graph .graph-line.gl-7 {
+  width: 157px;
+}
+.body-wrapper .graph-section-wrapper .graph-section .job-titles {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  gap: 13px;
+}
+.body-wrapper .graph-section-wrapper .graph-section .job-titles span {
+  color: #002766;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  text-transform: capitalize;
+}
+.body-wrapper .graph-section-wrapper .graph-section .job-titles .recent-search-list {
+  display: flex;
+  gap: 13px;
+}
+.body-wrapper .graph-section-wrapper .graph-section .job-titles .recent-search-list li {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  gap: 0.8rem;
+  border-radius: 55px;
+  border: 1px solid #91d5ff;
+  padding: 6px 5px 6px 19px;
+  color: #ffffff;
+  background-color: #40a9ff;
+}
+.body-wrapper .graph-section-wrapper .graph-section .match-progress {
+  width: 100%;
+  background-color: #f5fcff;
+  padding: 68px 23px;
+}
+.body-wrapper .graph-section-wrapper .graph-section .match-progress span {
+  color: #003a8c;
+}
+.body-wrapper .graph-section-wrapper .graph-section .match-progress .progress-wrapper h4 {
+  color: #40a9ff !important;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: -0.24px;
+  margin-top: 23px;
+}
+.body-wrapper .graph-section-wrapper .graph-section .match-progress .progress-wrapper h5 {
+  margin: 0;
+  color: #40a9ff;
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.24px;
+}
+.body-wrapper .graph-section-wrapper .graph-section .match-progress .progress-wrapper .circular-progress {
+  width: 120px;
+  height: 120px !important;
+  float: left;
+  line-height: 150px;
+  background: none;
+  box-shadow: none;
+  position: relative;
+  margin-top: 53px;
+}
+.body-wrapper .graph-section-wrapper .graph-section .match-progress .progress-wrapper .circular-progress:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 6px solid #bae7ff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.body-wrapper .graph-section-wrapper .graph-section .match-progress .progress-wrapper .circular-progress > span {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.body-wrapper .graph-section-wrapper .graph-section .match-progress .progress-wrapper .circular-progress .progress-left {
+  left: 0;
+}
+.body-wrapper .graph-section-wrapper .graph-section .match-progress .progress-wrapper .circular-progress .progress-bar {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 6px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+}
+.body-wrapper .graph-section-wrapper .graph-section .match-progress .progress-wrapper .circular-progress .progress-value {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  line-height: 135px;
+  text-align: center;
+  position: absolute;
+  top: -3%;
+  left: 8%;
+  color: #262626;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 400;
+}
+.body-wrapper .graph-section-wrapper .graph-section .match-progress .progress-wrapper .circular-progress .progress-right {
+  right: 0;
+}
+.body-wrapper .graph-section-wrapper .graph-section .match-progress .progress-wrapper .circular-progress .progress-left .progress-bar {
+  left: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-left: 0;
+  transform-origin: center left;
+}
+.body-wrapper .graph-section-wrapper .graph-section .match-progress .progress-wrapper .circular-progress .progress-right .progress-bar {
+  left: -100%;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-right: 0;
+  transform-origin: center right;
+  animation: loading-1 1.8s linear forwards;
+}
+.body-wrapper .graph-section-wrapper .graph-section .match-progress .progress-wrapper .circular-progress.blue .progress-bar {
+  border-color: #1890ff;
+}
+.body-wrapper .graph-section-wrapper .graph-section .match-progress .progress-wrapper .circular-progress.blue .progress-left .progress-bar {
+  animation: loading-2 1.5s linear forwards 1.8s;
+}
+@keyframes loading-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes loading-2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(80deg);
+  }
+}
+@keyframes loading-3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(135deg);
+  }
+}
+.body-wrapper .graph-section-wrapper .graph-section .match-progress .linear-progress-wrapper {
+  margin-top: 36px;
+}
+.body-wrapper .graph-section-wrapper .graph-section .match-progress .linear-progress-wrapper span {
+  color: #003a8c;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.12px;
+}
+.body-wrapper .graph-section-wrapper .graph-section .match-progress .linear-progress-wrapper .progress {
+  margin-top: 11px;
+  background-color: #d9f7be;
+  border-radius: 10px;
+}
+.body-wrapper .graph-section-wrapper .graph-section .match-progress .linear-progress-wrapper .progress .progress-bar {
+  border-radius: 8px;
+}
+.body-wrapper .button-section {
+  padding: 100px 0 32px;
+  gap: 15px;
+}
+.body-wrapper .button-section .previous-button {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #40a9ff;
+  border: 1px solid #40a9ff;
+  background-color: transparent;
+  width: 121px;
+  border-radius: 4px;
+  padding: 8px 16px;
+  gap: 8px;
+  white-space: nowrap;
+}
+.body-wrapper .button-section .next-button {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #ffffff;
+  min-width: 125px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #096dd9;
+  border: transparent;
+  white-space: nowrap;
+}
+
+.body-wrapper .step-seven-hero {
+  position: relative;
+  background-color: #f5fcff;
+  height: calc(100vh - 32px);
+}
+.body-wrapper .step-seven-hero .heading-section .heading h1 {
+  margin-top: 274px;
+  max-width: 600px;
+  color: #002766;
+  margin-bottom: 20px;
+}
+.body-wrapper .step-seven-hero .heading-section .heading h1 span {
+  color: #0050b3;
+  display: block;
+}
+.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress {
+  width: 120px;
+  height: 120px !important;
+  float: left;
+  line-height: 150px;
+  background: none;
+  box-shadow: none;
+  position: relative;
+  margin-top: 53px;
+}
+.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 6px solid #bae7ff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress > span {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress .progress-left {
+  left: 0;
+}
+.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress .progress-bar {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 6px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+}
+.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress .progress-value {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  line-height: 135px;
+  text-align: center;
+  position: absolute;
+  top: -3%;
+  left: 8%;
+  color: #262626;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 400;
+}
+.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress .progress-right {
+  right: 0;
+}
+.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress .progress-left .progress-bar {
+  left: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-left: 0;
+  transform-origin: center left;
+}
+.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress .progress-right .progress-bar {
+  left: -100%;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-right: 0;
+  transform-origin: center right;
+  animation: loading-1 1.8s linear forwards;
+}
+.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress.blue .progress-bar {
+  border-color: #1890ff;
+}
+.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress.blue .progress-left .progress-bar {
+  animation: loading-2 1.5s linear forwards 1.8s;
+}
+@keyframes loading-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes loading-2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(80deg);
+  }
+}
+@keyframes loading-3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(135deg);
+  }
+}
+.body-wrapper .step-seven-hero .heading-section .sub-heading {
+  margin-top: 109px;
+}
+.body-wrapper .step-seven-hero .heading-section .sub-heading h3 {
+  max-width: 513px;
+  color: #002766;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+}
+.body-wrapper .step-seven-hero .heading-section .sub-heading h3 span {
+  font-weight: 600;
+  position: relative;
+  z-index: 99999;
+}
+.body-wrapper .step-seven-hero .proceed-button-section {
+  margin-top: 200px;
+  gap: 15px;
+}
+.body-wrapper .step-seven-hero .proceed-button-section .previous-button {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #40a9ff;
+  border: 1px solid #40a9ff;
+  background-color: transparent;
+  width: 121px;
+  border-radius: 4px;
+  padding: 8px 16px;
+  gap: 8px;
+  white-space: nowrap;
+}
+.body-wrapper .step-seven-hero .proceed-button-section .next-button {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #ffffff;
+  min-width: 125px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #096dd9;
+  border: transparent;
+  white-space: nowrap;
+}
+
+.step-four-hero {
+  background-color: #fff;
+  position: relative;
+}
+.step-four-hero .overlay {
+  background-color: #f5fcff;
+  top: 0;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  width: 50%;
+}
+.step-four-hero .headings-section {
+  margin-top: 2.875rem;
+}
+.step-four-hero .headings-section .heading h1 {
+  max-width: 700px;
+  z-index: 9999;
+  color: #002766;
+}
+.step-four-hero .headings-section .sub-heading {
+  margin-top: 32px;
+}
+.step-four-hero .headings-section .sub-heading h3 {
+  max-width: 670px;
+  color: #002766;
+  z-index: 99999;
+}
+.step-four-hero .headings-section .sub-heading h3 span {
+  font-weight: 600;
+  position: relative;
+  z-index: 99999;
+}
+.step-four-hero .skils-detail-section {
+  z-index: 9999;
+}
+.step-four-hero .next-buttons-section {
+  gap: 15px;
+  z-index: 9999;
+  padding: 362px 0 32px;
+}
+.step-four-hero .next-buttons-section .previous-button {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #40a9ff;
+  border: 1px solid #40a9ff;
+  background-color: transparent;
+  width: 121px;
+  border-radius: 4px;
+  padding: 8px 16px;
+  gap: 8px;
+  white-space: nowrap;
+}
+.step-four-hero .next-buttons-section .next-button {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #ffffff;
+  min-width: 125px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #096dd9;
+  border: transparent;
+  white-space: nowrap;
 }/*# sourceMappingURL=app.css.map */
