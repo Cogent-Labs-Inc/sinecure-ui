@@ -18,7 +18,7 @@
 		<script src="./index.js"></script>
 
 		<link rel="stylesheet" href="../../app.css" />
-		<title>Step 4</title>
+		<title>Step 5</title>
 	</head>
 	<body>
 		<div class="main">
@@ -135,12 +135,12 @@
 					<!-- <button onclick="nextStep()">Next</button> -->
 					<div class="headings-section d-flex d-col">
 						<div class="heading center text-center">
-							<h1>Which industries you would like to recruit from...</h1>
+							<h1>What companies do you want to include or exclude from your search?</h1>
 						</div>
 						<div class="sub-heading center text-center">
 							<h3>
-								Simply <span class="text-underline">choose from the list of holding companies</span>, pick agency
-								functions and <span class="text-underline"> select the individual agencies</span> to recruit from
+								Which firms <span class="text-underline">you want to target </span>candidates from or those that
+								<span class="text-underline">you want to exclude </span>from search results
 							</h3>
 						</div>
 					</div>
@@ -148,7 +148,7 @@
 						<div class="search-fields-wrapper d-flex">
 							<div class="search-container job-title">
 								<div>
-									<span>Choose your industry</span>
+									<span>Where do your candidates work?</span>
 									<div class="input-wrapper">
 										<img src="../../assets/svgs/Edit.svg" />
 										<input type="text" id="job-title-search-input" placeholder="Add industry" class="search-input" />
@@ -159,7 +159,14 @@
 										<li>UX Manager</li>
 										<li>UX Researcher</li>
 									</ul>
-									<div class="your-choice">
+									<div class="check-box d-flex">
+										<input type="checkbox" />
+										<label class="container"
+											>Also show me candidates that have previously worked at these companies
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="selected_items">
 										<ul class="recent-search-list d-flex">
 											<li class="center pointer">
 												Marketing and Advertising
@@ -171,7 +178,7 @@
 							</div>
 							<div class="search-container apply-field">
 								<div>
-									<span>Choose your industry Leader</span>
+									<span>What companies do your want exclude from search?</span>
 									<div class="input-wrapper">
 										<img src="../../assets/svgs/Edit.svg" />
 										<input type="text" id="apply-search-input" placeholder="Add industry leader" class="search-input" />
@@ -185,7 +192,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="next-buttons-section d-flex center">
+						<div class="buttons-wrapper d-flex center">
 							<button class="previous-button">
 								<div>
 									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

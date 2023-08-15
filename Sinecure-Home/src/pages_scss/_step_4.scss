@@ -32,12 +32,135 @@
 			}
 		}
 	}
+	.detail-section-wrapper {
+		position: relative;
+		z-index: 9999;
+	}
 	.skils-detail-section {
 		z-index: 9999;
+		.search-fields-wrapper {
+			.search-container {
+				display: flex;
+				flex-direction: column;
+				gap: 27px;
+				.check-box {
+					margin-top: 1rem;
+					label {
+						color: #262626;
+						font-family: Roboto;
+						font-size: 12px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: 20px;
+						padding: 0 8px;
+					}
+					input {
+						width: unset;
+					}
+				}
+				.tree-selector {
+					.input-wrapper {
+						position: relative;
+						&::after {
+							position: absolute;
+							background-image: url('assets/svgs/dropDown.svg');
+							background-size: contain;
+							background-repeat: no-repeat;
+							height: 8px;
+							width: 11px;
+							content: '';
+							right: 24px;
+							top: 28px;
+						}
+					}
+				}
+				.your-choice {
+					.recent-search-list {
+						width: 100%;
+						li {
+							height: 34px;
+						}
+					}
+					.recent-search-list::-webkit-scrollbar {
+						display: none;
+					}
+				}
+			}
+		}
+		.left-section {
+			width: 50%;
+		}
+		.right-section {
+			padding-left: 48px;
+			width: 50%;
+			h5 {
+				color: #002766;
+				font-family: Roboto;
+				font-size: 24px;
+				font-weight: 600;
+				line-height: 22px;
+			}
+			.accordion {
+				.accordion-item {
+					border: none;
+					&:not(:last-of-type) {
+						border-bottom: 1px solid #40a9ff;
+					}
+					.accordion-header {
+						button {
+							display: flex;
+							gap: 1rem;
+							background-color: #f5fcff;
+							color: #002766;
+							font-family: Roboto;
+							font-size: 16px;
+							font-weight: 600;
+							line-height: 24px;
+							&::after {
+								display: none;
+							}
+							&::before {
+								flex-shrink: 0;
+								width: var(--bs-accordion-btn-icon-width);
+								height: var(--bs-accordion-btn-icon-width);
+								content: '';
+								background-image: url('assets/svgs/dropDown.svg');
+								background-repeat: no-repeat;
+								background-size: var(--bs-accordion-btn-icon-width);
+								rotate: -90deg;
+							}
+						}
+					}
+					.accordion-collapse {
+						background-color: #f5fcff;
+						.accordion-pills-list {
+							display: flex;
+							gap: 12px;
+							flex-wrap: wrap;
+							li {
+								font-family: Roboto;
+								font-size: 14px;
+								font-weight: 400;
+								line-height: 19px;
+								gap: 0.8rem;
+								border-radius: 55px;
+								border: 1px solid $listBorderColor;
+								padding: 4px 5px 4px 15px;
+								color: $universalWhite;
+								background-color: $listColor;
+							}
+						}
+					}
+				}
+			}
+			.accordion-button:not(.collapsed)::before {
+				background-image: var(--bs-accordion-btn-active-icon);
+				transform: rotate(90deg);
+			}
+		}
 	}
 	.next-buttons-section {
 		gap: 15px;
-		z-index: 9999;
 		padding: 362px 0 32px;
 		.previous-button {
 			display: flex;

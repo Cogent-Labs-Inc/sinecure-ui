@@ -1133,7 +1133,6 @@ div.range-slider > input[type=range]::-ms-tooltip {
 .body-wrapper .step-seven-hero {
   position: relative;
   background-color: #f5fcff;
-  height: calc(100vh - 32px);
 }
 .body-wrapper .step-seven-hero .heading-section .heading h1 {
   margin-top: 274px;
@@ -1256,7 +1255,7 @@ div.range-slider > input[type=range]::-ms-tooltip {
   color: #002766;
   font-family: Poppins;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 32px;
 }
 .body-wrapper .step-seven-hero .heading-section .sub-heading h3 span {
@@ -1329,12 +1328,125 @@ div.range-slider > input[type=range]::-ms-tooltip {
   position: relative;
   z-index: 99999;
 }
+.step-four-hero .detail-section-wrapper {
+  position: relative;
+  z-index: 9999;
+}
 .step-four-hero .skils-detail-section {
   z-index: 9999;
 }
+.step-four-hero .skils-detail-section .search-fields-wrapper .search-container {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+.step-four-hero .skils-detail-section .search-fields-wrapper .search-container .check-box {
+  margin-top: 1rem;
+}
+.step-four-hero .skils-detail-section .search-fields-wrapper .search-container .check-box label {
+  color: #262626;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 0 8px;
+}
+.step-four-hero .skils-detail-section .search-fields-wrapper .search-container .check-box input {
+  width: unset;
+}
+.step-four-hero .skils-detail-section .search-fields-wrapper .search-container .tree-selector .input-wrapper {
+  position: relative;
+}
+.step-four-hero .skils-detail-section .search-fields-wrapper .search-container .tree-selector .input-wrapper::after {
+  position: absolute;
+  background-image: url("assets/svgs/dropDown.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 8px;
+  width: 11px;
+  content: "";
+  right: 24px;
+  top: 28px;
+}
+.step-four-hero .skils-detail-section .search-fields-wrapper .search-container .your-choice .recent-search-list {
+  width: 100%;
+}
+.step-four-hero .skils-detail-section .search-fields-wrapper .search-container .your-choice .recent-search-list li {
+  height: 34px;
+}
+.step-four-hero .skils-detail-section .search-fields-wrapper .search-container .your-choice .recent-search-list::-webkit-scrollbar {
+  display: none;
+}
+.step-four-hero .skils-detail-section .left-section {
+  width: 50%;
+}
+.step-four-hero .skils-detail-section .right-section {
+  padding-left: 48px;
+  width: 50%;
+}
+.step-four-hero .skils-detail-section .right-section h5 {
+  color: #002766;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 22px;
+}
+.step-four-hero .skils-detail-section .right-section .accordion .accordion-item {
+  border: none;
+}
+.step-four-hero .skils-detail-section .right-section .accordion .accordion-item:not(:last-of-type) {
+  border-bottom: 1px solid #40a9ff;
+}
+.step-four-hero .skils-detail-section .right-section .accordion .accordion-item .accordion-header button {
+  display: flex;
+  gap: 1rem;
+  background-color: #f5fcff;
+  color: #002766;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.step-four-hero .skils-detail-section .right-section .accordion .accordion-item .accordion-header button::after {
+  display: none;
+}
+.step-four-hero .skils-detail-section .right-section .accordion .accordion-item .accordion-header button::before {
+  flex-shrink: 0;
+  width: var(--bs-accordion-btn-icon-width);
+  height: var(--bs-accordion-btn-icon-width);
+  content: "";
+  background-image: url("assets/svgs/dropDown.svg");
+  background-repeat: no-repeat;
+  background-size: var(--bs-accordion-btn-icon-width);
+  rotate: -90deg;
+}
+.step-four-hero .skils-detail-section .right-section .accordion .accordion-item .accordion-collapse {
+  background-color: #f5fcff;
+}
+.step-four-hero .skils-detail-section .right-section .accordion .accordion-item .accordion-collapse .accordion-pills-list {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.step-four-hero .skils-detail-section .right-section .accordion .accordion-item .accordion-collapse .accordion-pills-list li {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  gap: 0.8rem;
+  border-radius: 55px;
+  border: 1px solid #91d5ff;
+  padding: 4px 5px 4px 15px;
+  color: #ffffff;
+  background-color: #40a9ff;
+}
+.step-four-hero .skils-detail-section .right-section .accordion-button:not(.collapsed)::before {
+  background-image: var(--bs-accordion-btn-active-icon);
+  transform: rotate(90deg);
+}
 .step-four-hero .next-buttons-section {
   gap: 15px;
-  z-index: 9999;
   padding: 362px 0 32px;
 }
 .step-four-hero .next-buttons-section .previous-button {
@@ -1353,6 +1465,401 @@ div.range-slider > input[type=range]::-ms-tooltip {
   white-space: nowrap;
 }
 .step-four-hero .next-buttons-section .next-button {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #ffffff;
+  min-width: 125px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #096dd9;
+  border: transparent;
+  white-space: nowrap;
+}
+
+.selected_items {
+  width: 458px;
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  gap: 13px;
+}
+.selected_items span {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-right: 13px;
+}
+.selected_items .recent-search-list {
+  flex-wrap: wrap;
+  gap: 13px;
+}
+.selected_items .recent-search-list li {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  gap: 0.8rem;
+  border-radius: 55px;
+  border: 1px solid #91d5ff;
+  padding: 4px 5px 4px 15px;
+  color: #ffffff;
+  background-color: #40a9ff;
+}
+
+.buttons-wrapper {
+  padding: 281px 0 32px;
+  gap: 15px;
+}
+.buttons-wrapper .previous-button {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #40a9ff;
+  border: 1px solid #40a9ff;
+  background-color: transparent;
+  width: 121px;
+  border-radius: 4px;
+  padding: 8px 16px;
+  gap: 8px;
+  white-space: nowrap;
+}
+.buttons-wrapper .next-button {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #ffffff;
+  min-width: 125px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #096dd9;
+  border: transparent;
+  white-space: nowrap;
+}
+
+.step-six-hero {
+  background-color: #fff;
+  position: relative;
+}
+.step-six-hero .overlay {
+  background-color: #f5fcff;
+  top: 0;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  width: 50%;
+}
+.step-six-hero .headings-section {
+  margin-top: 2.875rem;
+}
+.step-six-hero .headings-section .heading h1 {
+  max-width: 700px;
+  z-index: 9999;
+  color: #002766;
+}
+.step-six-hero .headings-section .sub-heading {
+  margin-top: 32px;
+}
+.step-six-hero .headings-section .sub-heading h3 {
+  max-width: 670px;
+  color: #002766;
+  z-index: 99999;
+}
+.step-six-hero .headings-section .sub-heading h3 span {
+  font-weight: 600;
+  position: relative;
+  z-index: 99999;
+}
+.step-six-hero .body-section {
+  width: 100%;
+  margin-top: 3.75rem;
+}
+.step-six-hero .body-section .form-section {
+  width: 50%;
+  padding: 0 62px;
+}
+.step-six-hero .body-section .form-section .add-role-section {
+  padding: 1rem;
+}
+.step-six-hero .body-section .form-section .add-role-section label {
+  color: #002766;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.step-six-hero .body-section .form-section .add-role-section .dropdown button {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: transparent;
+  color: #8c8c8c;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  padding: 5px 12px;
+  width: 413px;
+  border: 1px solid #d9d9d9;
+}
+.step-six-hero .body-section .form-section .add-role-section .dropdown button::after {
+  margin-top: 9px;
+}
+.step-six-hero .body-section .form-section .add-role-section .dropdown .dropdown-menu {
+  width: 413px;
+}
+.step-six-hero .body-section .form-section .add-role-section .more-role {
+  margin-top: 1.875rem;
+  gap: 19px;
+}
+.step-six-hero .body-section .form-section .add-role-section .more-role span {
+  color: #002766;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.step-six-hero .body-section .form-section .add-role-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.step-six-hero .body-section .form-section .add-role-section form .form-group label {
+  color: #002766;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.step-six-hero .body-section .form-section .add-role-section form .form-group label span {
+  color: #f5222d;
+}
+.step-six-hero .body-section .form-section .add-role-section form .form-group ::-moz-placeholder {
+  color: #8c8c8c;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.step-six-hero .body-section .form-section .add-role-section form .form-group ::placeholder {
+  color: #8c8c8c;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.step-six-hero .body-section .form-section .add-role-section form .form-group .salary-input-wrapper {
+  gap: 5px;
+}
+.step-six-hero .body-section .form-section .add-role-section form .form-group .salary-input-wrapper .salary-format_list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #1890ff;
+  padding: 5px;
+  width: 40px;
+  height: 38px;
+}
+.step-six-hero .body-section .form-section .add-role-section form .form-group .form-check label {
+  color: #262626;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.step-six-hero .body-section .form-section .add-role-section form .optional {
+  align-items: center;
+  gap: 6px;
+}
+.step-six-hero .body-section .form-section .add-role-section form .optional h6 {
+  color: #002766;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.step-six-hero .body-section .form-section .add-role-section form .optional h6 span {
+  color: #8c8c8c;
+}
+.step-six-hero .body-section .form-section .add-role-section form .cancel-btn-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+.step-six-hero .body-section .form-section .add-role-section form button {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+  background-color: #fff;
+  width: 75px;
+  color: #262626;
+}
+.step-six-hero .body-section .search-section {
+  width: 50%;
+  z-index: 9999;
+  padding: 0 80px 0 60px;
+}
+.step-six-hero .body-section .search-section label {
+  color: #002766;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-bottom: 2px;
+}
+.step-six-hero .body-section .search-section .or-detail {
+  display: flex;
+  position: relative;
+}
+.step-six-hero .body-section .search-section .or-detail::before {
+  position: absolute;
+  height: 1px;
+  width: 175px;
+  background-color: #bae7ff;
+  content: "";
+  top: 50%;
+  left: 0;
+}
+.step-six-hero .body-section .search-section .or-detail::after {
+  position: absolute;
+  height: 1px;
+  width: 175px;
+  background-color: #bae7ff;
+  content: "";
+  top: 50%;
+  right: 0;
+}
+.step-six-hero .body-section .search-section .or-detail span {
+  margin: 0 auto;
+  color: #40a9ff;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+.step-six-hero .body-section .search-section .select-title {
+  margin-top: 2.8125rem;
+}
+.step-six-hero .body-section .search-section .select-title span {
+  color: #002766;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  text-transform: capitalize;
+}
+.step-six-hero .body-section .search-section .select-title .titles-list {
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.step-six-hero .body-section .search-section .select-title .titles-list li {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  gap: 0.3125rem;
+  border-radius: 55px;
+  border: 1px solid #91d5ff;
+  padding: 4px 5px 4px 10px;
+  color: #ffffff;
+  background-color: #40a9ff;
+}
+.step-six-hero .detail-section-wrapper {
+  position: relative;
+  z-index: 9999;
+}
+.step-six-hero .more-buttons-section {
+  gap: 15px;
+  position: relative;
+  z-index: 9999;
+  padding: 260px 0 32px;
+}
+.step-six-hero .more-buttons-section .previous-button {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #40a9ff;
+  border: 1px solid #40a9ff;
+  background-color: transparent;
+  width: 121px;
+  border-radius: 4px;
+  padding: 8px 16px;
+  gap: 8px;
+  white-space: nowrap;
+}
+.step-six-hero .more-buttons-section .next-button {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #ffffff;
+  min-width: 125px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #096dd9;
+  border: transparent;
+  white-space: nowrap;
+}
+
+.drag-drop-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #91d5ff;
+  padding: 20px;
+  text-align: center;
+  background-color: #f5fcff;
+  height: 146px;
+}
+.drag-drop-area p {
+  color: #002766;
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.drag-drop-area span {
+  color: #8c8c8c;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.drag-drop-area.active {
+  border-color: #007bff;
+}
+
+input[type=file] {
+  display: none;
+}
+
+.btn-section {
+  gap: 15px;
+  position: relative;
+  z-index: 9999;
+  padding: 0 0 32px;
+}
+.btn-section .previous-button {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #40a9ff;
+  border: 1px solid #40a9ff;
+  background-color: transparent;
+  width: 121px;
+  border-radius: 4px;
+  padding: 8px 16px;
+  gap: 8px;
+  white-space: nowrap;
+}
+.btn-section .next-button {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;

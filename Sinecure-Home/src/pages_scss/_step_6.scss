@@ -1,0 +1,331 @@
+.step-six-hero {
+	background-color: #fff;
+	position: relative;
+	.overlay {
+		background-color: #f5fcff;
+		top: 0;
+		height: 100%;
+		position: absolute;
+		right: 0;
+		width: 50%;
+	}
+	.headings-section {
+		margin-top: 2.875rem;
+		.heading {
+			h1 {
+				max-width: 700px;
+				z-index: 9999;
+				color: $textColorPrimary;
+			}
+		}
+		.sub-heading {
+			margin-top: 32px;
+			h3 {
+				max-width: 670px;
+				color: $textColorPrimary;
+				z-index: 99999;
+				span {
+					font-weight: 600;
+					position: relative;
+					z-index: 99999;
+				}
+			}
+		}
+	}
+	.body-section {
+		width: 100%;
+		margin-top: 3.75rem;
+		.form-section {
+			width: 50%;
+			padding: 0 62px;
+			.add-role-section {
+				padding: 1rem;
+				label {
+					color: #002766;
+					font-family: Roboto;
+					font-size: 16px;
+					font-weight: 600;
+					line-height: 24px;
+				}
+				.dropdown {
+					button {
+						display: flex;
+						justify-content: space-between;
+						width: 100%;
+						background-color: transparent;
+						color: #8c8c8c;
+						font-size: 14px;
+						font-weight: 400;
+						line-height: 22px;
+						padding: 5px 12px;
+						width: 413px;
+						border: 1px solid #d9d9d9;
+						&::after {
+							margin-top: 9px;
+						}
+					}
+					.dropdown-menu {
+						width: 413px;
+					}
+				}
+				.more-role {
+					margin-top: 1.875rem;
+					gap: 19px;
+					span {
+						color: #002766;
+						font-size: 16px;
+						font-weight: 600;
+						line-height: 24px;
+					}
+				}
+				form {
+					display: flex;
+					flex-direction: column;
+					gap: 16px;
+					.form-group {
+						label {
+							color: #002766;
+							font-family: Roboto;
+							font-size: 14px;
+							font-weight: 400;
+							line-height: 22px;
+							span {
+								color: #f5222d;
+							}
+						}
+						::placeholder {
+							color: #8c8c8c;
+							font-family: Roboto;
+							font-size: 14px;
+							font-weight: 400;
+							line-height: 22px;
+						}
+						.salary-input-wrapper {
+							gap: 5px;
+							.salary-format_list {
+								li {
+									display: flex;
+									justify-content: center;
+									align-items: center;
+									border: 1px solid #1890ff;
+									padding: 5px;
+									width: 40px;
+									height: 38px;
+								}
+							}
+						}
+						.form-check {
+							label {
+								color: #262626;
+								font-family: Roboto;
+								font-size: 12px;
+								font-weight: 400;
+								line-height: 20px;
+							}
+						}
+					}
+					.optional {
+						align-items: center;
+						gap: 6px;
+						h6 {
+							color: #002766;
+							font-family: Roboto;
+							font-size: 14px;
+							font-weight: 400;
+							line-height: 22px;
+							span {
+								color: #8c8c8c;
+							}
+						}
+					}
+					.cancel-btn-wrapper {
+						display: flex;
+						justify-content: flex-start;
+					}
+					button {
+						font-family: Roboto;
+						font-size: 14px;
+						font-weight: 400;
+						line-height: 22px;
+						border-radius: 4px;
+						border: 1px solid #d9d9d9;
+						background-color: #fff;
+						width: 75px;
+						color: #262626;
+					}
+				}
+			}
+		}
+		.search-section {
+			width: 50%;
+			z-index: 9999;
+			padding: 0 80px 0 60px;
+			label {
+				color: #002766;
+				font-size: 16px;
+				font-weight: 600;
+				line-height: 24px;
+				margin-bottom: 2px;
+			}
+			.or-detail {
+				display: flex;
+				position: relative;
+				&::before {
+					position: absolute;
+					height: 1px;
+					width: 175px;
+					background-color: #bae7ff;
+					content: '';
+					top: 50%;
+					left: 0;
+				}
+				&::after {
+					position: absolute;
+					height: 1px;
+					width: 175px;
+					background-color: #bae7ff;
+					content: '';
+					top: 50%;
+					right: 0;
+				}
+				span {
+					margin: 0 auto;
+					color: #40a9ff;
+					font-family: Roboto;
+					font-size: 14px;
+					font-weight: 600;
+					line-height: 22px;
+					text-transform: uppercase;
+				}
+			}
+			.select-title {
+				margin-top: 2.8125rem;
+				span {
+					color: #002766;
+					font-family: Roboto;
+					font-size: 14px;
+					font-weight: 600;
+					line-height: 22px;
+					text-transform: capitalize;
+				}
+				.titles-list {
+					gap: 12px;
+					flex-wrap: wrap;
+					margin-top: 12px;
+					li {
+						font-family: Roboto;
+						font-size: 14px;
+						font-weight: 400;
+						line-height: 19px;
+						gap: 0.3125rem;
+						border-radius: 55px;
+						border: 1px solid $listBorderColor;
+						padding: 4px 5px 4px 10px;
+						color: $universalWhite;
+						background-color: $listColor;
+					}
+				}
+			}
+		}
+	}
+	.detail-section-wrapper {
+		position: relative;
+		z-index: 9999;
+	}
+	.more-buttons-section {
+		gap: 15px;
+		position: relative;
+		z-index: 9999;
+		padding: 260px 0 32px;
+		.previous-button {
+			display: flex;
+			align-items: center;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 24px;
+			color: $listColor;
+			border: 1px solid $listColor;
+			background-color: transparent;
+			width: 121px;
+			border-radius: 4px;
+			padding: 8px 16px;
+			gap: 8px;
+			white-space: nowrap;
+		}
+		.next-button {
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 24px;
+			color: $universalWhite;
+			min-width: 125px;
+			padding: 8px 16px;
+			border-radius: 4px;
+			background-color: #096dd9;
+			border: transparent;
+			white-space: nowrap;
+		}
+	}
+}
+.drag-drop-area {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border: 2px dashed #91d5ff;
+	padding: 20px;
+	text-align: center;
+	background-color: #f5fcff;
+	height: 146px;
+	p {
+		color: #002766;
+    margin-top: 16px;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 24px;
+	}
+	span {
+		color: #8c8c8c;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 22px;
+	}
+}
+.drag-drop-area.active {
+	border-color: #007bff;
+}
+input[type='file'] {
+	display: none;
+}
+.btn-section {
+	gap: 15px;
+		position: relative;
+		z-index: 9999;
+		padding: 0  0 32px;
+		.previous-button {
+			display: flex;
+			align-items: center;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 24px;
+			color: $listColor;
+			border: 1px solid $listColor;
+			background-color: transparent;
+			width: 121px;
+			border-radius: 4px;
+			padding: 8px 16px;
+			gap: 8px;
+			white-space: nowrap;
+		}
+		.next-button {
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 24px;
+			color: $universalWhite;
+			min-width: 125px;
+			padding: 8px 16px;
+			border-radius: 4px;
+			background-color: #096dd9;
+			border: transparent;
+			white-space: nowrap;
+		}
+}
