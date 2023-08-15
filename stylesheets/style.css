@@ -1210,8 +1210,30 @@ body {
   position: absolute;
   content: "";
   width: 24.625rem;
-  height: 0.125remx;
-  border: 1px dashed rgb(145, 213, 255);
+  height: 0.125rem;
+  border: 1px dashed #91D5FF;
   bottom: 0.6875rem;
   left: 0;
+}
+@media screen and (min-width: 160rem) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail:nth-child(2):before {
+    position: absolute;
+    content: "";
+    width: 24.625rem;
+    height: 0.125rem;
+    border: 1px dashed #91D5FF;
+    bottom: 4.6875rem;
+    left: 0;
+  }
+}
+@media screen and (min-width: 160rem) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail:last-child::before {
+    position: absolute;
+    content: "";
+    width: 24.625rem;
+    height: 0.125rem;
+    border: 1px dashed #91D5FF;
+    bottom: 3.4375rem;
+    left: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
