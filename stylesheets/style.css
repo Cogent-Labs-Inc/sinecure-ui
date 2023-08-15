@@ -1036,12 +1036,24 @@ body {
     display: block;
   }
 }
+
+}
+@media screen and (min-width: 160rem) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail:last-child {
+    display: block;
+  }
+}
 .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail h4 {
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.375rem;
   color: #002766;
   margin-bottom: 0.3125rem;
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .renewed-date {
+  display: none;
+}
+
 }
 .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .renewed-date {
   display: none;
@@ -1110,6 +1122,13 @@ body {
     width: 100%;
   }
 }
+
+}
+@media screen and (min-width: 75rem) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .rank {
+    width: 100%;
+  }
+}
 .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .rank span:first-child {
   color: #1890FF;
 }
@@ -1151,6 +1170,14 @@ body {
     width: 100%;
   }
 }
+
+}
+@media screen and (min-width: 75rem) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .university p {
+    width: 100%;
+  }
+}
+
 @media screen and (min-width: 160rem) {
   .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .university p {
     max-width: 27.5625rem;
@@ -1204,6 +1231,15 @@ body {
   border-radius: 50%;
   background-color: #1890FF;
   top: 0.4375rem;
+  left: 0;
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail:before {
+  position: absolute;
+  content: "";
+  width: 24.625rem;
+  height: 0.125remx;
+  border: 1px dashed rgb(145, 213, 255);
+  bottom: 0.6875rem;
   left: 0;
 }
 .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail:before {
