@@ -1,6 +1,8 @@
 /* red */
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 body {
+  font-family: "Poppins", sans-serif;
   width: 100%;
   height: 100vh;
 }
@@ -181,6 +183,21 @@ body .main .body .top-navbar .add-role-button button {
   width: 38%;
   height: 100%;
 }
+@media screen and (max-width: 1200px) {
+  .range-slider {
+    width: 48%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .range-slider {
+    width: 57%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .range-slider {
+    width: 77%;
+  }
+}
 
 .range-slider > div {
   position: absolute;
@@ -350,16 +367,29 @@ div.range-slider > input[type=range]::-ms-tooltip {
 }
 
 h1 {
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif !important;
   font-size: 48px;
   font-weight: 700;
   line-height: 55px;
 }
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+    line-height: 55px;
+  }
+}
 
 h3 {
+  font-family: "Poppins", sans-serif !important;
   font-size: 24px;
   font-weight: 400;
   line-height: 32px;
+}
+@media screen and (max-width: 768px) {
+  h3 {
+    font-size: 20px;
+    line-height: 32px;
+  }
 }
 
 /* Box sizing rules */
@@ -380,7 +410,6 @@ figure,
 blockquote,
 dl,
 dd {
-  font-family: "Roboto" !important;
   margin: 0;
 }
 
@@ -406,21 +435,12 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  font-family: "Inter", sans-serif !important;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   -webkit-text-decoration-skip: ink;
           text-decoration-skip-ink: auto;
-  font-family: "Inter", sans-serif !important;
-}
-
-table,
-th,
-tr,
-td {
-  font-family: "Inter", sans-serif !important;
 }
 
 /* Make images easier to work with */
@@ -436,7 +456,6 @@ button,
 textarea,
 select {
   font: inherit;
-  font-family: "Inter", sans-serif !important;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -470,7 +489,7 @@ select {
 }
 .hero-wrapper .hero {
   background-image: url("assets/images/background.png");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   height: calc(100vh - 100px);
   background-color: #ffffff;
@@ -501,9 +520,14 @@ select {
   margin: 150px auto 0;
   max-width: 826px;
 }
+.hero-wrapper .hero .search-section h4 {
+  font-size: 12px;
+  color: #595959;
+}
 .hero-wrapper .hero .search-section span {
   margin-left: 4rem;
   color: #595959;
+  font-weight: 600;
 }
 .hero-wrapper .hero .search-section .serch-fields-wrapper {
   display: flex;
@@ -515,6 +539,51 @@ select {
   border: 1px solid #eee;
   background: #ffffff;
   box-shadow: 9px 9px 40px 0px rgba(54, 122, 184, 0.2);
+}
+.hero-wrapper .hero .search-section .search-container {
+  position: relative;
+  display: inline-block;
+  border: none;
+}
+.hero-wrapper .hero .search-section .search-container .input-wrapper {
+  display: flex;
+  border-radius: 50px;
+  padding: 18px 16px;
+  gap: 16px;
+}
+.hero-wrapper .hero .search-section .search-container input {
+  width: 200px;
+  padding: 10px;
+  border: transparent;
+  border-radius: 50px;
+  outline: none;
+  padding: 0;
+  font-size: 18px;
+}
+.hero-wrapper .hero .search-section .search-container .options-list {
+  display: none;
+  list-style-type: none;
+  position: absolute;
+  width: 270px;
+  padding: 0;
+  top: 66px;
+  left: 15px;
+  width: 262px;
+  background-color: #ffffff;
+  border-top: none;
+  border-radius: 0 0 2px 2px;
+  box-shadow: 0px 12px 16px 0px rgba(54, 122, 184, 0.08);
+}
+.hero-wrapper .hero .search-section .search-container .options-list li {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  padding: 5px 12px;
+  cursor: pointer;
+}
+.hero-wrapper .hero .search-section .search-container .options-list li:hover {
+  font-weight: 600;
+  background-color: #e6f7ff;
 }
 .hero-wrapper .hero .search-section .job-title {
   min-width: 289px;
@@ -569,7 +638,7 @@ select {
   border: none;
   padding: 1px 19px;
   border-radius: 50px;
-  background-color: #ffffff;
+  background-color: transparent;
 }
 .hero-wrapper .hero .search-section .your-choice {
   display: flex;
@@ -598,6 +667,182 @@ select {
   padding: 6px 5px 6px 19px;
   color: #ffffff;
   background-color: #40a9ff;
+}
+@media screen and (max-width: 1920px) {
+  .hero-wrapper .hero {
+    background-size: contain;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .hero-wrapper .hero .description h1 {
+    max-width: 590px;
+    margin-top: 5.1875rem;
+  }
+  .hero-wrapper .hero .description h3 {
+    max-width: 500px;
+  }
+  .hero-wrapper .hero .search-section {
+    margin-top: 105px;
+    max-width: 700px;
+  }
+  .hero-wrapper .hero .search-section span {
+    margin-left: 2rem;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper {
+    width: 700px;
+    gap: 20px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .search-container .input-wrapper {
+    padding: 18px 7px;
+    gap: 5px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .search-container input {
+    padding: 0 5px;
+    font-size: 14px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .job-title {
+    min-width: 220px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .job-title input {
+    width: 160px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .apply-field {
+    min-width: 220px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .apply-field input {
+    width: 170px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .apply-field .options-list {
+    width: 180px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .location-field {
+    min-width: 110px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .location-field input {
+    width: 80px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .location-field .options-list {
+    width: 150px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .hero-wrapper .hero .description h1 {
+    margin-top: 6rem;
+  }
+  .hero-wrapper .hero .search-section {
+    margin-top: 90px;
+    max-width: 620px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper {
+    width: 620px;
+    gap: 2px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .search-container .input-wrapper {
+    padding: 18px 7px;
+    gap: 5px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .search-container input {
+    padding: 0 5px;
+    font-size: 14px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .job-title {
+    min-width: 220px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .job-title input {
+    width: 150px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .apply-field {
+    min-width: 220px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .apply-field input {
+    width: 150px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .apply-field .options-list {
+    width: 180px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .location-field {
+    min-width: 80px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .location-field input {
+    width: 60px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .location-field .options-list {
+    width: 100px;
+  }
+  .hero-wrapper .hero .recent-searches {
+    margin-top: 1.375rem;
+    gap: 10px;
+  }
+  .hero-wrapper .hero .recent-searches span {
+    margin-right: 10px;
+  }
+  .hero-wrapper .hero .recent-searches .recent-search-list {
+    display: flex;
+    gap: 13px;
+  }
+  .hero-wrapper .hero .recent-searches .recent-search-list li {
+    padding: 5px 10px;
+  }
+  .hero-wrapper .hero .recent-searches .recent-search-list .seo-list-item {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero-wrapper .hero .description h1 {
+    margin: 5.75rem auto 0;
+    max-width: 350px;
+  }
+  .hero-wrapper .hero .description h3 {
+    max-width: 455px;
+  }
+  .hero-wrapper .hero .search-section {
+    margin-top: 105px;
+  }
+  .hero-wrapper .hero .search-section span {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper {
+    width: 620px;
+    gap: 2px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .search-container .input-wrapper {
+    padding: 18px 7px;
+    gap: 5px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .search-container input {
+    padding: 0 5px;
+    font-size: 14px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .job-title {
+    min-width: 220px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .job-title input {
+    width: 150px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .job-title .options-list {
+    width: 180px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .apply-field {
+    min-width: 220px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .apply-field input {
+    width: 150px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .apply-field .options-list {
+    width: 180px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .location-field {
+    min-width: 80px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .location-field input {
+    width: 60px;
+  }
+  .hero-wrapper .hero .search-section .serch-fields-wrapper .location-field .options-list {
+    width: 120px;
+  }
 }
 
 .search-container {
@@ -657,6 +902,7 @@ select {
   background-image: url("assets/images/background.png");
   background-size: contain;
   background-repeat: no-repeat;
+  height: calc(100vh - 32px);
 }
 .body-wrapper .required-skills-description {
   gap: 31px;
@@ -706,20 +952,20 @@ select {
 .body-wrapper .experience-section .slider-wrapper .range-slider-items li span {
   display: flex;
   height: 50px;
-  background-color: #91D5FF;
+  background-color: #91d5ff;
   width: 30px;
   margin: 0;
 }
 .body-wrapper .experience-section .slider-wrapper .range-slider-items .h1 {
   height: 20px;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
 }
 .body-wrapper .experience-section .slider-wrapper .range-slider-items .h2 {
   height: 30px;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
 }
 .body-wrapper .experience-section .slider-wrapper .range-slider-items .h3 {
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
 }
 .body-wrapper .experience-section .slider-wrapper .range-slider-items .h4 {
   height: 40px;
@@ -740,15 +986,15 @@ select {
   height: 20px;
 }
 .body-wrapper .experience-section .slider-wrapper .range-slider-items .h-10 {
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   height: 40px;
 }
 .body-wrapper .experience-section .slider-wrapper .range-slider-items .h-11 {
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   height: 30px;
 }
 .body-wrapper .experience-section .slider-wrapper .range-slider-items .h-12 {
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   height: 10px;
 }
 .body-wrapper .skils-detail-section {
@@ -765,19 +1011,22 @@ select {
   line-height: 22px;
 }
 .body-wrapper .skils-detail-section .search-fields-wrapper .input-wrapper {
-  width: 458px;
+  width: 855px;
   margin-top: 1rem;
   border: 1px solid #eee;
   box-shadow: 9px 9px 40px 0px rgba(54, 122, 184, 0.2);
 }
+.body-wrapper .skils-detail-section .search-fields-wrapper .input-wrapper input {
+  width: 800px;
+}
 .body-wrapper .skils-detail-section .search-fields-wrapper .options-list {
   z-index: 999999999;
   top: 108px;
-  width: 380px;
+  width: 790px;
   left: 45px;
 }
 .body-wrapper .skils-detail-section .search-fields-wrapper .your-choice {
-  width: 458px;
+  width: 855px;
   display: flex;
   align-items: center;
   margin-top: 1.5rem;
@@ -820,7 +1069,7 @@ select {
 .body-wrapper .buttons-section {
   left: 50%;
   right: 50%;
-  padding: 71px 0 32px;
+  padding: 200px 0 32px;
   gap: 15px;
 }
 .body-wrapper .buttons-section .previous-button {
@@ -850,512 +1099,46 @@ select {
   border: transparent;
   white-space: nowrap;
 }
-
-.body-wrapper .step-three-hero {
-  background-color: #ffffff;
-  position: relative;
-}
-.body-wrapper .graph-section-wrapper {
-  margin-top: 3.3125rem;
-  padding: 0 3.5625rem 0 5.25rem;
-}
-.body-wrapper .graph-section-wrapper .graph-section {
-  gap: 105px;
-}
-.body-wrapper .graph-section-wrapper .graph-section .sorting-buttons {
-  gap: 10px;
-}
-.body-wrapper .graph-section-wrapper .graph-section .sorting-buttons .title-sort .title-sort-button {
-  display: flex;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 22px;
-  gap: 3px;
-  color: #262626;
-  background-color: transparent;
-  border: 1px solid #d9d9d9;
-  border-radius: 4px;
-  padding: 5px 16px;
-  align-items: center;
-  height: 34px;
-}
-.body-wrapper .graph-section-wrapper .graph-section .sorting-buttons .match-sort .match-sort-button {
-  display: flex;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 22px;
-  gap: 3px;
-  color: #262626;
-  background-color: transparent;
-  border: 1px solid #d9d9d9;
-  border-radius: 4px;
-  padding: 5px 16px;
-  align-items: center;
-}
-.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper {
-  margin-top: 2.0625rem;
-}
-.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .listing-wrapper {
-  padding: 15px 16px 15px 0;
-  justify-content: flex-end;
-  max-width: 210px;
-  gap: 18px;
-  border-right: 3px solid rgb(176, 190, 197);
-  opacity: 0.6068;
-}
-.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .listing-wrapper .graph-listing {
-  height: 280px;
-  overflow-y: scroll;
-  gap: 18px;
-}
-.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .listing-wrapper .graph-listing li {
-  display: flex;
-  gap: 5px;
-  justify-content: flex-end;
-}
-.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .listing-wrapper .graph-listing li span {
-  color: #002766;
-  text-align: right;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 22px;
-  width: 146px;
-}
-.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .listing-wrapper .show-more-button {
-  justify-content: flex-end;
-}
-.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .listing-wrapper .show-more-button .more-title-button {
-  display: flex;
-  width: 154px;
-  padding: 5px 16px;
-  align-items: center;
-  gap: 8px;
-  border-radius: 4px;
-  border: 1px solid #40a9ff;
-  background: transparent;
-  color: #40a9ff;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 22px;
-}
-.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .graph {
-  margin-left: 40px;
-  padding: 15px 0;
-  gap: 18px;
-}
-.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .graph .graph-line {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  background-color: #cde9f6;
-  height: 24px;
-  border-radius: 50px;
-  gap: 4px;
-}
-.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .graph .graph-line span {
-  width: 50.386px;
-  color: #003a8c;
-  text-align: center;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 16px;
-}
-.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .graph .graph-line.gl-1 {
-  width: 520px;
-}
-.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .graph .graph-line.gl-2 {
-  width: 402px;
-}
-.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .graph .graph-line.gl-3 {
-  width: 460px;
-}
-.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .graph .graph-line.gl-4 {
-  width: 360px;
-}
-.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .graph .graph-line.gl-5 {
-  width: 460px;
-}
-.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .graph .graph-line.gl-6 {
-  width: 309px;
-}
-.body-wrapper .graph-section-wrapper .graph-section .graph-wrapper .graph .graph-line.gl-7 {
-  width: 157px;
-}
-.body-wrapper .graph-section-wrapper .graph-section .job-titles {
-  display: flex;
-  align-items: center;
-  margin-top: 1.5rem;
-  gap: 13px;
-}
-.body-wrapper .graph-section-wrapper .graph-section .job-titles span {
-  color: #002766;
-  font-family: Roboto;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 22px;
-  text-transform: capitalize;
-}
-.body-wrapper .graph-section-wrapper .graph-section .job-titles .recent-search-list {
-  display: flex;
-  gap: 13px;
-}
-.body-wrapper .graph-section-wrapper .graph-section .job-titles .recent-search-list li {
-  font-family: Roboto;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 22px;
-  gap: 0.8rem;
-  border-radius: 55px;
-  border: 1px solid #91d5ff;
-  padding: 6px 5px 6px 19px;
-  color: #ffffff;
-  background-color: #40a9ff;
-}
-.body-wrapper .graph-section-wrapper .graph-section .match-progress {
-  width: 100%;
-  background-color: #f5fcff;
-  padding: 68px 23px;
-}
-.body-wrapper .graph-section-wrapper .graph-section .match-progress span {
-  color: #003a8c;
-}
-.body-wrapper .graph-section-wrapper .graph-section .match-progress .progress-wrapper h4 {
-  color: #40a9ff !important;
-  text-align: center;
-  font-family: Poppins;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 29px;
-  letter-spacing: -0.24px;
-  margin-top: 23px;
-}
-.body-wrapper .graph-section-wrapper .graph-section .match-progress .progress-wrapper h5 {
-  margin: 0;
-  color: #40a9ff;
-  font-family: Poppins;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 24px;
-  letter-spacing: -0.24px;
-}
-.body-wrapper .graph-section-wrapper .graph-section .match-progress .progress-wrapper .circular-progress {
-  width: 120px;
-  height: 120px !important;
-  float: left;
-  line-height: 150px;
-  background: none;
-  box-shadow: none;
-  position: relative;
-  margin-top: 53px;
-}
-.body-wrapper .graph-section-wrapper .graph-section .match-progress .progress-wrapper .circular-progress:after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 6px solid #bae7ff;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.body-wrapper .graph-section-wrapper .graph-section .match-progress .progress-wrapper .circular-progress > span {
-  width: 50%;
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  z-index: 1;
-}
-.body-wrapper .graph-section-wrapper .graph-section .match-progress .progress-wrapper .circular-progress .progress-left {
-  left: 0;
-}
-.body-wrapper .graph-section-wrapper .graph-section .match-progress .progress-wrapper .circular-progress .progress-bar {
-  width: 100%;
-  height: 100%;
-  background: none;
-  border-width: 6px;
-  border-style: solid;
-  position: absolute;
-  top: 0;
-}
-.body-wrapper .graph-section-wrapper .graph-section .match-progress .progress-wrapper .circular-progress .progress-value {
-  width: 90%;
-  height: 90%;
-  border-radius: 50%;
-  line-height: 135px;
-  text-align: center;
-  position: absolute;
-  top: -3%;
-  left: 8%;
-  color: #262626;
-  text-align: center;
-  font-family: Roboto;
-  font-size: 24px;
-  font-weight: 400;
-}
-.body-wrapper .graph-section-wrapper .graph-section .match-progress .progress-wrapper .circular-progress .progress-right {
-  right: 0;
-}
-.body-wrapper .graph-section-wrapper .graph-section .match-progress .progress-wrapper .circular-progress .progress-left .progress-bar {
-  left: 100%;
-  border-top-right-radius: 80px;
-  border-bottom-right-radius: 80px;
-  border-left: 0;
-  transform-origin: center left;
-}
-.body-wrapper .graph-section-wrapper .graph-section .match-progress .progress-wrapper .circular-progress .progress-right .progress-bar {
-  left: -100%;
-  border-top-left-radius: 80px;
-  border-bottom-left-radius: 80px;
-  border-right: 0;
-  transform-origin: center right;
-  animation: loading-1 1.8s linear forwards;
-}
-.body-wrapper .graph-section-wrapper .graph-section .match-progress .progress-wrapper .circular-progress.blue .progress-bar {
-  border-color: #1890ff;
-}
-.body-wrapper .graph-section-wrapper .graph-section .match-progress .progress-wrapper .circular-progress.blue .progress-left .progress-bar {
-  animation: loading-2 1.5s linear forwards 1.8s;
-}
-@keyframes loading-1 {
-  0% {
-    transform: rotate(0deg);
+@media screen and (max-width: 1200px) {
+  .body-wrapper .required-skills-description .skills-heading {
+    margin-top: 1.9375rem;
   }
-  100% {
-    transform: rotate(180deg);
+  .body-wrapper .required-skills-description .skills-heading h1 {
+    font-size: 2.25rem;
+    max-width: 550px;
   }
-}
-@keyframes loading-2 {
-  0% {
-    transform: rotate(0deg);
+  .body-wrapper .required-skills-description .skills-detail h3 {
+    font-size: 1.25rem;
+    max-width: 645px;
   }
-  100% {
-    transform: rotate(80deg);
+  .body-wrapper .experience-section {
+    margin-top: 74px;
   }
-}
-@keyframes loading-3 {
-  0% {
-    transform: rotate(0deg);
+  .body-wrapper .experience-section .slider-wrapper {
+    margin-top: 24px;
   }
-  100% {
-    transform: rotate(135deg);
+  .body-wrapper .skils-detail-section {
+    margin: 53px 40px 0;
   }
-}
-.body-wrapper .graph-section-wrapper .graph-section .match-progress .linear-progress-wrapper {
-  margin-top: 36px;
-}
-.body-wrapper .graph-section-wrapper .graph-section .match-progress .linear-progress-wrapper span {
-  color: #003a8c;
-  text-align: center;
-  font-family: Roboto;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: -0.12px;
-}
-.body-wrapper .graph-section-wrapper .graph-section .match-progress .linear-progress-wrapper .progress {
-  margin-top: 11px;
-  background-color: #d9f7be;
-  border-radius: 10px;
-}
-.body-wrapper .graph-section-wrapper .graph-section .match-progress .linear-progress-wrapper .progress .progress-bar {
-  border-radius: 8px;
-}
-.body-wrapper .button-section {
-  padding: 100px 0 32px;
-  gap: 15px;
-}
-.body-wrapper .button-section .previous-button {
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #40a9ff;
-  border: 1px solid #40a9ff;
-  background-color: transparent;
-  width: 121px;
-  border-radius: 4px;
-  padding: 8px 16px;
-  gap: 8px;
-  white-space: nowrap;
-}
-.body-wrapper .button-section .next-button {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #ffffff;
-  min-width: 125px;
-  padding: 8px 16px;
-  border-radius: 4px;
-  background-color: #096dd9;
-  border: transparent;
-  white-space: nowrap;
-}
-
-.body-wrapper .step-seven-hero {
-  position: relative;
-  background-color: #f5fcff;
-}
-.body-wrapper .step-seven-hero .heading-section .heading h1 {
-  margin-top: 274px;
-  max-width: 600px;
-  color: #002766;
-  margin-bottom: 20px;
-}
-.body-wrapper .step-seven-hero .heading-section .heading h1 span {
-  color: #0050b3;
-  display: block;
-}
-.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress {
-  width: 120px;
-  height: 120px !important;
-  float: left;
-  line-height: 150px;
-  background: none;
-  box-shadow: none;
-  position: relative;
-  margin-top: 53px;
-}
-.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress:after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 6px solid #bae7ff;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress > span {
-  width: 50%;
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  z-index: 1;
-}
-.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress .progress-left {
-  left: 0;
-}
-.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress .progress-bar {
-  width: 100%;
-  height: 100%;
-  background: none;
-  border-width: 6px;
-  border-style: solid;
-  position: absolute;
-  top: 0;
-}
-.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress .progress-value {
-  width: 90%;
-  height: 90%;
-  border-radius: 50%;
-  line-height: 135px;
-  text-align: center;
-  position: absolute;
-  top: -3%;
-  left: 8%;
-  color: #262626;
-  text-align: center;
-  font-family: Roboto;
-  font-size: 24px;
-  font-weight: 400;
-}
-.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress .progress-right {
-  right: 0;
-}
-.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress .progress-left .progress-bar {
-  left: 100%;
-  border-top-right-radius: 80px;
-  border-bottom-right-radius: 80px;
-  border-left: 0;
-  transform-origin: center left;
-}
-.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress .progress-right .progress-bar {
-  left: -100%;
-  border-top-left-radius: 80px;
-  border-bottom-left-radius: 80px;
-  border-right: 0;
-  transform-origin: center right;
-  animation: loading-1 1.8s linear forwards;
-}
-.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress.blue .progress-bar {
-  border-color: #1890ff;
-}
-.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress.blue .progress-left .progress-bar {
-  animation: loading-2 1.5s linear forwards 1.8s;
-}
-@keyframes loading-1 {
-  0% {
-    transform: rotate(0deg);
+  .body-wrapper .skils-detail-section .search-fields-wrapper .input-wrapper {
+    width: 430px;
+    height: 3.5rem;
   }
-  100% {
-    transform: rotate(180deg);
+  .body-wrapper .skils-detail-section .search-fields-wrapper .input-wrapper input {
+    font-size: 14px;
+    width: 390px;
   }
-}
-@keyframes loading-2 {
-  0% {
-    transform: rotate(0deg);
+  .body-wrapper .skils-detail-section .search-fields-wrapper .options-list {
+    top: 96px;
+    width: 360px;
+    left: 45px;
   }
-  100% {
-    transform: rotate(80deg);
+  .body-wrapper .skils-detail-section .search-fields-wrapper .your-choice {
+    width: 430px;
   }
-}
-@keyframes loading-3 {
-  0% {
-    transform: rotate(0deg);
+  .body-wrapper .buttons-section {
+    padding: 360px 0 32px;
   }
-  100% {
-    transform: rotate(135deg);
-  }
-}
-.body-wrapper .step-seven-hero .heading-section .sub-heading {
-  margin-top: 109px;
-}
-.body-wrapper .step-seven-hero .heading-section .sub-heading h3 {
-  max-width: 513px;
-  color: #002766;
-  font-family: Poppins;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 32px;
-}
-.body-wrapper .step-seven-hero .heading-section .sub-heading h3 span {
-  font-weight: 600;
-  position: relative;
-  z-index: 99999;
-}
-.body-wrapper .step-seven-hero .proceed-button-section {
-  margin-top: 200px;
-  gap: 15px;
-}
-.body-wrapper .step-seven-hero .proceed-button-section .previous-button {
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #40a9ff;
-  border: 1px solid #40a9ff;
-  background-color: transparent;
-  width: 121px;
-  border-radius: 4px;
-  padding: 8px 16px;
-  gap: 8px;
-  white-space: nowrap;
-}
-.body-wrapper .step-seven-hero .proceed-button-section .next-button {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #ffffff;
-  min-width: 125px;
-  padding: 8px 16px;
-  border-radius: 4px;
-  background-color: #096dd9;
-  border: transparent;
-  white-space: nowrap;
 }
 
 .step-four-hero {
@@ -1374,15 +1157,17 @@ select {
   margin-top: 2.875rem;
 }
 .step-four-hero .headings-section .heading h1 {
+  font-size: 36px;
+  line-height: 42px;
   max-width: 700px;
   z-index: 9999;
   color: #002766;
 }
 .step-four-hero .headings-section .sub-heading {
-  margin-top: 32px;
+  margin-top: 51px;
 }
 .step-four-hero .headings-section .sub-heading h3 {
-  max-width: 670px;
+  max-width: 780px;
   color: #002766;
   z-index: 99999;
 }
@@ -1490,6 +1275,9 @@ select {
 .step-four-hero .skils-detail-section .right-section .accordion .accordion-item .accordion-collapse {
   background-color: #f5fcff;
 }
+.step-four-hero .skils-detail-section .right-section .accordion .accordion-item .accordion-collapse .accordion-body {
+  padding: 16px 0;
+}
 .step-four-hero .skils-detail-section .right-section .accordion .accordion-item .accordion-collapse .accordion-pills-list {
   display: flex;
   gap: 12px;
@@ -1513,7 +1301,7 @@ select {
 }
 .step-four-hero .next-buttons-section {
   gap: 15px;
-  padding: 362px 0 32px;
+  padding: 79px 0 32px;
 }
 .step-four-hero .next-buttons-section .previous-button {
   display: flex;
@@ -1543,24 +1331,52 @@ select {
   white-space: nowrap;
 }
 
-.selected_items {
+.step-five-hero {
+  background-color: #fff;
+  position: relative;
+  height: 100vh;
+}
+.step-five-hero .headings-section {
+  margin-top: 2.875rem;
+}
+.step-five-hero .headings-section .heading h1 {
+  font-size: 36px;
+  line-height: 42px;
+  max-width: 700px;
+  z-index: 9999;
+  color: #002766;
+}
+.step-five-hero .headings-section .sub-heading {
+  margin-top: 51px;
+}
+.step-five-hero .headings-section .sub-heading h3 {
+  max-width: 780px;
+  color: #002766;
+  z-index: 99999;
+}
+.step-five-hero .headings-section .sub-heading h3 span {
+  font-weight: 600;
+  position: relative;
+  z-index: 99999;
+}
+.step-five-hero .selected_items {
   width: 458px;
   display: flex;
   align-items: center;
   margin-top: 1.5rem;
   gap: 13px;
 }
-.selected_items span {
+.step-five-hero .selected_items span {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   margin-right: 13px;
 }
-.selected_items .recent-search-list {
+.step-five-hero .selected_items .recent-search-list {
   flex-wrap: wrap;
   gap: 13px;
 }
-.selected_items .recent-search-list li {
+.step-five-hero .selected_items .recent-search-list li {
   font-family: Roboto;
   font-size: 14px;
   font-weight: 400;
@@ -1572,12 +1388,11 @@ select {
   color: #ffffff;
   background-color: #40a9ff;
 }
-
-.buttons-wrapper {
+.step-five-hero .buttons-wrapper {
   padding: 281px 0 32px;
   gap: 15px;
 }
-.buttons-wrapper .previous-button {
+.step-five-hero .buttons-wrapper .previous-button {
   display: flex;
   align-items: center;
   font-size: 16px;
@@ -1592,7 +1407,7 @@ select {
   gap: 8px;
   white-space: nowrap;
 }
-.buttons-wrapper .next-button {
+.step-five-hero .buttons-wrapper .next-button {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -1603,6 +1418,49 @@ select {
   background-color: #096dd9;
   border: transparent;
   white-space: nowrap;
+}
+.step-five-hero .search-fields-wrapper .search-container {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+.step-five-hero .search-fields-wrapper .search-container .check-box {
+  margin-top: 1rem;
+}
+.step-five-hero .search-fields-wrapper .search-container .check-box label {
+  color: #262626;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 0 8px;
+}
+.step-five-hero .search-fields-wrapper .search-container .check-box input {
+  width: unset;
+}
+.step-five-hero .search-fields-wrapper .search-container .tree-selector .input-wrapper {
+  position: relative;
+}
+.step-five-hero .search-fields-wrapper .search-container .tree-selector .input-wrapper::after {
+  position: absolute;
+  background-image: url("assets/svgs/dropDown.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 8px;
+  width: 11px;
+  content: "";
+  right: 24px;
+  top: 28px;
+}
+.step-five-hero .search-fields-wrapper .search-container .your-choice .recent-search-list {
+  width: 100%;
+}
+.step-five-hero .search-fields-wrapper .search-container .your-choice .recent-search-list li {
+  height: 34px;
+}
+.step-five-hero .search-fields-wrapper .search-container .your-choice .recent-search-list::-webkit-scrollbar {
+  display: none;
 }
 
 .step-six-hero {
@@ -1732,6 +1590,9 @@ select {
   font-size: 12px;
   font-weight: 400;
   line-height: 20px;
+}
+.step-six-hero .body-section .form-section .add-role-section form .form-group .form-dropdown-wrapper {
+  display: flex;
 }
 .step-six-hero .body-section .form-section .add-role-section form .optional {
   align-items: center;
@@ -1926,6 +1787,229 @@ input[type=file] {
   white-space: nowrap;
 }
 .btn-section .next-button {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #ffffff;
+  min-width: 125px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #096dd9;
+  border: transparent;
+  white-space: nowrap;
+}
+
+.body-wrapper .step-seven-hero {
+  position: relative;
+  background-color: #f5fcff;
+}
+.body-wrapper .step-seven-hero .heading-section .heading h1 {
+  margin-top: 274px;
+  max-width: 600px;
+  color: #002766;
+  margin-bottom: 20px;
+}
+.body-wrapper .step-seven-hero .heading-section .heading h1 span {
+  color: #0050b3;
+  display: block;
+}
+.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress {
+  width: 120px;
+  height: 120px !important;
+  float: left;
+  line-height: 150px;
+  background: none;
+  box-shadow: none;
+  position: relative;
+  margin-top: 53px;
+}
+.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 6px solid #bae7ff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress > span {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress .progress-left {
+  left: 0;
+}
+.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress .progress-bar {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 6px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+}
+.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress .progress-value {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  line-height: 135px;
+  text-align: center;
+  position: absolute;
+  top: -3%;
+  left: 8%;
+  color: #262626;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 400;
+}
+.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress .progress-right {
+  right: 0;
+}
+.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress .progress-left .progress-bar {
+  left: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-left: 0;
+  transform-origin: center left;
+}
+.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress .progress-right .progress-bar {
+  left: -100%;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-right: 0;
+  transform-origin: center right;
+  animation: loading-1 1.8s linear forwards;
+}
+.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress.blue .progress-bar {
+  border-color: #1890ff;
+}
+.body-wrapper .step-seven-hero .heading-section .progress-wrapper .circular-progress.blue .progress-left .progress-bar {
+  animation: loading-2 1.5s linear forwards 1.8s;
+}
+@keyframes loading-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes loading-2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(80deg);
+  }
+}
+@keyframes loading-3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(135deg);
+  }
+}
+.body-wrapper .step-seven-hero .heading-section .sub-heading {
+  margin-top: 109px;
+}
+.body-wrapper .step-seven-hero .heading-section .sub-heading h3 {
+  max-width: 513px;
+  color: #002766;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+}
+.body-wrapper .step-seven-hero .heading-section .sub-heading h3 span {
+  font-weight: 600;
+  position: relative;
+  z-index: 99999;
+}
+.body-wrapper .step-seven-hero .proceed-button-section {
+  margin-top: 200px;
+  gap: 15px;
+}
+.body-wrapper .step-seven-hero .proceed-button-section .previous-button {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #40a9ff;
+  border: 1px solid #40a9ff;
+  background-color: transparent;
+  width: 121px;
+  border-radius: 4px;
+  padding: 8px 16px;
+  gap: 8px;
+  white-space: nowrap;
+}
+.body-wrapper .step-seven-hero .proceed-button-section .next-button {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #ffffff;
+  min-width: 125px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #096dd9;
+  border: transparent;
+  white-space: nowrap;
+}
+
+.step-eight-hero {
+  background-color: #fff;
+  position: relative;
+  height: calc(100vh - 32px);
+}
+.step-eight-hero .headings-section {
+  margin-top: 2.875rem;
+}
+.step-eight-hero .headings-section .heading h1 {
+  max-width: 700px;
+  z-index: 9999;
+  color: #002766;
+}
+.step-eight-hero .headings-section .sub-heading {
+  margin-top: 32px;
+}
+.step-eight-hero .headings-section .sub-heading h3 {
+  max-width: 670px;
+  color: #002766;
+  z-index: 99999;
+}
+.step-eight-hero .headings-section .sub-heading h3 span {
+  font-weight: 600;
+  position: relative;
+  z-index: 99999;
+}
+.step-eight-hero .butons-wrapper {
+  padding: 319px 0 32px;
+  gap: 15px;
+}
+.step-eight-hero .butons-wrapper .previous-button {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #40a9ff;
+  border: 1px solid #40a9ff;
+  background-color: transparent;
+  width: 121px;
+  border-radius: 4px;
+  padding: 8px 16px;
+  gap: 8px;
+  white-space: nowrap;
+}
+.step-eight-hero .butons-wrapper .next-button {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;

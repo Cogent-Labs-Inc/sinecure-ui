@@ -54,7 +54,7 @@
 					</a>
 				</div>
 				<div class="notification-icon pointer center">
-					<a href="./step_3.html">
+					<a href="./step_8.html">
 						<svg
 							class="pointer"
 							width="14"
@@ -135,7 +135,7 @@
 					<!-- <button onclick="nextStep()">Next</button> -->
 					<div class="headings-section d-flex d-col">
 						<div class="heading center text-center">
-							<h1>Which industries you would like to recruit from...</h1>
+							<h1>Our AI has thoroughly analyzed the marketing & advertising business</h1>
 						</div>
 						<div class="sub-heading center text-center">
 							<h3>
@@ -183,22 +183,58 @@
 											</ul>
 										</div>
 										<div class="tree-selector">
-											<span>Agency Tree Selector:</span>
-											<div class="input-wrapper">
-												<img src="../../assets/svgs/Edit.svg" />
-												<input
-													type="text"
-													id="job-title-search-input"
-													placeholder="Select Agencies Parent"
-													class="search-input"
-												/>
+											<div>
+												<span>Agency Tree Selector:</span>
+												<div class="input-wrapper">
+													<img src="../../assets/svgs/Edit.svg" />
+													<input
+														type="text"
+														id="job-title-search-input"
+														placeholder="Select Agencies Parent"
+														class="search-input"
+													/>
+												</div>
+												<ul id="options-list" class="options-list">
+													<li>UX Designer</li>
+													<li>UX Architect</li>
+													<li>UX Manager</li>
+													<li>UX Researcher</li>
+												</ul>
 											</div>
-											<ul id="options-list" class="options-list">
-												<li>UX Designer</li>
-												<li>UX Architect</li>
-												<li>UX Manager</li>
-												<li>UX Researcher</li>
-											</ul>
+											<div>
+												<div class="input-wrapper">
+													<img src="../../assets/svgs/Edit.svg" />
+													<input
+														type="text"
+														id="job-title-search-input"
+														placeholder="Select Agencies Agency Type"
+														class="search-input"
+													/>
+												</div>
+												<ul id="options-list" class="options-list">
+													<li>UX Designer</li>
+													<li>UX Architect</li>
+													<li>UX Manager</li>
+													<li>UX Researcher</li>
+												</ul>
+											</div>
+											<div>
+												<div class="input-wrapper">
+													<img src="../../assets/svgs/Edit.svg" />
+													<input
+														type="text"
+														id="job-title-search-input"
+														placeholder="Select Agencies"
+														class="search-input"
+													/>
+												</div>
+												<ul id="options-list" class="options-list">
+													<li>UX Designer</li>
+													<li>UX Architect</li>
+													<li>UX Manager</li>
+													<li>UX Researcher</li>
+												</ul>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -209,19 +245,19 @@
 									<div class="accordion-item">
 										<h2 class="accordion-header" id="headingOne">
 											<button
-												class="accordion-button"
+												class="accordion-button collapsed"
 												type="button"
 												data-bs-toggle="collapse"
 												data-bs-target="#collapseOne"
-												aria-expanded="true"
-												aria-controls="collapseOne"
+												aria-expanded="false"
+												aria-controls="collapseTwo"
 											>
 												Companies / Agencies
 											</button>
 										</h2>
 										<div
 											id="collapseOne"
-											class="accordion-collapse collapse show"
+											class="accordion-collapse collapse"
 											aria-labelledby="headingOne"
 											data-bs-parent="#accordionExample"
 										>

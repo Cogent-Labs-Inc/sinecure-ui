@@ -13,15 +13,17 @@
 		margin-top: 2.875rem;
 		.heading {
 			h1 {
+				font-size: 36px;
+				line-height: 42px;
 				max-width: 700px;
 				z-index: 9999;
 				color: $textColorPrimary;
 			}
 		}
 		.sub-heading {
-			margin-top: 32px;
+			margin-top: 51px;
 			h3 {
-				max-width: 670px;
+				max-width: 780px;
 				color: $textColorPrimary;
 				z-index: 99999;
 				span {
@@ -136,6 +138,9 @@
 					}
 					.accordion-collapse {
 						background-color: #f5fcff;
+						.accordion-body {
+							padding: 16px 0;
+						}
 						.accordion-pills-list {
 							display: flex;
 							gap: 12px;
@@ -164,7 +169,7 @@
 	}
 	.next-buttons-section {
 		gap: 15px;
-		padding: 362px 0 32px;
+		padding: 79px 0 32px;
 		.previous-button {
 			display: flex;
 			align-items: center;
