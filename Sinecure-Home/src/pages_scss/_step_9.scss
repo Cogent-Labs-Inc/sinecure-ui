@@ -1,0 +1,103 @@
+.step-nine-hero {
+	background-color: #fff;
+	position: relative;
+	height: calc(100vh - 32px);
+	.headings-secton {
+		margin-top: 2.875rem;
+		.page-heading {
+			h1 {
+				font-size: 36px;
+				max-width: 712px;
+				z-index: 9999;
+				color: $textColorPrimary;
+			}
+		}
+	}
+	.select-sites {
+		max-width: 589px;
+		margin: 87px auto 0;
+		text-align: center;
+		span {
+			color: #002766;
+			font-family: Roboto;
+			font-size: 14px;
+			font-weight: 600;
+			line-height: 22px;
+		}
+		.pills-wrapper {
+			margin-top: 20px;
+			gap: 20px;
+			span {
+				color: #002766;
+				font-family: Roboto;
+				font-size: 14px;
+				font-weight: 600;
+				line-height: 22px;
+				text-transform: capitalize;
+			}
+			.titles-list {
+				gap: 17px;
+				flex-wrap: wrap;
+				li {
+					font-family: Roboto;
+					font-size: 14px;
+					font-weight: 400;
+					line-height: 19px;
+					gap: 0.3125rem;
+					border-radius: 55px;
+					border: 1px solid $listBorderColor;
+					padding: 4px 5px 4px 10px;
+					color: #1890ff;
+					background-color: #f5fcff;
+				}
+				.selected {
+					color: $universalWhite;
+					background-color: #40a9ff;
+				}
+			}
+		}
+		.see-more-btn {
+			display: flex;
+			justify-content: center;
+			margin-top: 20px;
+			color: #003a8c;
+			font-family: Roboto;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 22px;
+			text-decoration-line: underline;
+		}
+	}
+	.butons-wrapper {
+		padding: 156px 0 32px;
+		gap: 15px;
+		.previous-button {
+			display: flex;
+			align-items: center;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 24px;
+			color: $listColor;
+			border: 1px solid $listColor;
+			background-color: transparent;
+			width: 121px;
+			border-radius: 4px;
+			padding: 8px 16px;
+			gap: 8px;
+			white-space: nowrap;
+		}
+		.next-button {
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 24px;
+			color: $universalWhite;
+			min-width: 125px;
+			padding: 8px 16px;
+			border-radius: 4px;
+			background-color: #096dd9;
+			border: transparent;
+			white-space: nowrap;
+		}
+	}
+}

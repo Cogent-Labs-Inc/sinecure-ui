@@ -2,6 +2,14 @@
 	background-color: #fff;
 	position: relative;
 	height: 100vh;
+	.overlay {
+		background-color: #f5fcff;
+		top: 0;
+		height: 100%;
+		position: absolute;
+		right: 0;
+		width: 50%;
+	}
 	.headings-section {
 		margin-top: 2.875rem;
 		.heading {
@@ -87,6 +95,49 @@
 			white-space: nowrap;
 		}
 	}
+	.required-skills-description {
+		.skills-heading {
+			margin-top: 1.9375rem;
+			h1 {
+				font-size: 2.25rem;
+				max-width: 550px;
+			}
+		}
+		.skills-detail {
+			h3 {
+				font-size: 1.25rem;
+				max-width: 645px;
+			}
+		}
+	}
+	.experience-section {
+		margin-top: 74px;
+		.slider-wrapper {
+			margin-top: 24px;
+		}
+	}
+	.skils-detail-section {
+		z-index: 99999999;
+		margin: 53px 40px 0;
+		.search-fields-wrapper {
+			.input-wrapper {
+				width: 430px;
+				height: 3.5rem;
+				input {
+					font-size: 14px;
+					width: 390px;
+				}
+			}
+			.options-list {
+				top: 96px;
+				width: 360px;
+				left: 45px;
+			}
+			.your-choice {
+				width: 430px;
+			}
+		}
+	}
 	.search-fields-wrapper {
 		.search-container {
 			display: flex;
@@ -132,6 +183,123 @@
 				}
 				.recent-search-list::-webkit-scrollbar {
 					display: none;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 2560px) {
+		.skils-detail-section {
+			margin: 138px 40px 0;
+			.search-fields-wrapper {
+				.search-container {
+					max-width: 900px;
+				}
+				.input-wrapper {
+					width: 853px;
+					input {
+						width: 800px;
+					}
+				}
+				.options-list {
+					top: 96px;
+					width: 790px;
+					left: 45px;
+				}
+				.your-choice {
+					width: 430px;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 1920px) {
+		.skils-detail-section {
+			margin: 138px 40px 0;
+			.search-fields-wrapper {
+				.search-container {
+					max-width: 700px;
+				}
+				.input-wrapper {
+					width: 630px;
+					input {
+						width: 580px;
+					}
+				}
+				.options-list {
+					top: 96px;
+					width: 560px;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 1920px) {
+		.skils-detail-section {
+			.search-fields-wrapper {
+				.search-container {
+					max-width: 550px;
+				}
+				.input-wrapper {
+					width: 440px;
+					input {
+						width: 430px;
+					}
+				}
+				.options-list {
+					top: 96px;
+					width: 380px;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 1024px) {
+		.skils-detail-section {
+			margin: 138px 40px 0;
+			.search-fields-wrapper {
+				.search-container {
+					max-width: 330px;
+				}
+				.input-wrapper {
+					width: 300px;
+					input {
+						width: 240px;
+					}
+				}
+				.options-list {
+					top: 123px;
+					width: 260px;
+					left: 45px;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 768px) {
+		.headings-section {
+			.heading {
+				h1 {
+					font-size: 32px;
+				}
+			}
+			.sub-heading {
+				margin-top: 31px;
+				h3 {
+					font-size: 20px;
+				}
+			}
+		}
+		.skils-detail-section {
+			margin: 138px 16px 0;
+			.search-fields-wrapper {
+				.search-container {
+					max-width: 300px;
+				}
+				.input-wrapper {
+					width: 18.375rem;
+					input {
+						font-size: 12px;
+						width: 280px;
+					}
+				}
+				.options-list {
+					width: 360px;
 				}
 			}
 		}
