@@ -2,7 +2,15 @@
 	background-color: #fff;
 	position: relative;
 	height: calc(100vh - 32px);
-  .headings-section {
+	.overlay {
+		background-color: #f5fcff;
+		top: 0;
+		height: 100%;
+		position: absolute;
+		right: 0;
+		width: 50%;
+	}
+	.headings-section {
 		margin-top: 2.875rem;
 		.heading {
 			h1 {
@@ -25,47 +33,48 @@
 			}
 		}
 	}
-  .skils-detail-section {
-    .search-fields-wrapper {
-      .search-container {
-        .input-wrapper {
-          width: 426px;
-        }
-        ul {
-          width: 360px;
-        }
-      }
-    }
-  }
-  .butons-wrapper {
-    padding: 319px 0 32px;
-    gap: 15px;
-    .previous-button {
-      display: flex;
-      align-items: center;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 24px;
-      color: $listColor;
-      border: 1px solid $listColor;
-      background-color: transparent;
-      width: 121px;
-      border-radius: 4px;
-      padding: 8px 16px;
-      gap: 8px;
-      white-space: nowrap;
-    }
-    .next-button {
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 24px;
-      color: $universalWhite;
-      min-width: 125px;
-      padding: 8px 16px;
-      border-radius: 4px;
-      background-color: #096dd9;
-      border: transparent;
-      white-space: nowrap;
-    }
-  }
+	.skils-detail-section {
+    z-index: 9999;
+		.search-fields-wrapper {
+			.search-container {
+				.input-wrapper {
+					width: 426px;
+				}
+				ul {
+					width: 360px;
+				}
+			}
+		}
+	}
+	.butons-wrapper {
+		padding: 319px 0 32px;
+		gap: 15px;
+		.previous-button {
+			display: flex;
+			align-items: center;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 24px;
+			color: $listColor;
+			border: 1px solid $listColor;
+			background-color: transparent;
+			width: 121px;
+			border-radius: 4px;
+			padding: 8px 16px;
+			gap: 8px;
+			white-space: nowrap;
+		}
+		.next-button {
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 24px;
+			color: $universalWhite;
+			min-width: 125px;
+			padding: 8px 16px;
+			border-radius: 4px;
+			background-color: #096dd9;
+			border: transparent;
+			white-space: nowrap;
+		}
+	}
 }

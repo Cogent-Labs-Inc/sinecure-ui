@@ -68,6 +68,30 @@
 						width: 413px;
 					}
 				}
+				.form-dropdown-wrapper {
+					gap: 30px;
+					.dropdown-wrapper {
+						.dropdown-btn {
+							display: flex;
+							justify-content: space-between;
+							width: 100%;
+							background-color: transparent;
+							color: #8c8c8c;
+							font-size: 14px;
+							font-weight: 400;
+							line-height: 22px;
+							padding: 5px 12px;
+							width: 203px !important;
+							border: 1px solid #d9d9d9;
+							&::after {
+								margin-top: 9px;
+							}
+						}
+						.dropdown-menu {
+							width: 203px;
+						}
+					}
+				}
 				.more-role {
 					margin-top: 1.875rem;
 					gap: 19px;
@@ -125,8 +149,7 @@
 						}
 						.form-dropdown-wrapper {
 							display: flex;
-							
-					}
+						}
 					}
 					.optional {
 						align-items: center;
@@ -282,7 +305,7 @@
 	height: 146px;
 	p {
 		color: #002766;
-    margin-top: 16px;
+		margin-top: 16px;
 		font-size: 16px;
 		font-weight: 400;
 		line-height: 24px;
@@ -302,34 +325,34 @@ input[type='file'] {
 }
 .btn-section {
 	gap: 15px;
-		position: relative;
-		z-index: 9999;
-		padding: 0  0 32px;
-		.previous-button {
-			display: flex;
-			align-items: center;
-			font-size: 16px;
-			font-weight: 400;
-			line-height: 24px;
-			color: $listColor;
-			border: 1px solid $listColor;
-			background-color: transparent;
-			width: 121px;
-			border-radius: 4px;
-			padding: 8px 16px;
-			gap: 8px;
-			white-space: nowrap;
-		}
-		.next-button {
-			font-size: 16px;
-			font-weight: 400;
-			line-height: 24px;
-			color: $universalWhite;
-			min-width: 125px;
-			padding: 8px 16px;
-			border-radius: 4px;
-			background-color: #096dd9;
-			border: transparent;
-			white-space: nowrap;
-		}
+	position: relative;
+	z-index: 9999;
+	padding: 0 0 32px;
+	.previous-button {
+		display: flex;
+		align-items: center;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 24px;
+		color: $listColor;
+		border: 1px solid $listColor;
+		background-color: transparent;
+		width: 121px;
+		border-radius: 4px;
+		padding: 8px 16px;
+		gap: 8px;
+		white-space: nowrap;
+	}
+	.next-button {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 24px;
+		color: $universalWhite;
+		min-width: 125px;
+		padding: 8px 16px;
+		border-radius: 4px;
+		background-color: #096dd9;
+		border: transparent;
+		white-space: nowrap;
+	}
 }

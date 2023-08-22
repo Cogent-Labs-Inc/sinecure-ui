@@ -85,3 +85,43 @@ function removeClass(elem, className) {
 }
 
 // Range Slider
+document.addEventListener("DOMContentLoaded", function () {
+  const navbarListItems = document.querySelectorAll(".navbar-list-item");
+  const settingsIcon = document.querySelector(".settings-icon");
+
+  // Add the active class to the first item by default
+  navbarListItems[0].classList.add("active");
+
+  navbarListItems.forEach(function (item) {
+    item.addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent default navigation behavior
+
+      // Remove the active class from all items
+      navbarListItems.forEach(function (item) {
+        item.classList.remove("active");
+      });
+
+      // Add the active class to the clicked item
+      item.classList.add("active");
+
+      // Remove the active class from the settings icon
+      settingsIcon.classList.remove("active");
+    });
+  });
+
+  // Add click event listener for the settings icon
+  settingsIcon.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent default navigation behavior
+
+    // Remove the active class from all items
+    navbarListItems.forEach(function (item) {
+      item.classList.remove("active");
+    });
+
+    // Add the active class to the settings icon
+    settingsIcon.classList.add("active");
+  });
+});
+
+
+

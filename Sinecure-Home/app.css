@@ -78,6 +78,13 @@ body .main .body .top-navbar .add-role-button button {
   background-color: rgb(230, 247, 255);
   border-right: 2px solid #1890ff;
 }
+.active svg path {
+  fill: #1890FF;
+}
+
+.settings-icon {
+  padding: 0.75rem 1.375rem 0.75rem 1.5rem;
+}
 
 .d-flex {
   display: flex;
@@ -2331,6 +2338,28 @@ select {
 .step-six-hero .body-section .form-section .add-role-section .dropdown .dropdown-menu {
   width: 413px;
 }
+.step-six-hero .body-section .form-section .add-role-section .form-dropdown-wrapper {
+  gap: 30px;
+}
+.step-six-hero .body-section .form-section .add-role-section .form-dropdown-wrapper .dropdown-wrapper .dropdown-btn {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: transparent;
+  color: #8c8c8c;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  padding: 5px 12px;
+  width: 203px !important;
+  border: 1px solid #d9d9d9;
+}
+.step-six-hero .body-section .form-section .add-role-section .form-dropdown-wrapper .dropdown-wrapper .dropdown-btn::after {
+  margin-top: 9px;
+}
+.step-six-hero .body-section .form-section .add-role-section .form-dropdown-wrapper .dropdown-wrapper .dropdown-menu {
+  width: 203px;
+}
 .step-six-hero .body-section .form-section .add-role-section .more-role {
   margin-top: 1.875rem;
   gap: 19px;
@@ -2767,6 +2796,14 @@ input[type=file] {
   position: relative;
   height: calc(100vh - 32px);
 }
+.step-eight-hero .overlay {
+  background-color: #f5fcff;
+  top: 0;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  width: 50%;
+}
 .step-eight-hero .headings-section {
   margin-top: 2.875rem;
 }
@@ -2787,6 +2824,9 @@ input[type=file] {
   font-weight: 600;
   position: relative;
   z-index: 99999;
+}
+.step-eight-hero .skils-detail-section {
+  z-index: 9999;
 }
 .step-eight-hero .skils-detail-section .search-fields-wrapper .search-container .input-wrapper {
   width: 426px;
@@ -2946,7 +2986,7 @@ input[type=file] {
 .step-ten-hero .headings-section .heading h1 {
   font-size: 36px;
   line-height: 42px;
-  max-width: 700px;
+  max-width: 660px;
   z-index: 9999;
   color: #002766;
 }
@@ -2965,6 +3005,22 @@ input[type=file] {
 }
 .step-ten-hero .skils-detail-section {
   z-index: 9999;
+}
+.step-ten-hero .input-section-wrapper .search-fields-wrapper .input-wrapper {
+  width: 430px;
+  height: 3.5rem;
+}
+.step-ten-hero .input-section-wrapper .search-fields-wrapper .input-wrapper input {
+  font-size: 14px;
+  width: 390px;
+}
+.step-ten-hero .input-section-wrapper .search-fields-wrapper .options-list {
+  top: 96px;
+  width: 360px;
+  left: 45px;
+}
+.step-ten-hero .input-section-wrapper .search-fields-wrapper .your-choice {
+  width: 430px;
 }
 .step-ten-hero .next-buttons-section {
   gap: 15px;
