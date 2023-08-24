@@ -166,9 +166,9 @@
 									<span>Include Location</span>
 									<div class="input-wrapper">
 										<img src="../../assets/svgs/Edit.svg" />
-										<input type="text" id="job-title-search-input" placeholder="ex: New York" class="search-input" />
+										<input type="text" id="include-location-input" placeholder="ex: New York" class="search-input" />
 									</div>
-									<ul id="options-list" class="options-list">
+									<ul id="include-options-list" class="options-list">
 										<li>New York</li>
 										<li>New Hamption</li>
 										<li>New Jersey</li>
@@ -181,9 +181,9 @@
 									<span>Exclude Location</span>
 									<div class="input-wrapper">
 										<img src="../../assets/svgs/Edit.svg" />
-										<input type="text" id="apply-search-input" placeholder="ex: Chacago" class="search-input" />
+										<input type="text" id="exclude-search-input" placeholder="ex: Chacago" class="search-input" />
 									</div>
-									<ul id="options-list" class="options-list">
+									<ul id="exclude-options-list" class="options-list">
 										<li>New York</li>
 										<li>New Hamption</li>
 										<li>New Jersey</li>
@@ -211,6 +211,42 @@
 				</div>
 			</div>
 		</div>
+		<script>
+			const includeOptionsList = document.getElementById('include-options-list');
+			const searchInput = document.getElementById('include-location-input');
+			const locationOptionsList = document.getElementById('exclude-options-list');
+			const locationSearchInput = document.getElementById('exclude-search-input');
+			const applyInputWrapper = document.querySelector('.apply-field .input-wrapper');
+			const locationInputWrapper = document.querySelector('.location-field .input-wrapper');
+
+			includeOptionsList.addEventListener('click', function (event) {
+				const selectedOption = event.target.textContent;
+				searchInput.value = selectedOption;
+				applyInputWrapper.classList.add('active-input');
+			});
+
+			searchInput.addEventListener('input', function () {
+				if (searchInput.value.trim() !== '') {
+					applyInputWrapper.classList.add('active-input');
+				} else {
+					applyInputWrapper.classList.remove('active-input');
+				}
+			});
+
+			locationSearchInput.addEventListener('input', function () {
+				if (locationSearchInput.value.trim() !== '') {
+					locationInputWrapper.classList.add('active-input');
+				} else {
+					locationInputWrapper.classList.remove('active-input');
+				}
+			});
+
+			locationOptionsList.addEventListener('click', function (event) {
+				const selectedLocation = event.target.textContent;
+				locationSearchInput.value = selectedLocation;
+				locationInputWrapper.classList.add('active-input');
+			});
+		</script>
 		<script>
 			var previousButton = document.querySelector('.previous-button');
 			var nextButton = document.querySelector('.next-button');
