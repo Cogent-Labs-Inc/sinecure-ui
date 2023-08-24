@@ -1,0 +1,1269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F5F5F5 !important;
+  font-family: "Roboto", "sans-serif" !important;
+}
+
+.main {
+  display: flex;
+  gap: 1rem;
+}
+@media screen and (min-width: 64rem) {
+  .main {
+    gap: 18rem;
+  }
+}
+.main .active {
+  left: 4rem !important;
+}
+.main .blur {
+  filter: blur(0.3125rem);
+  overflow-y: hidden !important;
+}
+.main .side-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFFFFF;
+  flex: 0 0 4rem;
+  height: 100vh;
+  z-index: 2;
+}
+.main .side-bar img {
+  width: 100%;
+  height: 100%;
+}
+.main .side-bar .logo {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 0.25rem 0 5.8125rem;
+}
+.main .side-bar .avatar {
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 5.8125rem;
+}
+.main .side-bar .message {
+  position: relative;
+  width: 4rem;
+  height: 2.5rem;
+  margin-bottom: 3.125rem;
+}
+.main .side-bar .message .message-number {
+  display: flex;
+  position: absolute;
+  top: 0.4375rem;
+  right: 1.0625rem;
+  width: 1rem;
+  height: 1rem;
+}
+.main .side-bar nav ul {
+  margin-bottom: 3.6875rem;
+}
+.main .side-bar nav ul li {
+  list-style: none;
+}
+.main .side-bar nav ul li a {
+  width: 4rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .side-bar nav ul li a svg {
+  color: #002766;
+  display: flex;
+  width: 1rem;
+  height: 1rem;
+}
+.main .side-bar nav ul li:first-child {
+  background-color: #E6F7FF;
+  border-right: 2px solid #1890FF;
+}
+.main .side-bar nav ul li:first-child a svg {
+  color: #1890FF;
+}
+.main .side-bar .setting {
+  width: 4rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .collapsible-bar {
+  width: 16rem;
+  position: fixed;
+  top: 1rem;
+  left: -16rem;
+  background-color: #FFFFFF;
+  border-radius: 0.5rem;
+  height: calc(100vh - 1rem);
+  z-index: 1;
+  transition: 0.7s;
+}
+@media screen and (min-width: 64rem) {
+  .main .collapsible-bar {
+    left: 5rem !important;
+    height: calc(100vh - 2rem);
+  }
+}
+.main .collapsible-bar .selection-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.1875rem;
+  white-space: nowrap;
+  padding: 0.625rem 0;
+  background-color: #E6F7FF;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.main .collapsible-bar .selection-bar .selection {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.375rem;
+  color: #002766;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.main .collapsible-bar .selection-bar .selection img {
+  width: 1rem;
+  height: 1rem;
+}
+.main .collapsible-bar .selection-bar .clear {
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: #1890FF;
+}
+.main .collapsible-bar .selection-bar .clear img {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+.main .collapsible-bar .advance-seach {
+  margin: 0.875rem 0 1.125rem 1.5rem;
+}
+.main .collapsible-bar .advance-seach span {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: #262626;
+}
+.main .collapsible-bar .advance-seach .search {
+  width: 12rem;
+  height: 2.25rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  color: #FFFFFF;
+  border: none;
+  background-color: #1890FF;
+  margin-top: 0.25rem;
+}
+.main .collapsible-bar .advance-seach .search img {
+  width: 1rem;
+  height: 1rem;
+}
+.main .collapsible-bar .detail-listing li {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: #262626;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  list-style: none;
+  border-top: 2px solid #F5F5F5;
+}
+.main .collapsible-bar .detail-listing li:last-child {
+  border-bottom: 2px solid #F5F5F5;
+}
+.main .collapsible-bar .detail-listing img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.main .main-content {
+  flex: 1;
+  height: 100vh;
+  overflow-y: scroll;
+  padding: 1rem 1rem 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.main .main-content::-webkit-scrollbar {
+  display: none;
+}
+.main .main-content .skill-type {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: #FFFFFF;
+}
+.main .main-content .skill-type .result {
+  display: flex;
+  justify-content: space-between;
+}
+.main .main-content .skill-type .result h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.75rem;
+  color: #262626;
+}
+.main .main-content .skill-type .result .breadcrumb {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  gap: 1.375rem;
+  height: 1.375rem;
+  margin-bottom: 1rem;
+}
+.main .main-content .skill-type .result .breadcrumb li {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  color: #8C8C8C;
+  list-style: none;
+}
+.main .main-content .skill-type .result .breadcrumb li img {
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+}
+.main .main-content .skill-type .result .breadcrumb li:last-child {
+  color: #262626;
+}
+.main .main-content .skill-type .result .breadcrumb li:not(:last-child) {
+  position: relative;
+}
+.main .main-content .skill-type .result .breadcrumb li:not(:last-child)::after {
+  position: absolute;
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.3662 6.04688L9.2168 16.8545H8.12988L12.2861 6.04688H13.3662Z' fill='%238C8C8C'/%3E%3C/svg%3E ");
+  width: 1.375rem;
+  height: 1.375rem;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -1.4375rem;
+}
+.main .main-content .skill-type .detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .main-content .skill-type .detail .more-detail {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  color: #1890FF;
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+}
+.main .main-content .skill-type .detail .more-detail img {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+.main .main-content .skill-type .detail .button-wrapper {
+  display: flex;
+  gap: 0.5rem;
+}
+.main .main-content .skill-type .detail .button-wrapper .btn {
+  padding: 0 1rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  color: #262626;
+  background-color: transparent;
+  border-radius: 0.25rem;
+  border: 1px solid #D9D9D9;
+  outline: none;
+  cursor: pointer;
+}
+.main .main-content .skill-type .detail .button-wrapper .btn:first-child {
+  padding: 0.4375rem;
+}
+.main .main-content .skill-type .detail .button-wrapper .btn:last-child {
+  color: #FFFFFF;
+  background-color: #1890FF;
+  border: none;
+}
+.main .main-content .skill-type .detail .button-wrapper .btn img {
+  width: 1rem;
+  height: 1rem;
+}
+.main .main-content .ideal-candidate {
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
+  background-color: #E6F7FF;
+  border-radius: 0.5rem;
+}
+.main .main-content .ideal-candidate .ideal-candidate-modification {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.main .main-content .ideal-candidate .ideal-candidate-modification h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.375rem;
+  color: #262626;
+  margin: 0;
+}
+.main .main-content .ideal-candidate .ideal-candidate-modification .modification-detail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.main .main-content .ideal-candidate .ideal-candidate-modification .modification-detail .modify {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3125rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  color: #1890FF;
+  border-radius: 0.25rem;
+  border: 1px solid #1890FF;
+}
+.main .main-content .ideal-candidate .ideal-candidate-modification .modification-detail .arrow-down {
+  width: 3rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.main .main-content .ideal-candidate .ideal-candidate-profile {
+  display: flex;
+  gap: 1.5rem;
+}
+.main .main-content .ideal-candidate .ideal-candidate-profile .image {
+  border-radius: 50%;
+}
+.main .main-content .ideal-candidate .ideal-candidate-profile .image img {
+  width: 5.5rem;
+  height: 5.5rem;
+}
+.main .main-content .ideal-candidate .ideal-candidate-profile .ideal-candidate-skillset {
+  display: flex;
+  justify-content: space-between;
+  width: -webkit-fill-available;
+}
+.main .main-content .ideal-candidate .ideal-candidate-profile .ideal-candidate-skillset .ideal-candidate-personal-deatil p {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  color: #262626;
+  margin-bottom: 0.625rem;
+}
+.main .main-content .ideal-candidate .ideal-candidate-profile .ideal-candidate-skillset .ideal-candidate-personal-deatil p strong {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  color: #0050B3;
+}
+.main .main-content .ideal-candidate .ideal-candidate-profile .ideal-candidate-skillset .ideal-candidate-personal-deatil span {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  margin-bottom: 0.625rem;
+  color: #717D96;
+}
+.main .main-content .ideal-candidate .ideal-candidate-profile .ideal-candidate-skillset .ideal-candidate-personal-deatil .ideal-candidate-skill-listing {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin: 0.875rem 0 0.3125rem;
+}
+.main .main-content .ideal-candidate .ideal-candidate-profile .ideal-candidate-skillset .ideal-candidate-personal-deatil .ideal-candidate-skill-listing h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.375rem;
+  color: #002766;
+  margin: 0;
+}
+.main .main-content .ideal-candidate .ideal-candidate-profile .ideal-candidate-skillset .ideal-candidate-personal-deatil .ideal-candidate-skill-listing li {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: #1890FF;
+  list-style: none;
+}
+.main .main-content .ideal-candidate .ideal-candidate-profile .ideal-candidate-skillset .ideal-candidate-personal-deatil .ideal-candidate-skill-listing li:nth-child(3) {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .main .main-content .ideal-candidate .ideal-candidate-profile .ideal-candidate-skillset .ideal-candidate-personal-deatil .ideal-candidate-skill-listing li:nth-child(3) {
+    display: block;
+  }
+}
+.main .main-content .ideal-candidate .ideal-candidate-profile .ideal-candidate-skillset .ideal-candidate-personal-deatil .ideal-candidate-skill-listing li:not(:last-child) {
+  padding: 0 0.5rem;
+  border-radius: 0.125rem;
+  border: 1px solid #91D5FF;
+  background-color: #FFFFFF;
+}
+.main .main-content .ideal-candidate .ideal-candidate-profile .ideal-candidate-skillset .ideal-candidate-personal-deatil .ideal-candidate-skill-listing li:last-child {
+  position: relative;
+  font-weight: 500;
+}
+.main .main-content .ideal-candidate .ideal-candidate-profile .ideal-candidate-skillset .ideal-candidate-personal-deatil .ideal-candidate-skill-listing li:last-child::before {
+  position: absolute;
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.5 5.8335L7 9.3335L10.5 5.8335' stroke='%231890FF' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+  width: 0.875rem;
+  height: 0.875rem;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -1.0625rem;
+}
+.main .main-content .ideal-candidate .ideal-candidate-profile .ideal-candidate-skillset .ideal-candidate-personal-deatil .ideal-candidate-skill-listing li:last-child:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0.0625rem;
+  background-color: #1890FF;
+  bottom: 0.125rem;
+  left: 0;
+}
+.main .main-content .ideal-candidate .ideal-candidate-profile .ideal-candidate-skillset .profile-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.main .main-content .ideal-candidate .ideal-candidate-profile .ideal-candidate-skillset .profile-detail .linked-in-profile {
+  display: flex;
+  gap: 10px;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: #003A8C;
+}
+.main .main-content .ideal-candidate .ideal-candidate-profile .ideal-candidate-skillset .profile-detail .linked-in-profile span {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: #1890FF;
+  position: relative;
+}
+.main .main-content .ideal-candidate .ideal-candidate-profile .ideal-candidate-skillset .profile-detail .linked-in-profile span::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #1890FF;
+  left: 0;
+  bottom: 0.25rem;
+}
+.main .main-content .ideal-candidate .ideal-candidate-profile .ideal-candidate-skillset .profile-detail .information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 10.3125rem;
+  height: 2rem;
+  border: 1px solid #FFFFFF;
+  outline: none;
+  border-radius: 0.25rem;
+  color: #FFFFFF;
+  background-color: #40A9FF;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.main .main-content .achievement-listing {
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  display: flex;
+  gap: 2.0625rem;
+  align-items: center;
+}
+.main .main-content .achievement-listing .achievement {
+  width: -webkit-fill-available;
+  height: 5.25rem;
+  padding: 1rem 0 1rem 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@media screen and (min-width: 160rem) {
+  .main .main-content .achievement-listing .achievement {
+    justify-content: center;
+  }
+}
+.main .main-content .achievement-listing .achievement .image {
+  display: none;
+}
+@media screen and (min-width: 75rem) {
+  .main .main-content .achievement-listing .achievement .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.625rem;
+    height: 3.625rem;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+  }
+  .main .main-content .achievement-listing .achievement .image img {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+}
+.main .main-content .achievement-listing .achievement .achievement-data span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  color: #262626;
+}
+.main .main-content .achievement-listing .achievement .achievement-data h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2rem;
+  color: #06152B;
+  margin: 0;
+}
+.main .main-content .achievement-listing .achievement:first-child {
+  background-color: #F0F5FF;
+}
+.main .main-content .achievement-listing .achievement:nth-child(2) {
+  background-color: #F9F0FF;
+}
+.main .main-content .achievement-listing .achievement:last-child {
+  background-color: rgba(217, 247, 190, 0.6);
+}
+.main .main-content .detail-search {
+  background-color: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+.main .main-content .detail-search .btn-wrapper {
+  display: flex;
+  gap: 0.5625rem;
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 64rem) {
+  .main .main-content .detail-search .btn-wrapper {
+    display: none;
+  }
+}
+.main .main-content .detail-search .btn-wrapper .btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #1890FF;
+  color: #FFFFFF;
+}
+.main .main-content .detail-search .btn-wrapper .btn img {
+  width: 1rem;
+  height: 1rem;
+}
+.main .main-content .detail-search .candidate-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.3125rem;
+}
+.main .main-content .detail-search .candidate-filter h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #595959;
+  margin: 0;
+}
+.main .main-content .detail-search .candidate-filter .filter-listing {
+  display: flex;
+  gap: 0.75rem;
+}
+.main .main-content .detail-search .candidate-filter .filter-listing .filter {
+  display: flex;
+  align-items: center;
+  gap: 1.5625rem;
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #E6F7FF;
+}
+.main .main-content .detail-search .candidate-filter .filter-listing .filter span {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: #262626;
+}
+.main .main-content .detail-search .candidate-filter .filter-listing .filter p {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  color: #06152B;
+  margin: 0;
+}
+.main .main-content .detail-search .features {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.625rem;
+  background-color: #FAFAFA;
+  border-radius: 0.25rem;
+}
+.main .main-content .detail-search .features ul {
+  display: flex;
+  gap: 1.3125rem;
+  margin: 0;
+}
+.main .main-content .detail-search .features ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: #262626;
+}
+.main .main-content .detail-search .features ul li:last-child {
+  color: #F5222D;
+}
+.main .main-content .detail-search .features ul li input[type=checkbox] {
+  width: 1rem;
+  height: 1rem;
+  background-color: #FFFFFF;
+  border: 1px solid #d9d9d9;
+}
+.main .main-content .detail-search .features ul li label {
+  color: #0050B3;
+  margin: 0;
+}
+.main .main-content .detail-search .features ul li:nth-child(2), .main .main-content .detail-search .features ul li:last-child {
+  display: none;
+}
+@media screen and (min-width: 75rem) {
+  .main .main-content .detail-search .features ul li:nth-child(2), .main .main-content .detail-search .features ul li:last-child {
+    display: flex;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .main .main-content .detail-search .features ul li:nth-child(6) {
+    display: none;
+  }
+}
+.main .main-content .detail-search .features img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.main .main-content .candidate-listing {
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  position: relative;
+}
+.main .main-content .candidate-listing .candidate {
+  padding: 1.5rem 0;
+  display: flex;
+}
+.main .main-content .candidate-listing .candidate:nth-child(3), .main .main-content .candidate-listing .candidate:nth-child(4), .main .main-content .candidate-listing .candidate:nth-child(5) {
+  display: none;
+}
+@media screen and (min-width: 64rem) {
+  .main .main-content .candidate-listing .candidate:nth-child(3) {
+    display: flex;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .main .main-content .candidate-listing .candidate:nth-child(4) {
+    display: flex;
+  }
+}
+@media screen and (min-width: 160rem) {
+  .main .main-content .candidate-listing .candidate {
+    border-radius: 0.5rem;
+  }
+  .main .main-content .candidate-listing .candidate:nth-child(5) {
+    display: flex;
+  }
+}
+.main .main-content .candidate-listing .candidate:not(:last-child) {
+  border-bottom: 2px solid #F5F5F5;
+}
+.main .main-content .candidate-listing .candidate .candidate-personal-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 14.875rem;
+}
+@media screen and (min-width: 160rem) {
+  .main .main-content .candidate-listing .candidate .candidate-personal-detail {
+    flex: 0 0 23.625rem;
+  }
+}
+.main .main-content .candidate-listing .candidate .candidate-personal-detail .profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8125rem;
+}
+.main .main-content .candidate-listing .candidate .candidate-personal-detail .profile input {
+  width: 1rem;
+  height: 1rem;
+}
+@media screen and (min-width: 75rem) {
+  .main .main-content .candidate-listing .candidate .candidate-personal-detail .profile input {
+    position: relative;
+    bottom: -156%;
+  }
+}
+@media screen and (min-width: 160rem) {
+  .main .main-content .candidate-listing .candidate .candidate-personal-detail .profile input {
+    position: static;
+  }
+}
+.main .main-content .candidate-listing .candidate .candidate-personal-detail .profile .progress-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.main .main-content .candidate-listing .candidate .candidate-personal-detail .profile .progress-detail img {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+}
+.main .main-content .candidate-listing .candidate .candidate-personal-detail .profile .progress-detail .progress {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+.main .main-content .candidate-listing .candidate .candidate-personal-detail .profile .progress-detail .progress span {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: #2D3648;
+}
+.main .main-content .candidate-listing .candidate .candidate-personal-detail .profile .progress-detail .progress .progress-bar {
+  width: 7.125rem;
+  height: 0.3125rem;
+  border-radius: 0.3125rem;
+  background-color: #D9D9D9;
+  margin: 0.625rem;
+}
+@media screen and (min-width: 160rem) {
+  .main .main-content .candidate-listing .candidate .candidate-personal-detail .profile .progress-detail .progress .progress-bar {
+    width: 12.0625rem;
+  }
+}
+.main .main-content .candidate-listing .candidate .candidate-personal-detail .profile .progress-detail .progress .progress-bar .progress-value {
+  width: 51%;
+  height: 100%;
+  background-color: #2EDB4B;
+  border-radius: 5px;
+}
+.main .main-content .candidate-listing .candidate .candidate-personal-detail .profile > img {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+@media screen and (min-width: 75rem) {
+  .main .main-content .candidate-listing .candidate .candidate-personal-detail .profile > img {
+    position: relative;
+    bottom: -195%;
+    right: 10.625rem;
+  }
+}
+@media screen and (min-width: 160rem) {
+  .main .main-content .candidate-listing .candidate .candidate-personal-detail .profile > img {
+    position: static;
+  }
+}
+.main .main-content .candidate-listing .candidate .candidate-personal-detail h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  color: #0050B3;
+  text-align: center;
+}
+.main .main-content .candidate-listing .candidate .candidate-personal-detail p {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: #717D96;
+  text-align: center;
+  max-width: 13.1875rem;
+  margin-bottom: 0.8125rem;
+}
+@media screen and (min-width: 160rem) {
+  .main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links {
+    display: flex;
+    align-items: center;
+    gap: 0.8125rem;
+  }
+}
+.main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 8.4375rem;
+  height: 2.25rem;
+  border: 1px solid #40A9FF;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #1890FF;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+@media screen and (min-width: 75rem) {
+  .main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links .btn {
+    margin-left: 0.625rem;
+    height: 1.875rem;
+  }
+}
+.main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul {
+  display: flex;
+  gap: 0.1875rem;
+  margin: 0.8125rem 0 1.3125rem;
+}
+@media screen and (min-width: 75rem) {
+  .main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul {
+    margin-left: 0.4375rem;
+  }
+}
+@media screen and (min-width: 160rem) {
+  .main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul {
+    margin: 0;
+  }
+}
+.main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li {
+  list-style: none;
+  border-radius: 50%;
+}
+@media screen and (min-width: 160rem) {
+  .main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:first-child {
+    display: none;
+  }
+}
+.main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li button {
+  width: 1.9375rem;
+  height: 1.9375rem;
+  padding: 0.4063rem;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+.main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li button img {
+  color: #8C8C8C;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+.main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:first-child, .main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:hover {
+  background-color: #E6F7FF;
+}
+.main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:first-child svg, .main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:hover svg {
+  color: #40A9FF;
+}
+.main .main-content .candidate-listing .candidate .candidate-personal-detail .profile-change {
+  display: none;
+}
+@media screen and (min-width: 75rem) {
+  .main .main-content .candidate-listing .candidate .candidate-personal-detail .profile-change {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #262626;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .main .main-content .candidate-listing .candidate .candidate-personal-detail .profile-change {
+    display: none;
+  }
+}
+.main .main-content .candidate-listing .candidate .candidate-personal-detail .work-detail-listing {
+  display: flex;
+  gap: 1rem;
+}
+@media screen and (min-width: 160rem) {
+  .main .main-content .candidate-listing .candidate .candidate-personal-detail .work-detail-listing {
+    display: none;
+  }
+}
+.main .main-content .candidate-listing .candidate .candidate-personal-detail .work-detail-listing .work-detail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.main .main-content .candidate-listing .candidate .candidate-personal-detail .work-detail-listing .work-detail img {
+  width: 1rem;
+  height: 1rem;
+}
+.main .main-content .candidate-listing .candidate .activity {
+  display: none;
+}
+@media screen and (min-width: 160rem) {
+  .main .main-content .candidate-listing .candidate .activity {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.9375rem;
+    margin: 0 1.875rem;
+  }
+  .main .main-content .candidate-listing .candidate .activity h4 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.375rem;
+    margin-bottom: 0.9375rem;
+    color: #002766;
+  }
+  .main .main-content .candidate-listing .candidate .activity li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+  }
+  .main .main-content .candidate-listing .candidate .activity li span {
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: -0.01em;
+    color: #34AFF7;
+    border-bottom: 1px solid #34AFF7;
+  }
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail {
+  flex: 1;
+  padding-left: 1rem;
+}
+@media screen and (min-width: 160rem) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail {
+    padding: 0 3.4375rem 0 2.875rem;
+  }
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 0.8125rem;
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #002766;
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul {
+  display: flex;
+  gap: 0.625rem;
+  margin: 0;
+  margin: 0;
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul li {
+  list-style: none;
+  padding: 0.0625rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #1890FF;
+  border-radius: 0.125rem;
+  border: 1px solid #91D5FF;
+  display: none;
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul li:first-child, .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul li:nth-child(2), .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul li:nth-child(3), .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul li:last-child {
+  display: block;
+}
+@media screen and (min-width: 64rem) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul li:nth-child(3) {
+    display: none;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul li:nth-child(3) {
+    display: block;
+  }
+}
+@media screen and (min-width: 160rem) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul li:nth-child(n) {
+    display: block;
+  }
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul li svg {
+  position: relative;
+  top: 0.125rem;
+  color: #8C8C8C;
+  margin-left: 0.25rem;
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul li:last-child {
+  color: #262626;
+  background-color: #FAFAFA;
+  border: 1px solid #D9D9D9;
+}
+@media screen and (min-width: 2560px) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul li:last-child {
+    border: none;
+    color: #1890FF;
+    background-color: transparent;
+    position: relative;
+    padding: 0;
+  }
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul li:last-child:after {
+    position: absolute;
+    content: "";
+    background-color: #1890FF;
+    width: 72px;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+  }
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul li:last-child span {
+  display: none;
+}
+@media screen and (min-width: 2560px) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul li:last-child span {
+    display: inline;
+    font-size: 12px;
+    color: #1890FF;
+  }
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul li:last-child svg {
+  color: #1890FF;
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul li:hover {
+  color: #262626;
+  background-color: #FAFAFA;
+  border: 1px solid #D9D9D9;
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+@media screen and (min-width: 160rem) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail {
+  padding-left: 1.5rem;
+  position: relative;
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail:last-child {
+  display: none;
+}
+@media screen and (min-width: 160rem) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail:last-child {
+    display: block;
+  }
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.375rem;
+  color: #002766;
+  margin-bottom: 0.3125rem;
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .experience-span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  color: #595959;
+  padding-left: 0.625rem;
+  background-color: #E6F7FF;
+  max-width: 12.5625rem;
+  box-shadow: -2px 0 0 0 #B5D9FA;
+}
+@media screen and (min-width: 75rem) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .experience-span {
+    width: 100%;
+  }
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .experience-span span {
+  color: #000000;
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .rank {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: #000000;
+  margin-bottom: 0.3125rem;
+  width: 23.25rem;
+}
+@media screen and (min-width: 75rem) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .rank {
+    width: 100%;
+  }
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .rank span:first-child {
+  color: #1890FF;
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .rank span:last-child {
+  font-weight: 600;
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .role {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0 0.875rem 0 0.5rem;
+  border-left: 2px solid #1890FF;
+  margin-bottom: 0.3125rem;
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .role p {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: #003A8C;
+  margin: 0;
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .role img {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .university {
+  margin-bottom: 0.625rem;
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .university p {
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  color: #000000;
+  margin: 0;
+  width: 22.75rem;
+}
+@media screen and (min-width: 75rem) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .university p {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 160rem) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .university p {
+    max-width: 27.5625rem;
+  }
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .university p span {
+  font-weight: 400;
+  color: #595959;
+}
+@media screen and (min-width: 75rem) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .university .renewed-education {
+    width: 27.5625rem;
+    padding-left: 0.5rem;
+    background-color: #FFF7E6;
+    border-left: 2px solid #FF9E75;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .university .renewed-education {
+    width: 100%;
+    padding-left: 0;
+    background-color: transparent;
+    border-left: none;
+  }
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .assets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  background-color: #F0F0F0;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 1rem;
+  height: 1.4375rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #1890FF;
+  position: relative;
+  z-index: 2;
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .assets img {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail:after {
+  position: absolute;
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #1890FF;
+  top: 0.4375rem;
+  left: 0;
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail:before {
+  position: absolute;
+  content: "";
+  width: calc(100% - 1.5rem);
+  height: 0.125rem;
+  border: 1px dashed #91D5FF;
+  bottom: 0.6875rem;
+  left: 0;
+}
+@media screen and (min-width: 75rem) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail:before {
+    width: calc(100% - 2rem);
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail:first-child:before {
+    position: absolute;
+    content: "";
+    width: 34.0625rem;
+    height: 0.125rem;
+    border: 1px dashed #91D5FF;
+    bottom: 11px;
+    left: 0;
+  }
+}
+@media screen and (min-width: 160rem) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail:first-child:before {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 160rem) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail:nth-child(2):before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0.125rem;
+    border: 1px dashed #91D5FF;
+    bottom: 4.6875rem;
+    left: 0;
+  }
+}
+@media screen and (min-width: 160rem) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail:last-child::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0.125rem;
+    border: 1px dashed #91D5FF;
+    bottom: 3.4375rem;
+    left: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
