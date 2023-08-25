@@ -937,11 +937,34 @@ body {
   width: 1.125rem;
   height: 1.125rem;
 }
-.main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:first-child, .main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:hover {
+.main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:first-child, .main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:nth-child(3), .main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:hover {
   background-color: #E6F7FF;
 }
-.main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:first-child svg, .main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:hover svg {
+@media screen and (min-width: 160rem) {
+  .main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:first-child, .main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:nth-child(3), .main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:hover {
+    background-color: #F0F0F0;
+  }
+}
+.main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:first-child svg, .main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:nth-child(3) svg, .main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:hover svg {
   color: #40A9FF;
+}
+@media screen and (min-width: 160rem) {
+  .main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:first-child svg, .main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:nth-child(3) svg, .main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:hover svg {
+    color: #8C8C8C;
+  }
+}
+@media screen and (min-width: 160rem) {
+  .main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:nth-child(2) {
+    display: none;
+  }
+}
+.main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:nth-child(3) {
+  display: none;
+}
+@media screen and (min-width: 160rem) {
+  .main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:nth-child(3) {
+    display: block;
+  }
 }
 .main .main-content .candidate-listing .candidate .candidate-personal-detail .profile-change {
   display: none;
@@ -1006,6 +1029,10 @@ body {
     align-items: center;
     gap: 0.5rem;
     list-style: none;
+  }
+  .main .main-content .candidate-listing .candidate .activity li img {
+    width: 16px;
+    height: 16px;
   }
   .main .main-content .candidate-listing .candidate .activity li span {
     font-size: 0.75rem;

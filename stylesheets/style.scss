@@ -903,11 +903,28 @@ body {
                     height: 1.125rem;
                   }
                 }
-                &:first-child,
+                &:first-child, &:nth-child(3),
                 &:hover {
                   background-color: $bgPrimaryColor;
+                  @media screen and (min-width: 160rem) {
+                    background-color: $assetBgColor;
+                  }
                   svg {
                     color: $colorCommonTertiary;
+                    @media screen and (min-width: 160rem) {
+                      color: $colorCommonPrimary;;
+                    }
+                  }
+                }
+                &:nth-child(2) {
+                  @media screen and (min-width: 160rem) {
+                    display: none;
+                  }
+                }
+                &:nth-child(3) {
+                  display: none;
+                  @media screen and (min-width: 160rem) {
+                    display: block;
                   }
                 }
               }
@@ -968,6 +985,10 @@ body {
               align-items: center;
               gap: 0.5rem;
               list-style: none;
+              img {
+                width: 16px;
+                height: 16px;
+              }
               span {
                 font-size: 0.75rem;
                 font-weight: 500;
