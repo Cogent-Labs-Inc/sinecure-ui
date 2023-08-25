@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>Range Slider Example</title>
+	</head>
+	<body>
+		<div class="slider-container">
+			<input type="range" id="range-slider" min="0" max="60" value="0" />
+			<div id="slider-value">0</div>
+		</div>
+		<script src="script.js"></script>
+		<script>
+			const rangeSlider = document.getElementById('range-slider');
+			const sliderValue = document.getElementById('slider-value');
+
+			rangeSlider.addEventListener('input', () => {
+				const value = rangeSlider.value;
+				sliderValue.textContent = value;
+				updateSliderStyle(value);
+			});
+
+			function updateSliderStyle(value) {
+				const percent = (value / 60) * 100;
+				const background = `linear-gradient(to right, #1890FF 0%, #1890FF ${percent}%, #f5f5f5 ${percent}%, #f5f5f5 100%)`;
+				rangeSlider.style.background = background;
+			}
+		</script>
+	</body>
+</html>
