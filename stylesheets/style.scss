@@ -6,7 +6,7 @@
 }
 body {
   background-color: $pageTheme !important;
-  font-family: "Roboto", "sans-serif" !important;
+  font-family: "Roboto" !important;
 }
 .main {
   display: flex;
@@ -21,6 +21,25 @@ body {
     filter: blur(0.3125rem);
     overflow-y: hidden !important;
   }
+  input[type=checkbox] {
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    background-color: $universalWhite;
+    border-radius: 0.125rem;
+    border: 1px solid #d9d9d9;
+    position: relative;
+  }
+  input[type="checkbox"]:checked::before {
+    position: absolute;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg width='11' height='9' viewBox='0 0 11 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.7513 1.66504L4.08279 7.33355L1.24854 4.49929' stroke='%23292929' stroke-width='1.41667' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2px;
+    width: 0.6875rem;
+    height: 0.5625rem;
+  }
   .side-bar {
     display: flex;
     flex-direction: column;
@@ -29,6 +48,7 @@ body {
     flex: 0 0 4rem;
     height: 100vh;
     z-index: 2;
+    width: 4rem;
     img {
       width: 100%;
       height: 100%;
@@ -45,7 +65,7 @@ body {
     }
     .message {
       position: relative;
-      width: 4rem;
+      width: 3.875rem;
       height: 2.5rem;
       margin-bottom: 3.125rem;
       .message-number {
@@ -93,6 +113,10 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
+      img {
+        width: 1rem;
+        height: 1rem;
+      }
     }
   }
   .collapsible-bar {
@@ -115,7 +139,7 @@ body {
       justify-content: center;
       gap: 2.1875rem;
       white-space: nowrap;
-      padding: 0.625rem 0;
+      height: 40px;
       background-color: $bgPrimaryColor;
       border-top-left-radius: 0.5rem;
       border-top-right-radius: 0.5rem;
@@ -147,7 +171,7 @@ body {
       }
     }
     .advance-seach {
-      margin: 0.875rem 0 1.125rem 1.5rem;
+      margin: 0.625rem 0 1.125rem 1.5rem;
       span {
         font-size: 0.75rem;
         font-weight: 400;
@@ -156,7 +180,7 @@ body {
       }
       .search {
         width: 12rem;
-        height: 2.25rem;
+        height: 2.375rem;
         border-radius: 0.25rem;
         display: flex;
         align-items: center;
@@ -296,7 +320,18 @@ body {
             outline: none;
             cursor: pointer;
             &:first-child {
-              padding: 0.4375rem;
+              padding: 0.5rem;
+            }
+            &:first-child, &:nth-child(2) {
+              &:hover {
+                border: 1px solid $colorPrimary;
+              }
+            }
+            &:nth-child(3) {
+              &:hover {
+                border: 1px solid $highlightColor;
+                color: $renewedTextColor;
+              }
             }
             &:last-child {
               color: $universalWhite;
@@ -335,7 +370,8 @@ body {
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 0.3125rem 1rem;
+            padding: 0 1rem;
+            height: 32px;
             font-size: 0.875rem;
             font-weight: 400;
             line-height: 1.375rem;
@@ -352,6 +388,10 @@ body {
             background-color: transparent;
             border: none;
             outline: none;
+            &:hover {
+              border-radius: 0.25rem;
+              border: 1px solid $colorPrimary;
+            }
           }
         }
       }
@@ -394,7 +434,7 @@ body {
               display: flex;
               align-items: center;
               gap: 0.625rem;
-              margin: 0.875rem 0 0.3125rem;
+              margin: 0.875rem 0 0.125rem;
               h4 {
                 font-size: 0.875rem;
                 font-weight: 600;
@@ -504,11 +544,14 @@ body {
       .achievement {
         width: -webkit-fill-available;
         height: 5.25rem;
-        padding: 1rem 0 1rem 1.5rem;
+        padding: 1rem 1.5rem;
         border-radius: 0.5rem;
         display: flex;
         align-items: center;
         gap: 1rem;
+        @media screen and (min-width: 1220px) {
+          height: 5.625rem;
+        }
         @media screen and (min-width: 160rem) {
           justify-content: center;
         }
@@ -561,7 +604,7 @@ body {
       .btn-wrapper {
         display: flex;
         gap: 0.5625rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2.125rem;
         @media screen and (min-width: 64rem) {
           display: none;
         }
@@ -590,10 +633,15 @@ body {
         justify-content: space-between;
         align-items: center;
         margin-bottom: 2.3125rem;
+        padding: 0 0.625rem;
+        @media screen and (min-width: 1024px) {
+          margin-top: 0.625rem;
+        }
         h3 {
           font-size: 1.25rem;
           font-weight: 600;
-          color: $colorCommonSeconday;
+          line-height: 1.75rem;
+          color: $colorSecondary;
           margin: 0;
         }
         .filter-listing {
@@ -629,6 +677,10 @@ body {
         padding: 0.5rem 0.625rem;
         background-color: $tabColor;
         border-radius: 0.25rem;
+        margin-bottom: 1.5rem;
+        @media screen and (min-width: 1024px) {
+          margin-bottom: 0;
+        }
         ul {
           display: flex;
           gap: 1.3125rem;
@@ -643,12 +695,6 @@ body {
             color: $colorSecondary;
             &:last-child {
               color: $highlightColor;
-            }
-            input[type="checkbox"] {
-              width: 1rem;
-              height: 1rem;
-              background-color: $universalWhite;
-              border: 1px solid #d9d9d9;
             }
             label {
               color: $textPrimary;
@@ -715,17 +761,19 @@ body {
           }
           .profile {
             display: flex;
-            align-items: center;
             margin-bottom: 0.8125rem;
             input {
               width: 1rem;
               height: 1rem;
+              margin-top: 37px;
               @media screen and (min-width: 75rem) {
                 position: relative;
                 bottom: -156%;
+                margin-top: 0;
               }
               @media screen and (min-width: 160rem) {
                 position: static;
+                margin-top: 37px;
               }
             }
             .progress-detail {
@@ -769,13 +817,16 @@ body {
             > img {
               width: 0.875rem;
               height: 0.875rem;
+              margin-top: 37px;
               @media screen and (min-width: 75rem) {
                 position: relative;
                 bottom: -195%;
                 right: 10.625rem;
+                margin: 0;
               }
               @media screen and (min-width: 160rem) {
                 position: static;
+                margin-top: 37px;
               }
             }
           }
@@ -846,7 +897,7 @@ body {
                   border: none;
                   background-color: transparent;
                   outline: none;
-                  img {
+                  svg {
                     color: $colorCommonPrimary;
                     width: 1.125rem;
                     height: 1.125rem;
@@ -886,6 +937,10 @@ body {
               display: flex;
               align-items: center;
               gap: 0.5rem;
+              font-size: 0.75rem;
+              font-weight: 400;
+              line-height: 1.25rem;
+              color: $colorSecondary;
               img {
                 width: 1rem;
                 height: 1rem;
@@ -930,11 +985,25 @@ body {
           @media screen and (min-width: 160rem) {
             padding: 0 3.4375rem 0 2.875rem;
           }
+          > h4 {
+            display: none;
+            @media screen and (min-width: 1200px) {
+              display: block;
+              font-size: 1rem;
+              font-weight: 600;
+              line-height: 1.5rem;
+              color: $textSecondary;
+              margin-bottom: 0.75rem;
+            }
+            @media screen and (min-width: 2560px) {
+              display: none;
+            }
+          }
           .skill-set {
             display: flex;
             align-items: center;
             gap: 0.625rem;
-            margin-bottom: 0.8125rem;
+            margin-bottom: 0.75rem;
             span {
               font-size: 14px;
               font-weight: 600;
@@ -985,6 +1054,14 @@ body {
                   color: $colorSecondary;
                   background-color: $tabColor;
                   border: 1px solid $colorTertiary;
+                  &:hover {
+                    color: $colorPrimary;
+                    border-radius: 0.125rem;
+                    border: 1px solid $borderPrimaryColor;
+                    .show {
+                      color: $colorPrimary;
+                    }
+                  }
                   @media screen and (min-width: 2560px) {
                     border: none;
                     color: $colorPrimary;
@@ -999,6 +1076,18 @@ body {
                       height: 1px;
                       left: 0;
                       bottom: 0;
+                    }
+                  }
+                  .show {
+                    display: none;
+                    @media screen and (min-width: 1200px) {
+                      margin: 0;
+                      display: inline;
+                      font-size: 12px;
+                      color: $colorSecondary;
+                    }
+                    @media screen and (min-width: 2560px) {
+                      display: none;
                     }
                   }
                   span {
@@ -1054,6 +1143,7 @@ body {
                 background-color: $bgPrimaryColor;
                 max-width: 12.5625rem;
                 box-shadow: -2px 0 0 0 $boxShadowPrimary;
+                margin-bottom: 5px;
                 @media screen and (min-width: 75rem) {
                   width: 100%;
                 }
@@ -1066,8 +1156,8 @@ body {
                 font-weight: 400;
                 line-height: 1.25rem;
                 color: $universalBlack;
-                margin-bottom: 0.3125rem;
                 width: 23.25rem;
+                margin: 0;
                 @media screen and (min-width: 75rem) {
                   width: 100%;
                 }
@@ -1100,7 +1190,6 @@ body {
                 }
               }
               .university {
-                margin-bottom: 0.625rem;
                 p {
                   font-size: 0.75rem;
                   font-weight: 600;
@@ -1148,9 +1237,13 @@ body {
                 color: $colorPrimary;
                 position: relative;
                 z-index: 2;
+                margin-top: 0.625rem;
                 img {
                   width: 0.875rem;
                   height: 0.875rem;
+                }
+                &:hover {
+                  background-color: $bgPrimaryColor;
                 }
               }
               &:after {

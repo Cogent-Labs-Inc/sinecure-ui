@@ -6,7 +6,7 @@
 
 body {
   background-color: #F5F5F5 !important;
-  font-family: "Roboto", "sans-serif" !important;
+  font-family: "Roboto" !important;
 }
 
 .main {
@@ -25,6 +25,27 @@ body {
   filter: blur(0.3125rem);
   overflow-y: hidden !important;
 }
+.main input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 1rem;
+  height: 1rem;
+  background-color: #FFFFFF;
+  border-radius: 0.125rem;
+  border: 1px solid #d9d9d9;
+  position: relative;
+}
+.main input[type=checkbox]:checked::before {
+  position: absolute;
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg width='11' height='9' viewBox='0 0 11 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.7513 1.66504L4.08279 7.33355L1.24854 4.49929' stroke='%23292929' stroke-width='1.41667' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2px;
+  width: 0.6875rem;
+  height: 0.5625rem;
+}
 .main .side-bar {
   display: flex;
   flex-direction: column;
@@ -33,6 +54,7 @@ body {
   flex: 0 0 4rem;
   height: 100vh;
   z-index: 2;
+  width: 4rem;
 }
 .main .side-bar img {
   width: 100%;
@@ -50,7 +72,7 @@ body {
 }
 .main .side-bar .message {
   position: relative;
-  width: 4rem;
+  width: 3.875rem;
   height: 2.5rem;
   margin-bottom: 3.125rem;
 }
@@ -95,6 +117,10 @@ body {
   justify-content: center;
   align-items: center;
 }
+.main .side-bar .setting img {
+  width: 1rem;
+  height: 1rem;
+}
 .main .collapsible-bar {
   width: 16rem;
   position: fixed;
@@ -118,7 +144,7 @@ body {
   justify-content: center;
   gap: 2.1875rem;
   white-space: nowrap;
-  padding: 0.625rem 0;
+  height: 40px;
   background-color: #E6F7FF;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
@@ -150,7 +176,7 @@ body {
   height: 0.75rem;
 }
 .main .collapsible-bar .advance-seach {
-  margin: 0.875rem 0 1.125rem 1.5rem;
+  margin: 0.625rem 0 1.125rem 1.5rem;
 }
 .main .collapsible-bar .advance-seach span {
   font-size: 0.75rem;
@@ -160,7 +186,7 @@ body {
 }
 .main .collapsible-bar .advance-seach .search {
   width: 12rem;
-  height: 2.25rem;
+  height: 2.375rem;
   border-radius: 0.25rem;
   display: flex;
   align-items: center;
@@ -301,7 +327,14 @@ body {
   cursor: pointer;
 }
 .main .main-content .skill-type .detail .button-wrapper .btn:first-child {
-  padding: 0.4375rem;
+  padding: 0.5rem;
+}
+.main .main-content .skill-type .detail .button-wrapper .btn:first-child:hover, .main .main-content .skill-type .detail .button-wrapper .btn:nth-child(2):hover {
+  border: 1px solid #1890FF;
+}
+.main .main-content .skill-type .detail .button-wrapper .btn:nth-child(3):hover {
+  border: 1px solid #F5222D;
+  color: #FA541C;
 }
 .main .main-content .skill-type .detail .button-wrapper .btn:last-child {
   color: #FFFFFF;
@@ -339,7 +372,8 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.3125rem 1rem;
+  padding: 0 1rem;
+  height: 32px;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.375rem;
@@ -356,6 +390,10 @@ body {
   background-color: transparent;
   border: none;
   outline: none;
+}
+.main .main-content .ideal-candidate .ideal-candidate-modification .modification-detail .arrow-down:hover {
+  border-radius: 0.25rem;
+  border: 1px solid #1890FF;
 }
 .main .main-content .ideal-candidate .ideal-candidate-profile {
   display: flex;
@@ -397,7 +435,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.625rem;
-  margin: 0.875rem 0 0.3125rem;
+  margin: 0.875rem 0 0.125rem;
 }
 .main .main-content .ideal-candidate .ideal-candidate-profile .ideal-candidate-skillset .ideal-candidate-personal-deatil .ideal-candidate-skill-listing h4 {
   font-size: 0.875rem;
@@ -506,11 +544,16 @@ body {
 .main .main-content .achievement-listing .achievement {
   width: -webkit-fill-available;
   height: 5.25rem;
-  padding: 1rem 0 1rem 1.5rem;
+  padding: 1rem 1.5rem;
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+@media screen and (min-width: 1220px) {
+  .main .main-content .achievement-listing .achievement {
+    height: 5.625rem;
+  }
 }
 @media screen and (min-width: 160rem) {
   .main .main-content .achievement-listing .achievement {
@@ -565,7 +608,7 @@ body {
 .main .main-content .detail-search .btn-wrapper {
   display: flex;
   gap: 0.5625rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.125rem;
 }
 @media screen and (min-width: 64rem) {
   .main .main-content .detail-search .btn-wrapper {
@@ -596,11 +639,18 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2.3125rem;
+  padding: 0 0.625rem;
+}
+@media screen and (min-width: 1024px) {
+  .main .main-content .detail-search .candidate-filter {
+    margin-top: 0.625rem;
+  }
 }
 .main .main-content .detail-search .candidate-filter h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #595959;
+  line-height: 1.75rem;
+  color: #262626;
   margin: 0;
 }
 .main .main-content .detail-search .candidate-filter .filter-listing {
@@ -635,6 +685,12 @@ body {
   padding: 0.5rem 0.625rem;
   background-color: #FAFAFA;
   border-radius: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .main .main-content .detail-search .features {
+    margin-bottom: 0;
+  }
 }
 .main .main-content .detail-search .features ul {
   display: flex;
@@ -652,12 +708,6 @@ body {
 }
 .main .main-content .detail-search .features ul li:last-child {
   color: #F5222D;
-}
-.main .main-content .detail-search .features ul li input[type=checkbox] {
-  width: 1rem;
-  height: 1rem;
-  background-color: #FFFFFF;
-  border: 1px solid #d9d9d9;
 }
 .main .main-content .detail-search .features ul li label {
   color: #0050B3;
@@ -726,22 +776,24 @@ body {
 }
 .main .main-content .candidate-listing .candidate .candidate-personal-detail .profile {
   display: flex;
-  align-items: center;
   margin-bottom: 0.8125rem;
 }
 .main .main-content .candidate-listing .candidate .candidate-personal-detail .profile input {
   width: 1rem;
   height: 1rem;
+  margin-top: 37px;
 }
 @media screen and (min-width: 75rem) {
   .main .main-content .candidate-listing .candidate .candidate-personal-detail .profile input {
     position: relative;
     bottom: -156%;
+    margin-top: 0;
   }
 }
 @media screen and (min-width: 160rem) {
   .main .main-content .candidate-listing .candidate .candidate-personal-detail .profile input {
     position: static;
+    margin-top: 37px;
   }
 }
 .main .main-content .candidate-listing .candidate .candidate-personal-detail .profile .progress-detail {
@@ -787,17 +839,20 @@ body {
 .main .main-content .candidate-listing .candidate .candidate-personal-detail .profile > img {
   width: 0.875rem;
   height: 0.875rem;
+  margin-top: 37px;
 }
 @media screen and (min-width: 75rem) {
   .main .main-content .candidate-listing .candidate .candidate-personal-detail .profile > img {
     position: relative;
     bottom: -195%;
     right: 10.625rem;
+    margin: 0;
   }
 }
 @media screen and (min-width: 160rem) {
   .main .main-content .candidate-listing .candidate .candidate-personal-detail .profile > img {
     position: static;
+    margin-top: 37px;
   }
 }
 .main .main-content .candidate-listing .candidate .candidate-personal-detail h4 {
@@ -877,7 +932,7 @@ body {
   background-color: transparent;
   outline: none;
 }
-.main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li button img {
+.main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li button svg {
   color: #8C8C8C;
   width: 1.125rem;
   height: 1.125rem;
@@ -919,6 +974,10 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: #262626;
 }
 .main .main-content .candidate-listing .candidate .candidate-personal-detail .work-detail-listing .work-detail img {
   width: 1rem;
@@ -966,11 +1025,29 @@ body {
     padding: 0 3.4375rem 0 2.875rem;
   }
 }
+.main .main-content .candidate-listing .candidate .candidate-professional-detail > h4 {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail > h4 {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    color: #002766;
+    margin-bottom: 0.75rem;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail > h4 {
+    display: none;
+  }
+}
 .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set {
   display: flex;
   align-items: center;
   gap: 0.625rem;
-  margin-bottom: 0.8125rem;
+  margin-bottom: 0.75rem;
 }
 .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set span {
   font-size: 14px;
@@ -1022,6 +1099,14 @@ body {
   background-color: #FAFAFA;
   border: 1px solid #D9D9D9;
 }
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul li:last-child:hover {
+  color: #1890FF;
+  border-radius: 0.125rem;
+  border: 1px solid #91D5FF;
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul li:last-child:hover .show {
+  color: #1890FF;
+}
 @media screen and (min-width: 2560px) {
   .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul li:last-child {
     border: none;
@@ -1038,6 +1123,22 @@ body {
     height: 1px;
     left: 0;
     bottom: 0;
+  }
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul li:last-child .show {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul li:last-child .show {
+    margin: 0;
+    display: inline;
+    font-size: 12px;
+    color: #262626;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul li:last-child .show {
+    display: none;
   }
 }
 .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul li:last-child span {
@@ -1097,6 +1198,7 @@ body {
   background-color: #E6F7FF;
   max-width: 12.5625rem;
   box-shadow: -2px 0 0 0 #B5D9FA;
+  margin-bottom: 5px;
 }
 @media screen and (min-width: 75rem) {
   .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .experience-span {
@@ -1111,8 +1213,8 @@ body {
   font-weight: 400;
   line-height: 1.25rem;
   color: #000000;
-  margin-bottom: 0.3125rem;
   width: 23.25rem;
+  margin: 0;
 }
 @media screen and (min-width: 75rem) {
   .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .rank {
@@ -1143,9 +1245,6 @@ body {
 .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .role img {
   width: 0.875rem;
   height: 0.875rem;
-}
-.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .university {
-  margin-bottom: 0.625rem;
 }
 .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .university p {
   font-size: 0.75rem;
@@ -1200,10 +1299,14 @@ body {
   color: #1890FF;
   position: relative;
   z-index: 2;
+  margin-top: 0.625rem;
 }
 .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .assets img {
   width: 0.875rem;
   height: 0.875rem;
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail .assets:hover {
+  background-color: #E6F7FF;
 }
 .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-detail-listing .skill-detail:after {
   position: absolute;
