@@ -746,7 +746,7 @@ body {
           }
         }
         @media screen and (min-width: 87.5rem) {
-          &:nth-child(4) {background-color: $bgPrimaryColor;
+          &:nth-child(4) {
             display: flex;
           }
         }
@@ -1089,10 +1089,16 @@ body {
                   color: $colorSecondary;
                   background-color: $tabColor;
                   border: 1px solid $colorTertiary;
+                  svg {
+                    color: $colorCommonPrimary !important;
+                  }
                   &:hover {
                     color: $colorPrimary;
                     border-radius: 0.125rem;
                     border: 1px solid $borderPrimaryColor;
+                    svg {
+                      color: $colorPrimary !important;
+                    }
                     .show {
                       color: $colorPrimary;
                     }
