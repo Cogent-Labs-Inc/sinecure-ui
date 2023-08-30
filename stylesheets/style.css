@@ -219,9 +219,16 @@ body {
 .main .collapsible-bar .detail-listing li:last-child {
   border-bottom: 2px solid #F5F5F5;
 }
-.main .collapsible-bar .detail-listing img {
+.main .collapsible-bar .detail-listing svg {
   width: 1.5rem;
   height: 1.5rem;
+  color: #1890FF;
+  border-radius: 50%;
+  background-color: #E6F7FF;
+}
+.main .collapsible-bar .detail-listing svg:hover {
+  color: #FFFFFF;
+  background-color: #1890FF;
 }
 .main .main-content {
   flex: 1;
@@ -331,6 +338,7 @@ body {
 }
 .main .main-content .skill-type .detail .button-wrapper .btn:first-child:hover, .main .main-content .skill-type .detail .button-wrapper .btn:nth-child(2):hover {
   border: 1px solid #1890FF;
+  color: #1890FF;
 }
 .main .main-content .skill-type .detail .button-wrapper .btn:nth-child(3):hover {
   border: 1px solid #F5222D;
@@ -535,7 +543,7 @@ body {
 }
 .main .main-content .achievement-listing {
   padding: 1.5rem;
-  background-color: white;
+  background-color: #FFFFFF;
   border-radius: 0.5rem;
   display: flex;
   gap: 2.0625rem;
@@ -749,6 +757,7 @@ body {
 }
 @media screen and (min-width: 87.5rem) {
   .main .main-content .candidate-listing .candidate:nth-child(4) {
+    background-color: #E6F7FF;
     display: flex;
   }
 }
@@ -952,6 +961,12 @@ body {
   .main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:first-child svg, .main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:nth-child(3) svg, .main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:hover svg {
     color: #8C8C8C;
   }
+}
+.main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:first-child:hover {
+  background-color: #1890FF;
+}
+.main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:first-child:hover svg {
+  color: #FFFFFF;
 }
 @media screen and (min-width: 160rem) {
   .main .main-content .candidate-listing .candidate .candidate-personal-detail .social-links ul li:nth-child(2) {

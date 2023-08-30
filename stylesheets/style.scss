@@ -215,9 +215,16 @@ body {
           border-bottom: 2px solid $pageTheme;
         }
       }
-      img {
+      svg {
         width: 1.5rem;
         height: 1.5rem;
+        color: $colorPrimary;
+        border-radius: 50%;
+        background-color: $bgPrimaryColor;
+        &:hover {
+          color: $universalWhite;
+          background-color: $colorPrimary;
+        }
       }
     }
   }
@@ -325,6 +332,7 @@ body {
             &:first-child, &:nth-child(2) {
               &:hover {
                 border: 1px solid $colorPrimary;
+                color: $colorPrimary;
               }
             }
             &:nth-child(3) {
@@ -536,7 +544,7 @@ body {
     }
     .achievement-listing {
       padding: 1.5rem;
-      background-color: white;
+      background-color: $universalWhite;
       border-radius: 0.5rem;
       display: flex;
       gap: 2.0625rem;
@@ -738,7 +746,7 @@ body {
           }
         }
         @media screen and (min-width: 87.5rem) {
-          &:nth-child(4) {
+          &:nth-child(4) {background-color: $bgPrimaryColor;
             display: flex;
           }
         }
@@ -914,6 +922,12 @@ body {
                     @media screen and (min-width: 160rem) {
                       color: $colorCommonPrimary;;
                     }
+                  }
+                }
+                &:first-child:hover {
+                  background-color: $colorPrimary;
+                  svg {
+                    color: $universalWhite;
                   }
                 }
                 &:nth-child(2) {
