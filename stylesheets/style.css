@@ -757,7 +757,6 @@ body {
 }
 @media screen and (min-width: 87.5rem) {
   .main .main-content .candidate-listing .candidate:nth-child(4) {
-    background-color: #E6F7FF;
     display: flex;
   }
 }
@@ -1141,10 +1140,16 @@ body {
   background-color: #FAFAFA;
   border: 1px solid #D9D9D9;
 }
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul li:last-child svg {
+  color: #8C8C8C !important;
+}
 .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul li:last-child:hover {
   color: #1890FF;
   border-radius: 0.125rem;
   border: 1px solid #91D5FF;
+}
+.main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul li:last-child:hover svg {
+  color: #1890FF !important;
 }
 .main .main-content .candidate-listing .candidate .candidate-professional-detail .skill-set ul li:last-child:hover .show {
   color: #1890FF;
