@@ -2525,7 +2525,11 @@ select {
   font-weight: 400;
   line-height: 22px;
 }
+.step-six-hero .body-section .form-section .add-role-section form .form-group label span {
+  margin-right: 4px;
+}
 .step-six-hero .body-section .form-section .add-role-section form .form-group label p {
+  margin-left: 2px;
   color: #FF4D4F;
 }
 .step-six-hero .body-section .form-section .add-role-section form .form-group ::-moz-placeholder {
