@@ -40,6 +40,7 @@ body {
 				padding: 8px 22px;
 				.add-role-button {
 					button {
+						font-family: Roboto;
 						background-color: rgba(24, 144, 255, 1);
 						border: none;
 						color: white;
@@ -74,7 +75,7 @@ body {
 	border-right: 2px solid $textColorTernery;
 	svg {
 		path {
-			fill: #1890FF;
+			fill: #1890ff;
 		}
 	}
 }
@@ -98,6 +99,26 @@ body {
 		left: 0;
 		background-color: rgb(24, 144, 255, 0.2);
 	}
+}
+.options-list {
+	li {
+		font-family: Roboto;
+		color: #262626;
+	}
+}
+.input-wrapper {
+	font-family: Roboto;
+}
+.progress-bar {
+	background-color: #40A9FF;
+}
+.previous-button {
+	font-family: Roboto;
+	height: 40px !important;
+	width: 116px !important;
+}
+.next-button {
+	font-family: Roboto;
 }
 
 // stepper css
@@ -203,7 +224,7 @@ $border-color: #d9d9d9;
 	width: 38%;
 	height: 100%;
 	@media screen and (max-width: 1200px) {
-		width: 48%;
+		width: 58%;
 	}
 	@media screen and (max-width: 1024px) {
 		width: 57%;
@@ -217,8 +238,8 @@ $border-color: #d9d9d9;
 	position: absolute;
 	display: flex;
 	align-items: center;
-	left: 13px;
-	right: 15px;
+	left: 19px;
+	right: 13px;
 	height: 4px;
 }
 
@@ -230,10 +251,10 @@ $border-color: #d9d9d9;
 
 .range-slider > div > .range-slider-val-left {
 	position: absolute;
-	left: -8px;
+	left: 1px;
 
 	border-radius: 10px;
-	background-color: $sliderBorderColor;
+	background-color: #BAE7FF;
 }
 
 .range-slider > div > .range-slider-val-right {
@@ -241,7 +262,7 @@ $border-color: #d9d9d9;
 	right: 0;
 	margin: 0 7px;
 	border-radius: 10px;
-	background-color: $sliderBorderColor;
+	background-color: #BAE7FF;
 }
 
 .range-slider > div > .range-slider-val-range {
@@ -250,7 +271,7 @@ $border-color: #d9d9d9;
 	top: -1px;
 	height: 4px;
 	border-radius: 4px;
-	background-color: var(--ColorPrimaryLt);
+	background-color: #0050B3;
 }
 
 .range-slider > div > .range-slider-handle {

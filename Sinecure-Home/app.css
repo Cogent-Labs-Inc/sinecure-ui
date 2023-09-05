@@ -46,6 +46,7 @@ body .main .body .top-navbar {
   padding: 8px 22px;
 }
 body .main .body .top-navbar .add-role-button button {
+  font-family: Roboto;
   background-color: rgb(24, 144, 255);
   border: none;
   color: white;
@@ -79,7 +80,7 @@ body .main .body .top-navbar .add-role-button button {
   border-right: 2px solid #1890ff;
 }
 .active svg path {
-  fill: #1890FF;
+  fill: #1890ff;
 }
 
 .settings-icon {
@@ -103,6 +104,29 @@ body .main .body .top-navbar .add-role-button button {
   z-index: -1;
   left: 0;
   background-color: rgba(24, 144, 255, 0.2);
+}
+
+.options-list li {
+  font-family: Roboto;
+  color: #262626;
+}
+
+.input-wrapper {
+  font-family: Roboto;
+}
+
+.progress-bar {
+  background-color: #40A9FF;
+}
+
+.previous-button {
+  font-family: Roboto;
+  height: 40px !important;
+  width: 116px !important;
+}
+
+.next-button {
+  font-family: Roboto;
 }
 
 .stepper-horizontal {
@@ -192,7 +216,7 @@ body .main .body .top-navbar .add-role-button button {
 }
 @media screen and (max-width: 1200px) {
   .range-slider {
-    width: 48%;
+    width: 58%;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -210,8 +234,8 @@ body .main .body .top-navbar .add-role-button button {
   position: absolute;
   display: flex;
   align-items: center;
-  left: 13px;
-  right: 15px;
+  left: 19px;
+  right: 13px;
   height: 4px;
 }
 
@@ -223,9 +247,9 @@ body .main .body .top-navbar .add-role-button button {
 
 .range-slider > div > .range-slider-val-left {
   position: absolute;
-  left: -8px;
+  left: 1px;
   border-radius: 10px;
-  background-color: #ccc;
+  background-color: #BAE7FF;
 }
 
 .range-slider > div > .range-slider-val-right {
@@ -233,7 +257,7 @@ body .main .body .top-navbar .add-role-button button {
   right: 0;
   margin: 0 7px;
   border-radius: 10px;
-  background-color: #ccc;
+  background-color: #BAE7FF;
 }
 
 .range-slider > div > .range-slider-val-range {
@@ -242,7 +266,7 @@ body .main .body .top-navbar .add-role-button button {
   top: -1px;
   height: 4px;
   border-radius: 4px;
-  background-color: var(--ColorPrimaryLt);
+  background-color: #0050B3;
 }
 
 .range-slider > div > .range-slider-handle {
@@ -530,6 +554,7 @@ select {
   max-width: 826px;
 }
 .hero-wrapper .hero .search-section h4 {
+  font-family: Roboto;
   font-size: 12px;
   color: #595959;
 }
@@ -555,7 +580,7 @@ select {
   justify-content: center;
   align-items: center;
   height: 60px;
-  width: 60px;
+  min-width: 60px;
   background-color: #e6f7ff;
   border-radius: 50px;
 }
@@ -637,7 +662,7 @@ select {
   height: 60px;
 }
 .hero-wrapper .hero .search-section .location-field .input-wrapper {
-  width: 279px;
+  width: 255px;
   height: 60px;
 }
 .hero-wrapper .hero .search-section .location-field .input-wrapper input {
@@ -656,6 +681,7 @@ select {
   gap: 13px;
 }
 .hero-wrapper .hero .search-section .recent-searches span {
+  font-family: Roboto;
   margin-right: 13px;
 }
 .hero-wrapper .hero .search-section .recent-searches .recent-search-list {
@@ -670,7 +696,7 @@ select {
   gap: 0.5rem;
   border-radius: 55px;
   border: 1px solid #91d5ff;
-  padding: 5px 19px;
+  padding: 0px 19px;
   color: #40a9ff;
 }
 .hero-wrapper .hero .search-section .recent-searches button {
@@ -729,7 +755,7 @@ select {
   }
   .hero-wrapper .hero .search-section {
     margin-top: 105px;
-    max-width: 700px;
+    max-width: 800px;
   }
   .hero-wrapper .hero .search-section span {
     margin-left: 2rem;
@@ -737,11 +763,11 @@ select {
     line-height: 20px;
   }
   .hero-wrapper .hero .search-section .serch-fields-wrapper {
-    width: 700px;
-    gap: 20px;
+    width: 800px;
+    gap: 10px;
   }
   .hero-wrapper .hero .search-section .serch-fields-wrapper .search-container .input-wrapper {
-    padding: 18px 7px;
+    padding: 18px 16px;
     gap: 5px;
   }
   .hero-wrapper .hero .search-section .serch-fields-wrapper .search-container input {
@@ -758,19 +784,22 @@ select {
     min-width: 220px;
   }
   .hero-wrapper .hero .search-section .serch-fields-wrapper .apply-field input {
-    width: 170px;
+    font-weight: 600;
+    font-family: Roboto;
+    width: 310px;
   }
   .hero-wrapper .hero .search-section .serch-fields-wrapper .apply-field .options-list {
-    width: 180px;
+    width: 308px;
   }
   .hero-wrapper .hero .search-section .serch-fields-wrapper .location-field {
     min-width: 110px;
   }
   .hero-wrapper .hero .search-section .serch-fields-wrapper .location-field input {
-    width: 80px;
+    font-family: Roboto;
+    width: 150px;
   }
   .hero-wrapper .hero .search-section .serch-fields-wrapper .location-field .options-list {
-    width: 150px;
+    width: 198px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -931,6 +960,7 @@ select {
   line-height: 22px;
   padding: 5px 12px;
   cursor: pointer;
+  color: #262626;
 }
 .search-container .options-list li:hover {
   font-weight: 600;
@@ -988,18 +1018,18 @@ select {
 }
 .body-wrapper .experience-section .slider-wrapper .range-slider-items {
   display: flex;
-  gap: 10px;
+  gap: 2px;
 }
 .body-wrapper .experience-section .slider-wrapper .range-slider-items li {
   display: flex;
-  height: 80px;
+  height: 67px;
   align-items: end;
 }
 .body-wrapper .experience-section .slider-wrapper .range-slider-items li span {
   display: flex;
   height: 50px;
   background-color: #91d5ff;
-  width: 30px;
+  width: 28px;
   margin: 0;
 }
 .body-wrapper .experience-section .slider-wrapper .range-slider-items .h1 {
@@ -1008,7 +1038,6 @@ select {
 }
 .body-wrapper .experience-section .slider-wrapper .range-slider-items .h2 {
   height: 30px;
-  background-color: #f0f0f0;
 }
 .body-wrapper .experience-section .slider-wrapper .range-slider-items .h3 {
   background-color: #f0f0f0;
@@ -1023,10 +1052,11 @@ select {
   height: 50px;
 }
 .body-wrapper .experience-section .slider-wrapper .range-slider-items .h6 {
-  height: 70px;
+  height: 30px;
 }
 .body-wrapper .experience-section .slider-wrapper .range-slider-items .h7 {
-  height: 80px;
+  background-color: #f0f0f0;
+  height: 67px;
 }
 .body-wrapper .experience-section .slider-wrapper .range-slider-items .h9 {
   height: 20px;
@@ -1036,25 +1066,52 @@ select {
   height: 40px;
 }
 .body-wrapper .experience-section .slider-wrapper .range-slider-items .h-11 {
-  background-color: #f0f0f0;
   height: 30px;
 }
 .body-wrapper .experience-section .slider-wrapper .range-slider-items .h-12 {
   background-color: #f0f0f0;
   height: 10px;
 }
+.body-wrapper .experience-section .slider-wrapper .range-slider-items .h-13 {
+  height: 50px;
+}
+.body-wrapper .experience-section .slider-wrapper .range-slider-items .h-14 {
+  height: 30px;
+}
+.body-wrapper .experience-section .slider-wrapper .range-slider-items .h-15 {
+  background-color: #f0f0f0;
+  height: 20px;
+}
+.body-wrapper .experience-section .slider-wrapper .range-slider-items .h-16 {
+  background-color: #f0f0f0;
+  height: 10px;
+}
+.body-wrapper .experience-section .slider-wrapper .range-slider-items .h-17 {
+  height: 60px;
+}
+.body-wrapper .experience-section .slider-wrapper .range-slider-items .h-18 {
+  background-color: #f0f0f0;
+  height: 10px;
+}
+.body-wrapper .experience-section .slider-wrapper .range-slider-items .h-19 {
+  height: 10px;
+}
+.body-wrapper .experience-section .slider-wrapper .range-slider-items .h-20 {
+  height: 20px;
+}
 .body-wrapper .skils-detail-section {
   position: relative;
   margin: 90px 96px 0;
 }
 .body-wrapper .skils-detail-section .search-fields-wrapper {
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .body-wrapper .skils-detail-section .search-fields-wrapper span {
   color: #002766;
   font-size: 14px;
   font-weight: 600;
   line-height: 22px;
+  font-family: Roboto;
 }
 .body-wrapper .skils-detail-section .search-fields-wrapper .input-wrapper {
   width: 855px;
@@ -1147,18 +1204,19 @@ select {
 }
 @media screen and (max-width: 1200px) {
   .body-wrapper .required-skills-description .skills-heading {
-    margin-top: 1.9375rem;
+    margin-top: 46px;
   }
   .body-wrapper .required-skills-description .skills-heading h1 {
     font-size: 2.25rem;
     max-width: 550px;
+    line-height: 42px;
   }
   .body-wrapper .required-skills-description .skills-detail h3 {
     font-size: 1.25rem;
     max-width: 645px;
   }
   .body-wrapper .experience-section {
-    margin-top: 74px;
+    margin-top: 189px;
   }
   .body-wrapper .experience-section .slider-wrapper {
     margin-top: 24px;
@@ -1183,7 +1241,7 @@ select {
     width: 430px;
   }
   .body-wrapper .buttons-section {
-    padding: 360px 0 32px;
+    padding: 250px 0 32px;
   }
 }
 
@@ -1793,6 +1851,7 @@ select {
 .body-hero-section {
   background-color: #fff;
   position: relative;
+  height: calc(100vh - 32px);
 }
 .body-hero-section .overlay {
   background-color: #f5fcff;
@@ -1840,6 +1899,10 @@ select {
 }
 .body-hero-section .skils-detail-section .search-fields-wrapper .search-container .input-wrapper {
   width: 426px;
+  background-color: #fff;
+}
+.body-hero-section .skils-detail-section .search-fields-wrapper .search-container .input-wrapper input {
+  background-color: #fff;
 }
 .body-hero-section .skils-detail-section .search-fields-wrapper .search-container ul {
   width: 360px;
@@ -1858,6 +1921,7 @@ select {
 }
 .body-hero-section .skils-detail-section .search-fields-wrapper .search-container .check-box input {
   width: unset;
+  height: 18px;
 }
 .body-hero-section .skils-detail-section .search-fields-wrapper .search-container .tree-selector .input-wrapper {
   position: relative;
@@ -1867,8 +1931,8 @@ select {
   background-image: url("assets/svgs/dropDown.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  height: 8px;
-  width: 11px;
+  height: 16px;
+  width: 16px;
   content: "";
   right: 24px;
   top: 28px;
@@ -1884,6 +1948,8 @@ select {
 }
 .body-hero-section .skils-detail-section .left-section {
   width: 50%;
+  display: flex;
+  justify-content: center;
 }
 .body-hero-section .skils-detail-section .right-section {
   padding-left: 48px;
@@ -1900,7 +1966,7 @@ select {
   border: none;
 }
 .body-hero-section .skils-detail-section .right-section .accordion .accordion-item:not(:last-of-type) {
-  border-bottom: 1px solid #40a9ff;
+  border-bottom: 1px solid #BAE7FF;
 }
 .body-hero-section .skils-detail-section .right-section .accordion .accordion-item .accordion-header button {
   display: flex;
@@ -1911,6 +1977,8 @@ select {
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
+  border-bottom: 1px solid #BAE7FF;
+  padding: 11.5px 16px;
 }
 .body-hero-section .skils-detail-section .right-section .accordion .accordion-item .accordion-header button::after {
   display: none;
@@ -1950,6 +2018,7 @@ select {
   padding: 4px 5px 4px 15px;
   color: #ffffff;
   background-color: #40a9ff;
+  height: 30px;
 }
 .body-hero-section .skils-detail-section .right-section .accordion-button:not(.collapsed)::before {
   background-image: var(--bs-accordion-btn-active-icon);
@@ -1986,12 +2055,18 @@ select {
   border: transparent;
   white-space: nowrap;
 }
+.body-hero-section .border {
+  border: 1px solid #BAE7FF !important;
+  box-shadow: none !important;
+  outline: none;
+}
 @media screen and (max-width: 1024px) {
   .body-hero-section .skils-detail-section {
-    margin: 16px 20px;
+    margin: 68px 20px 16px;
   }
   .body-hero-section .skils-detail-section .search-fields-wrapper .search-container .input-wrapper {
     max-width: 300px;
+    font-family: Roboto;
   }
   .body-hero-section .skils-detail-section .search-fields-wrapper .search-container .input-wrapper input {
     width: 290px;
@@ -2181,6 +2256,7 @@ select {
 }
 .step-five-hero .search-fields-wrapper .search-container .check-box input {
   width: unset;
+  height: 20px;
 }
 .step-five-hero .search-fields-wrapper .search-container .tree-selector .input-wrapper {
   position: relative;
@@ -2214,9 +2290,11 @@ select {
   }
   .step-five-hero .skils-detail-section .search-fields-wrapper .input-wrapper {
     width: 853px;
+    background-color: #ffffff;
   }
   .step-five-hero .skils-detail-section .search-fields-wrapper .input-wrapper input {
     width: 800px;
+    background-color: #ffffff;
   }
   .step-five-hero .skils-detail-section .search-fields-wrapper .options-list {
     top: 96px;
@@ -2251,13 +2329,21 @@ select {
   }
   .step-five-hero .skils-detail-section .search-fields-wrapper .input-wrapper {
     width: 440px;
+    background-color: #ffffff;
   }
   .step-five-hero .skils-detail-section .search-fields-wrapper .input-wrapper input {
     width: 430px;
+    background-color: #ffffff;
   }
   .step-five-hero .skils-detail-section .search-fields-wrapper .options-list {
     top: 96px;
     width: 380px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .step-five-hero .headings-section .sub-heading h3 {
+    font-size: 20px;
+    max-width: 658px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -2266,6 +2352,9 @@ select {
   }
   .step-five-hero .skils-detail-section .search-fields-wrapper .search-container {
     max-width: 330px;
+  }
+  .step-five-hero .skils-detail-section .search-fields-wrapper .search-container .section-right {
+    margin-top: 25px;
   }
   .step-five-hero .skils-detail-section .search-fields-wrapper .input-wrapper {
     width: 300px;
@@ -2310,6 +2399,10 @@ select {
 .step-six-hero {
   background-color: #fff;
   position: relative;
+  height: calc(100vh - 32px);
+}
+.step-six-hero.height {
+  height: unset !important;
 }
 .step-six-hero .overlay {
   background-color: #f5fcff;
@@ -2326,6 +2419,9 @@ select {
   max-width: 700px;
   z-index: 9999;
   color: #002766;
+  font-size: 36px;
+  max-width: 555px;
+  line-height: 42px;
 }
 .step-six-hero .headings-section .sub-heading {
   margin-top: 32px;
@@ -2334,6 +2430,9 @@ select {
   max-width: 670px;
   color: #002766;
   z-index: 99999;
+  font-size: 20px;
+  max-width: 555px;
+  line-height: 32px;
 }
 .step-six-hero .headings-section .sub-heading h3 span {
   font-weight: 600;
@@ -2348,15 +2447,13 @@ select {
   width: 50%;
   padding: 0 62px;
 }
-.step-six-hero .body-section .form-section .add-role-section {
-  padding: 1rem;
-}
 .step-six-hero .body-section .form-section .add-role-section label {
   color: #002766;
   font-family: Roboto;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
+  margin-bottom: 2px;
 }
 .step-six-hero .body-section .form-section .add-role-section .dropdown button {
   display: flex;
@@ -2414,6 +2511,11 @@ select {
   flex-direction: column;
   gap: 16px;
 }
+.step-six-hero .body-section .form-section .add-role-section form .form-group input {
+  height: 32px;
+  font-size: 14px;
+  font-weight: 400;
+}
 .step-six-hero .body-section .form-section .add-role-section form .form-group label {
   color: #002766;
   font-family: Roboto;
@@ -2445,10 +2547,15 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #1890ff;
   padding: 5px;
+  box-shadow: 0px 1px 0px 0px #D9D9D9 inset, 0px -1px 0px 0px #D9D9D9 inset, -1px 0px 0px 0px #D9D9D9 inset;
   width: 40px;
-  height: 38px;
+  height: 32px;
+}
+.step-six-hero .body-section .form-section .add-role-section form .form-group .salary-input-wrapper .salary-format_list li.active {
+  border: 1px solid #1890ff;
+  box-shadow: none;
+  background-color: transparent;
 }
 .step-six-hero .body-section .form-section .add-role-section form .form-group .form-check label {
   color: #262626;
@@ -2494,9 +2601,13 @@ select {
   z-index: 9999;
   padding: 0 80px 0 60px;
 }
+.step-six-hero .body-section .search-section input {
+  height: 32px;
+}
 .step-six-hero .body-section .search-section label {
+  font-family: Roboto;
   color: #002766;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 24px;
   margin-bottom: 2px;
@@ -2559,6 +2670,7 @@ select {
   padding: 4px 5px 4px 10px;
   color: #ffffff;
   background-color: #40a9ff;
+  height: 30px;
 }
 .step-six-hero .detail-section-wrapper {
   position: relative;
@@ -2597,6 +2709,12 @@ select {
   border: transparent;
   white-space: nowrap;
 }
+.step-six-hero .input-group input {
+  font-size: 14px;
+}
+.step-six-hero .hiring {
+  align-items: center;
+}
 
 .drag-drop-area {
   display: flex;
@@ -2615,12 +2733,14 @@ select {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+  font-family: Roboto;
 }
 .drag-drop-area span {
   color: #8c8c8c;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
+  font-family: Roboto;
 }
 
 .drag-drop-area.active {
@@ -2670,10 +2790,12 @@ input[type=file] {
   background-color: #f5fcff;
 }
 .body-wrapper .step-seven-hero .heading-section .heading h1 {
-  margin-top: 274px;
+  margin-top: 273px;
   max-width: 600px;
   color: #002766;
   margin-bottom: 20px;
+  font-size: 36px;
+  line-height: 42px;
 }
 .body-wrapper .step-seven-hero .heading-section .heading h1 span {
   color: #0050b3;
@@ -2829,6 +2951,13 @@ input[type=file] {
   border: transparent;
   white-space: nowrap;
 }
+@media screen and (max-width: 768px) {
+  .body-wrapper .step-seven-hero .heading-section .heading h1 {
+    max-width: 528px;
+    margin-top: 215px;
+    font-size: 32px;
+  }
+}
 
 .step-eight-hero {
   background-color: #fff;
@@ -2844,12 +2973,14 @@ input[type=file] {
   width: 50%;
 }
 .step-eight-hero .headings-section {
-  margin-top: 2.875rem;
+  margin-top: 5.3125rem;
 }
 .step-eight-hero .headings-section .heading h1 {
-  max-width: 700px;
+  max-width: 579px;
   z-index: 9999;
   color: #002766;
+  font-size: 2.25rem;
+  line-height: 42px;
 }
 .step-eight-hero .headings-section .sub-heading {
   margin-top: 32px;
@@ -2867,11 +2998,18 @@ input[type=file] {
 .step-eight-hero .skils-detail-section {
   z-index: 9999;
 }
+.step-eight-hero .skils-detail-section.mt {
+  margin-top: 195px;
+}
 .step-eight-hero .skils-detail-section .search-fields-wrapper .search-container .input-wrapper {
   width: 426px;
+  background-color: #ffffff;
+}
+.step-eight-hero .skils-detail-section .search-fields-wrapper .search-container .input-wrapper input {
+  background-color: #ffffff;
 }
 .step-eight-hero .skils-detail-section .search-fields-wrapper .search-container ul {
-  width: 360px;
+  width: 198px;
 }
 .step-eight-hero .butons-wrapper {
   padding: 319px 0 32px;
@@ -2886,11 +3024,13 @@ input[type=file] {
   color: #40a9ff;
   border: 1px solid #40a9ff;
   background-color: transparent;
-  width: 121px;
+  width: 116px;
+  height: 40px;
   border-radius: 4px;
   padding: 8px 16px;
   gap: 8px;
   white-space: nowrap;
+  font-family: Roboto;
 }
 .step-eight-hero .butons-wrapper .next-button {
   font-size: 16px;
@@ -2918,6 +3058,7 @@ input[type=file] {
   max-width: 712px;
   z-index: 9999;
   color: #002766;
+  line-height: 42px;
 }
 .step-nine-hero .select-sites {
   max-width: 589px;
@@ -2958,6 +3099,7 @@ input[type=file] {
   padding: 4px 5px 4px 10px;
   color: #1890ff;
   background-color: #f5fcff;
+  height: 30px;
 }
 .step-nine-hero .select-sites .pills-wrapper .titles-list .selected {
   color: #ffffff;
@@ -3046,12 +3188,15 @@ input[type=file] {
   z-index: 9999;
 }
 .step-ten-hero .input-section-wrapper .search-fields-wrapper .input-wrapper {
-  width: 430px;
+  width: 422px;
   height: 3.5rem;
+  background-color: #ffffff;
 }
 .step-ten-hero .input-section-wrapper .search-fields-wrapper .input-wrapper input {
+  font-family: Roboto;
   font-size: 14px;
   width: 390px;
+  background-color: #ffffff;
 }
 .step-ten-hero .input-section-wrapper .search-fields-wrapper .options-list {
   top: 96px;
@@ -3120,6 +3265,7 @@ input[type=file] {
   padding: 6px 5px 6px 19px;
   color: #ffffff;
   background-color: #40a9ff;
+  height: 30px;
 }
 .step-ten-hero .sorting-buttons {
   margin-top: 14px;
@@ -3130,27 +3276,36 @@ input[type=file] {
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
-  gap: 8px;
+  gap: 3px;
   color: #262626;
   background-color: transparent;
   border: 1px solid #d9d9d9;
   border-radius: 4px;
-  padding: 5px 16px;
+  padding: 5px 14px;
   align-items: center;
   height: 34px;
+  width: 130px;
+  font-family: Roboto;
+  background-color: #ffffff;
 }
 .step-ten-hero .sorting-buttons .match-sort .match-sort-button {
   display: flex;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
-  gap: 8px;
+  gap: 5px;
   color: #262626;
   background-color: transparent;
   border: 1px solid #d9d9d9;
   border-radius: 4px;
   padding: 5px 16px;
   align-items: center;
+  background-color: #ffffff;
+  width: 143px;
+  font-family: Roboto;
+}
+.step-ten-hero .sorting-buttons .match-sort .match-sort-button:hover {
+  color: #40A9FF;
 }
 .step-ten-hero .listing-wrapper .graph-listing {
   display: flex;
@@ -3161,7 +3316,7 @@ input[type=file] {
   overflow-y: scroll;
 }
 .step-ten-hero .listing-wrapper .graph-listing::-webkit-scrollbar {
-  width: 4px;
+  width: 6px;
 }
 .step-ten-hero .listing-wrapper .graph-listing::-webkit-scrollbar-thumb {
   background-color: #69c0ff;
@@ -3187,7 +3342,6 @@ input[type=file] {
   line-height: 22px;
 }
 .step-ten-hero .listing-wrapper .graph-listing .progress-bar-section .linear-progress-wrapper .progress {
-  background-color: #bae7ff;
   border-radius: 10px;
   height: 6px;
   width: 331px;

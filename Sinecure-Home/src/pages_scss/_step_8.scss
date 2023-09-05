@@ -11,12 +11,14 @@
 		width: 50%;
 	}
 	.headings-section {
-		margin-top: 2.875rem;
+		margin-top: 5.3125rem;
 		.heading {
 			h1 {
-				max-width: 700px;
+				max-width: 579px;
 				z-index: 9999;
 				color: $textColorPrimary;
+				font-size: 2.25rem;
+				line-height: 42px;
 			}
 		}
 		.sub-heading {
@@ -34,14 +36,21 @@
 		}
 	}
 	.skils-detail-section {
+		&.mt {
+			margin-top: 195px;
+		}
     z-index: 9999;
 		.search-fields-wrapper {
 			.search-container {
 				.input-wrapper {
 					width: 426px;
+					background-color: #ffffff;
+					input {
+						background-color: #ffffff;
+					}
 				}
 				ul {
-					width: 360px;
+					width: 198px;
 				}
 			}
 		}
@@ -58,11 +67,13 @@
 			color: $listColor;
 			border: 1px solid $listColor;
 			background-color: transparent;
-			width: 121px;
+			width: 116px;
+			height: 40px;
 			border-radius: 4px;
 			padding: 8px 16px;
 			gap: 8px;
 			white-space: nowrap;
+			font-family: Roboto;
 		}
 		.next-button {
 			font-size: 16px;
