@@ -2518,6 +2518,7 @@ select {
   font-family: Roboto;
 }
 .step-six-hero .body-section .form-section .add-role-section form .form-group label {
+  display: flex;
   color: #002766;
   font-family: Roboto;
   font-size: 14px;
@@ -2525,7 +2526,11 @@ select {
   line-height: 22px;
 }
 .step-six-hero .body-section .form-section .add-role-section form .form-group label span {
-  color: #f5222d;
+  margin-right: 4px;
+}
+.step-six-hero .body-section .form-section .add-role-section form .form-group label p {
+  margin-left: 2px;
+  color: #FF4D4F;
 }
 .step-six-hero .body-section .form-section .add-role-section form .form-group ::-moz-placeholder {
   color: #8c8c8c;
@@ -2716,6 +2721,17 @@ select {
 .step-six-hero .hiring {
   align-items: center;
 }
+.step-six-hero .location-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 20px;
+  margin-bottom: 0;
+}
+.step-six-hero .location-input .checkbox {
+  height: 16px !important;
+  width: 16px;
+}
 
 .drag-drop-area {
   display: flex;
@@ -2784,6 +2800,10 @@ input[type=file] {
   background-color: #096dd9;
   border: transparent;
   white-space: nowrap;
+}
+
+.form-check {
+  padding-left: 0;
 }
 
 .body-wrapper .step-seven-hero {
