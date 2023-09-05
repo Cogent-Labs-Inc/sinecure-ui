@@ -40,11 +40,14 @@
 	.input-section-wrapper {
 		.search-fields-wrapper {
 			.input-wrapper {
-				width: 430px;
+				width: 422px;
 				height: 3.5rem;
+				background-color: #ffffff;
 				input {
+					font-family: Roboto;
 					font-size: 14px;
 					width: 390px;
+					background-color: #ffffff;
 				}
 			}
 			.options-list {
@@ -114,6 +117,7 @@
 				padding: 6px 5px 6px 19px;
 				color: $universalWhite;
 				background-color: $listColor;
+				height: 30px;
 			}
 		}
 	}
@@ -126,14 +130,17 @@
 				font-size: 14px;
 				font-weight: 400;
 				line-height: 22px;
-				gap: 8px;
+				gap: 3px;
 				color: #262626;
 				background-color: transparent;
 				border: 1px solid #d9d9d9;
 				border-radius: 4px;
-				padding: 5px 16px;
+				padding: 5px 14px;
 				align-items: center;
 				height: 34px;
+				width: 130px;
+				font-family: Roboto;
+				background-color: #ffffff;
 			}
 		}
 		.match-sort {
@@ -142,13 +149,19 @@
 				font-size: 14px;
 				font-weight: 400;
 				line-height: 22px;
-				gap: 8px;
+				gap: 5px;
 				color: #262626;
 				background-color: transparent;
 				border: 1px solid #d9d9d9;
 				border-radius: 4px;
 				padding: 5px 16px;
 				align-items: center;
+				background-color: #ffffff;
+				width: 143px;
+				font-family: Roboto;
+				&:hover{
+					color: #40A9FF;
+				}
 			}
 		}
 	}
@@ -161,7 +174,7 @@
 			height: 330px;
 			overflow-y: scroll;
 			&::-webkit-scrollbar {
-				width: 4px;
+				width: 6px;
 			}
 			&::-webkit-scrollbar-thumb {
 				background-color: #69c0ff;
@@ -187,7 +200,6 @@
 				}
 				.linear-progress-wrapper {
 					.progress {
-						background-color: #bae7ff;
 						border-radius: 10px;
 						height: 6px;
 						width: 331px;

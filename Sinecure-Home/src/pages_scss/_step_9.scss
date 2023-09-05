@@ -10,6 +10,7 @@
 				max-width: 712px;
 				z-index: 9999;
 				color: $textColorPrimary;
+				line-height: 42px;
 			}
 		}
 	}
@@ -49,6 +50,7 @@
 					padding: 4px 5px 4px 10px;
 					color: #1890ff;
 					background-color: #f5fcff;
+					height: 30px;
 				}
 				.selected {
 					color: $universalWhite;

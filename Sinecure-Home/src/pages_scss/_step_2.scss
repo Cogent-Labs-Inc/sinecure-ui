@@ -49,16 +49,16 @@
 
 			.range-slider-items {
 				display: flex;
-				gap: 10px;
+				gap: 2px;
 				li {
 					display: flex;
-					height: 80px;
+					height: 67px;
 					align-items: end;
 					span {
 						display: flex;
 						height: 50px;
 						background-color: #91d5ff;
-						width: 30px;
+						width: 28px;
 						margin: 0;
 					}
 				}
@@ -68,7 +68,6 @@
 				}
 				.h2 {
 					height: 30px;
-					background-color: #f0f0f0;
 				}
 				.h3 {
 					background-color: #f0f0f0;
@@ -83,10 +82,11 @@
 					height: 50px;
 				}
 				.h6 {
-					height: 70px;
+					height: 30px;
 				}
 				.h7 {
-					height: 80px;
+					background-color: #f0f0f0;
+					height: 67px;
 				}
 				.h9 {
 					height: 20px;
@@ -96,12 +96,38 @@
 					height: 40px;
 				}
 				.h-11 {
-					background-color: #f0f0f0;
 					height: 30px;
 				}
 				.h-12 {
 					background-color: #f0f0f0;
 					height: 10px;
+				}
+				.h-13 {
+					height: 50px;
+				}
+				.h-14 {
+					height: 30px;
+				}
+				.h-15 {
+					background-color: #f0f0f0;
+					height: 20px;
+				}
+				.h-16 {
+					background-color: #f0f0f0;
+					height: 10px;
+				}
+				.h-17 {
+					height: 60px;
+				}
+				.h-18 {
+					background-color: #f0f0f0;
+					height: 10px;
+				}
+				.h-19 {
+					height: 10px;
+				}
+				.h-20 {
+					height: 20px;
 				}
 			}
 		}
@@ -110,12 +136,13 @@
 		position: relative;
 		margin: 90px 96px 0;
 		.search-fields-wrapper {
-			justify-content: space-between;
+			justify-content: space-evenly;
 			span {
 				color: $textColorPrimary;
 				font-size: 14px;
 				font-weight: 600;
 				line-height: 22px;
+				font-family: Roboto;
 			}
 			.input-wrapper {
 				width: 855px;
@@ -247,10 +274,11 @@
 	@media screen and (max-width: 1200px) {
 		.required-skills-description {
 			.skills-heading {
-				margin-top: 1.9375rem;
+				margin-top: 46px;
 				h1 {
 					font-size: 2.25rem;
 					max-width: 550px;
+					line-height: 42px;
 				}
 			}
 			.skills-detail {
@@ -261,7 +289,7 @@
 			}
 		}
 		.experience-section {
-			margin-top: 74px;
+			margin-top: 189px;
 			.slider-wrapper {
 				margin-top: 24px;
 			}
@@ -288,7 +316,7 @@
 			}
 		}
 		.buttons-section {
-			padding: 360px 0 32px;
+			padding: 250px 0 32px;
 		}
 	}
 	// @media screen and (max-width: 1024px) {
