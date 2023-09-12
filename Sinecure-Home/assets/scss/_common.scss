@@ -136,14 +136,15 @@ $border-color: #d9d9d9;
 		padding: 0rem;
 		z-index: 2;
 		width: 25%;
+		height: 4px;
 		&:last-child .step-bar-left,
 		&:last-child .step-bar-right {
 			display: none;
 		}
 
 		.step-circle {
-			width: 8px;
-			height: 8px;
+			width: 6px;
+			height: 6px;
 			margin: 0;
 			border-radius: 50%;
 			text-align: center;
@@ -178,10 +179,10 @@ $border-color: #d9d9d9;
 		.step-bar-left,
 		.step-bar-right {
 			position: absolute;
-			height: 5px;
+			height: 4px;
 			background-color: $border-color;
 			border: solid $border-color;
-			border-width: 3px 0;
+			border-width: 2px 0;
 			top: 2px;
 		}
 		.step-bar-left {
